@@ -25,26 +25,7 @@ fertsh = .5
 all above done by Grace on July 7th, below still need to work on
 --------------------------------------------------------------------------------
 
-pubadgdp(t)..         pubgdp(t) =e= .10;
-
-model sdgfinance using /all/;
-
-poptot.lo(t) = .00001;
-en.lo(t) = .001;
-tsa.lo(t) = .00001;
-pop.lo(a,g,t) = .00000001;
-k.lo(t) = .001;
-kf.lo(t) = .001;
-kff.lo(t) = .001;
-kre.lo(t) = .001;
-conpc.lo(t) = .001;
-q.lo(t) = .0001;
-qpc.lo(t) = .0001;
-enh.lo(t) = .001;
-enhpc.lo(t) = .001;
-kf.lo(t) = .001;
-schooltot.lo(t) = .001;
-schoolage.lo(t) = 001;
-fbyage.lo(a,t) = .001;
-
-School continuation rate from age 6 to 22 eq60(t).. cont("6",t) =e= 1;
+gcostsh = .10		Government spending share of output
+pubgdpsh = .10		Public administration share of GDP
+lowerbound = .000001	Numerical lower bound for various denominators
+All continuation rates
