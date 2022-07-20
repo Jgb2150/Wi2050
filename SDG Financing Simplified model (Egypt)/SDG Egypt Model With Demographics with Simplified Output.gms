@@ -1,5 +1,6 @@
-$title SDG Egypt Model with Demographics with Simplified Output
-$stitle Last Updated: April 27, 2022
+$title SDG Financing Simplified model Egypt_ commented and cleaned by Philo and Yip
+$stitle Last Updated: July 20, 2022
+
 
 ************
 * Settings *
@@ -13,63 +14,43 @@ $offtext
 *****************
 
 *Define the years 2022-2030 as well as the starting and ending year
-Set     t /2022*2050/;
-Sets    tstart(t)       First Period tstart(t)
-        tend(t)         Last Period tend(t)
-        ;
-        tstart(t) = yes$(ord(t) eq 1);
-        tend(t) = yes$(ord(t) eq card(t));
+Set     t /2022*2050/
+        tstart(t)   First Period tstart(t)
+        tend(t)     Last Period tend(t)
+;
 
-*Define education levels: no schooling (nos), primary(ps), lower secondary(ls), upper secondary(us), tertiary(ts)       
+tstart(t) = yes$(ord(t) eq 1);
+tend(t) = yes$(ord(t) eq card(t));
 
-Set     e /nos,ps,ls,us,ts/;
-Alias   (e,ea);
+*Define education levels: primary, p; lower secondary, ls; upper secondary, us; tertiary, t;
+set e /nos,ps,ls,us,ts/;
+alias(e,ea);
 
 *Define gender
-Set     g /male,female/;
+set g /male,female/;
 
-*Define survival rates by gender for [target country] and high-income country             
-Set     surv /megypt,fegypt,mhic,fhic/;
+*Define survival rates by gender for [target country] and high-income country
+set surv /megypt,fegypt,mhic,fhic/;
 
 *Define fertility rates for [target country] and high-income country
-Set     fer /egypt,hic/;
-
-$ontext
-Define economic sectors:
-agriculture (ag)
-mining (mine)
-construction (con)
-power (pow)
-manufacturing (man)
-real estate (re)
-non-traded services (sern)
-traded services (sert)
-education (ed)
-health care (heal)
-public administration (pub)
-*secn: nontradable sectors
-$offtext
-
-Set     sec /ag, mine, con, pow, man, re, sern, sert, ed, heal, pub/;
-*Tradable sectors (sect): agriculture, mining, manufacturing, traded services
-Set     sect(sec) /ag, mine, man, sert/;
-*Non-tradable sectors (secn): construction, power, real estate, non-traded services, education, health care, public admin
-Set     secn(sec) /con, pow, re, sern, ed, heal, pub/;
+set fer /egypt,hic/;
 
 *Define age elements from 1-100
-Set     a /1*100/;
-Sets    a1(a)       Age 1 (for births)
-        aw(a)       Working age between 12 and 65
-        af2049(a)   Age between 20 and 49
-        an(a)       No schooling age
-        ap(a)       Primary age
-        als(a)      Lower secondary age 
-        af(a)       Fertile age between 15 and 49
-        aus(a)      Upper secondary age
-        ater(a)     Tertiary age
-        as(a)       School age between 12 and 23
-        asc(a);
-        
+*sets and subsets for age
+set a /1*100/
+    a1(a)       Age 1 (for births)
+    aw(a)       Working age between 12 and 65
+    af2049(a)   Age between 20 and 49
+    an(a)       age 6 group (asc) 
+    ap(a)       Primary age
+    als(a)      Lower secondary age
+    af(a)       Fertile age between 15 and 49
+    aus(a)      Upper secondary age
+    ater(a)     Tertiary age
+    as(a)       School age between 12 and 23
+    asc(a)      Age 7 to 22 group
+    ;
+    
 a1(a) = yes$(ord(a) eq 1);
 an(a) = yes$(ord(a) eq 6);
 ap(a) = yes$(ord(a) ge 7 and ord(a) le 12);
@@ -82,314 +63,353 @@ aw(a) = yes$(ord(a) ge 12 and ord(a) le 65);
 af2049(a) = yes$(ord(a) ge 20 and ord(a) le 49);
 af(a) = yes$(ord(a) ge 15 and ord(a) le 49);
 
-Alias   (as,aa);
+*Give another name (aa) to the previously declared set as
+*alias(as,aa); comment out:not used in this model
 
-*Define low and high debt scenarios
-Set     scen /low , high/;
+**Define scenarios for low and high cases** 
+*set scen /low , high/; comment out: no scen in this model
 
-* Parameter Declaration
+
+
+$onText
+Comment out: parameters with s means by senario, not used in this model
+
+**Define parameters(all by scenario and year)**
 ***********************
+*need to delete the scenario sets
+parameter   debtgdps(t)    Debt to GDP ratio 
+            conpcs(t)      Consumption per capita, 
+            kffs(t)        Capital to produce energy with fossil fuels
+            kres(t)        Capital to produce energy with renewables
+            kfs(t)         Infrastructure capital stock
+            wages(e,t)     Wages by education level
+            ktots(t)       Total capital
+            mpks(t)        Marginal product of capital 
+            qs(t)          Output 
+            qpcs(t)        Output per capita
+            ks(t)          Capital stock
+            edcostgdps(t)  Education cost of GDP
+            invs(t)        Investment
+            schoolshs(t)   Share of population in school
+            schoolyrs(t)   Schooling years
+            tfrts(t)       ?? Not used in this model 
+            tfrs(t)        Total fertility rate
+            poptots(t)     Totoal population 
+            edcosts(t)     Education cost
+            enrollrates(t) Enrollment rates 
+            birthrates(t)  Birth rate
+            fertshs       Fertility share 
+            ;
 
-Parameter   debtgdps(scen,t)    Debt to GDP ratio by scenario and year
-            conpcs(scen,t)
-            kffs(scen,t)        Capital to produce energy with fossil fuels by scenario and year
-            kres(scen,t)        Capital to produce energy with renewables by scenario and year
-            kfs(scen,t)         Infrastructure capital stock by scenario and year?
-            wages(scen,e,t)     Wages by scenario education level and year
-            ktots(scen,t)       Total capital by scenario and year
-            mpks(scen,t)        Marginal product of capital by scenario sector and year
-            conpcs(scen,t)
-            qs(scen,t)
-            qpcs(scen,t)
-            ks(scen,t)
-            edcostgdps(scen,t)
-            invs(scen,t)        Investment by scenario and year
-            schoolshs(scen,t)
-            schoolyrs(scen,t)
-            tfrts(scen,t)
-            tfrs(scen,t)
-            poptots(scen,t)
-            edcosts(scen,t)
-            enrollrates(scen,t)
-            schoolshs(scen,t)
-            birthrates(scen,t)
-            fertshs(scen);
+$offText
 
 $offOrder
 
-Parameter   bed(sec,e)  Production function coefficients on labor by sector and education; 
-Parameter   bk          Prod. func. coeff. on business capital stock (plant and equipment);
-            bk = .25;
-Parameter   bkf         Prod. func. coeff. on infrastructure capital; 
-            bkf = .10;
-Parameter   ben         Prod. func. coeff. on power;
-            ben = .05;
-Parameter   blab        Prod. func. coeff. on labor;
-            blab = 1-bk-bkf-ben;
+**Production function coefficients**
 
-Parameter   k0          Initial capital stock (2022);
-            k0 = 20;
-parameter   kf0         Initial infrastructure capital stock;
-            kf0 = 3;
+*Production function coefficients on labor by sector and education(bed)
+*parameter bed(e);
 
-Scalar      ek          Demand for capital stock
-            costff      Cost of fossil fuel generation
-            costre      Cost of renewable energy generation
-            dep         Depreciation
-            r           Interest rate
-            kff0        Initial capital to produce fossil fuel energy
-            kre0        Initial capital to produce renewable energy
-            aff         Percentage of fossil fuel capital required as input to produce energy
-            taxlim      Tax limit
-            min0        Production of mining sector in 2022 at time 0
-            land0       Production of land in 2022 at time 0
-            tfp1
-            phi;
+parameter   bk      bk coefficient on business capital stock (plant and equipment) in the production function
+            bkf     bkf coefficient on infrastructure capital in the production function
+            ben     ben coefficient on power in the production function
+            k0      k0 initial capital stock (2022)
+            kf0     kf0 initial infrastructure capital stock
+            ;
 
-            ek = .10;
-            costff = 1;
-            costre = 3;
-            dep = .05;
-            r = .05;
-            kff0 = 10;
-            kre0 = 1;
-            aff = .25;
-            taxlim = .5;
-            min0 = 10;
-            land0 = 20;
-            tfp1 = 1;
-            phi = .20;
+***gdx file ****
+bk = .25;
+bkf = .10;
+ben = .05;
+k0 = 20;
+KF0 = 3;
+
+**maybe need to declare after gdx file input
+Parameters  blab    blab coefficient on labor is remainder after subtract share for business capital infrastructure and energy ;
+blab = 1-bk-bkf-ben;
 
 
-*discount factor
 
-Parameter   disc(t)     Discount factor;
-            disc(t) = 1/(1+r)**(ord(t)-1);
+**Define some hardcoded variables**
+scalar
+*          ek                   Demand for capital stock(?)
+           costff               Cost of fossil fuel generation
+           costre               Cost of renewable energy generation
+           dep                  Depreciation
+           r                    Interest rate
+           kff0                 Initial fossil fuel capital stock
+           kre0                 Initial reneable energy capital stock
+           aff                  Percentage of fossil fuel capital required as input to produce energy
+*           taxlim               Tax limit
+*           min0                 Production of mining sector in 2022 at time period 0
+*          land0                Production of land in 2022 at time period 0
+           tfp1                 Total factor productivity at time period 1(?)
+           phi                  Unit cost of investment increases with growth rate
+           ;
 
-Parameter   debtqlim    Define maximum debt to GDP ratio;
+***gdx file ****
+       
+*ek = .10;
+costff = 1;
+costre = 3;
+*hc = .002;
+dep = .05;
+r = .05;
+kff0 = 10;
+kre0 = 1;
+aff = .25;
+*taxlim = .5;
+*min0 = 10;
+*land0 = 20;
+tfp1 = 1;
+phi = .20;
 
-*Initial state parameters loaded from GDX
-Parameter   popg0(a,g)      Initial population by age and gender
+**maybe need to declare after gdx file input
+Parameters debtqlim        Define maximum debt to GDP ratio;
+debtqlim = 10;
+Parameters  disc(t)         Discount factor defined by interest rate and target year ;
+disc(t) = 1/(1+r)**(ord(t)-1);
+
+
+**Some initial variables**
+parameter        
+            popg0(a,g)      Initial population by age and gender
             fert0(a,fer)    Initial fertility by age
             surv0(a,surv)   Initial survival rates by age
             w0(a,a,g)       Initial working age population by age and gender
             s0(a,g)         Initial school achievement by age and gender
             ferthic0(a,fer) Initial high-income country fertility by age
-            tfp(sec)        Total fertility of population?;
+            ;
 
+*read in data
 $CALL GDXXRW egyptdatainput.xlsx Index=Index!a1 trace=3
 $GDXIN egyptdatainput.gdx
 $LOAD popg0=D1 fert0= D2 surv0=D3 w0=D4 s0=D5 ferthic0=D6
 $GDXIN
 
-            fert0(a,"hic") = ferthic0(a,"hic");
+fert0(a,"hic") = ferthic0(a,"hic");
 
-Display     popg0,fert0,surv0,w0,s0,ferthic0;
+display popg0,fert0,surv0,w0,s0,ferthic0;
 
-Parameter   tfr0(fer)       Initial total fertility rate;
-            tfr0(fer) = sum(af,fert0(af,fer));
-Parameter   survive0(a,g)   Initial survival rate by age and gender;
-            survive0(a,"female") = surv0(a,"fegypt");
-            survive0(a,"male") = surv0(a,"megypt");
-Parameter   survivehi0(a,g) Initial high-income survival rate by age and gender;
-            survivehi0(a,"female") = surv0(a,"fhic");
-            survivehi0(a,"male") = surv0(a,"mhic");
-Parameter   lfep(e,t),poptotp(t),schooltotp(t),lfp(t);
 
-Scalar      fertsh;
+*initial setting
+parameter   tfr0(fer)         Initial total fertility rate;
+tfr0(fer) = sum(af,fert0(af,fer));
 
-Parameter   years(e)
-            /nos 0
-            ps 6
-            ls 9
-            us 12
-            ts 16/;
+parameter   survive0(a,g)     Initial survival rate by age and gender;
+survive0(a,"female") = surv0(a,"fegypt");
+survive0(a,"male") = surv0(a,"megypt");
 
-Positive variables  lfe(e,t)        Labor force as a function of education and year
-                    schoolsh(t)     Share of population in school
-                    schooltsa(t)
-                    q(t)            Output as a function of year
-                    qpc(t)          Output per capita as a function of year
-                    gdp(t)          GDP as a function of year
-                    gdpt(t)         GDP t(?) as a function of year
-                    gdptpc(t)       GDP per capita t(?) as a function of year
-                    emp(t)          Employment as a function of year
-                    hc(t)
-                    k(t)
-                    con(t)          Consumption as a function of year
-                    tx(t)           Taxes as a function of year
-                    conpc(t)        Consumption per capita as a function of year
-                    mpk(t)          Marginal product of capital as a function of year
-                    land(t)         Land as a function of year
-                    min(t)          Minerals as a function of year
-                    edcost(t)
-                    edcostgdp(t)
-                    ktot(t)         Total capital as a function of year
-                    qpc(t)
-                    efflabor(a,t)
-                    efflabtot(t)
-                    scgdp(t)
-                    kff(t)          Capital stock for fossil fuel energy production by year
-                    kre(t)          Capital stock for renewable energy production by year
-                    he(t)
-                    en(t)           Energy as a function of year
-                    entot(t)        Total energy as a function of year
-                    enh(t)          Housing energy as a function of year
-                    enhpc(t)        Housing energy per capita as a function of year
-                    invff(t)        Investment in fossil fuels as a function of year
-                    invre(t)        Investment in renewable energy as a function of year
-                    ff(t)           Fossil fuels by year
-                    invf(t)         Investment for capital infrastructure as a function of year
-                    kh(t)           Capital for housing as a function of year
-                    invh(t)         Capital for housing as a function of year
-                    hspc(t)         Housing per capita as a function of year
-                    kf(t)           Infrastructure capital as a function of year
-                    ktot(t)         Total capital as a function of year
-                    lqp(t)
-                    lsub(t)
-                    gov(t)          Government expenditure(?) as a function of year
-                    gdptot(t)       Total GDP as a function of year
-                    pn(t)           Price of non-tradeables as a function of year
-                    debt(t)         Debt level as a function of year
-                    debtgdp(t)      Debt-GDP ratio as a function of year
-                    cont12(t)
-                    govgdp(t)       Government expenditure as % of GDP as a function of year
-                    reserve(t)      Reserve levels as a function of year 
-                    edcost(t)
-                    hlcost(t)
-                    control(t)
-                    healthpc(t)
-                    hlcostgdp(t)
-                    lfe(e,t)        Labor force as a function of education and year (repeated)
-                    schoolpop(t)    Total school population as a function of year
-                    schooltsa(t)    School age as a function of year
-                    cont(a,t)       Continuation rate as a function of age and year
-                    s(a,g,t)        Schooling as a function of age gender and year
-                    leave(a,a,g,t)  School dropout rate as a function of two age elements gender and year
-                    neet(a,a,t)     Not in education employment or training as a func of two age elements and year
-                    school(e,t)     School enrollment at level e as a function of year
-                    schooltot(t)    Total school enrollment as a function of year
-                    schoolc(t)      School completion as a function of year
-                    ps(t)           Primary school as a function of year
-                    ls(t)           Lower secondary as a function of year
-                    us(t)           Upper secondary as a function of year
-                    ts(t)           Tertiary as a function of year
-                    lse(t)          Lower secondary enrollment as a function of year
-                    use(t)          Upper secondary enrollment as a function of year
-                    tse(t)          Tertiary enrollment as a function of year
-                    eattain(a,t)    Educational attainment as a function of age and year
-                    w(a,a,g,t)      Working population as a function of two age elements gender and year
-                    worka(a,t)      Working age as a function of age and time
-                    pop(a,g,t)      Age and gender-specific population as a function of year
-                    poptot(t)       Total population as a function of year
-                    noa(t)          No school attainment as a function of year
-                    pa(t)           Primary attainment as a function of year
-                    lsa(t)          Lower secondary attainment as a function of year
-                    usa(t)          Upper secondary attainment as a function of year
-                    tsa(t)          Tertiary attainment as a function of year
-                    lf(t)           Total labor force as a function of year
-                    h(t)            Housing(?) as a function of year
-                    birth(t)        Birth rate as a function of year
-                    fert(a,a,t)     Fertility as a function of two age elements and year
-                    inv(t)          Investment as a function of year
-                    schoolyr(t)
-                    cinv(t)
-                    cinvff(t)
-                    cinvf(t)
-                    cinvre(t)
-                    debt(t)         Debt level as a function of year
-                    debtgdp(t)      Debt-GDP ratio as a function of year
-                    schoolage(t)    School age as a function of year (?)
-                    enrollrate(t)   School enrollment rate as a function of year (?)
-                    birthrate(t)    Birthrate as a function of year (?)
-                    fbyage(a,t)
-                    tfr(t)          Total fertility rate as a function of year (?)
-                    invfgdp(t)
-                    pubgdp(t)
-                    outlaygdp(t)
-                    edunitcost(t)   Unit cost of education as a function of year (?)
-                    hlunitcost(t)
-                    gcost(t);
+parameter   survivehi0(a,g)   Initial high-income survival rate by age and gender;
+survivehi0(a,"female") = surv0(a,"fhic");
+survivehi0(a,"male") = surv0(a,"mhic");
+            
+
+parameter   lfep(e,t)       Labor force by education and year
+            poptotp(t)      Total school population by year
+            schooltotp(t)   ??Total school enrollment by year
+            lfp(t)           Total labor force by year
+            ;
+
+scalar fertsh;
+fertsh = .5;
+
+** gdx file **
+parameter years(e)
+/nos 0
+ ps 6
+ ls 9
+ us 12
+ ts 16/;
+
+
+*Variable declaration
+*********************
+positive variables    lfe(e,t)              Labor force as a function of education and year
+                      schoolsh(t)           Total school population share as a function of year
+*                      schooltsa(t)          School age as a function of year
+                      q(t)                  Output
+                      qpc(t)                Output per capita
+*                      gdp(t)                GDP
+*                      gdpt(t)               Total GDP(? same as gdptot?)
+*                      gdptpc(t)             GDP Total per capita(? same as gdppc?)
+*                      emp(t)                Employment as a function of sector and year
+                      hc(t)                 Human capital
+                      k(t)                  Business capital as a function of year
+                      con(t)                Consumption
+*                      tx(t)                 Taxes
+                      conpc(t)              Consumption per capita
+                      mpk(t)                Marginal product of capital
+*                      land(t)               Land
+*                      min(t)                Mining
+                      edcost(t)             Education cost
+                      edcostgdp(t)          Edu cost as ratio to GDP           
+                      ktot(t)               Total capital stock
+                      efflabor(a,t)         Labor measured in efficiency units by age           
+                      efflabtot(t)          Total labor measured in efficiency units
+*                      scgdp(t)
+                      kff(t)                Capital stock for fossil fuel energy production by year
+                      kre(t)                Capital stock for renewable energy production by year
+*                      he(t)
+                      en(t)                 Energy
+*                      entot(t)              Total energy
+                      enh(t)                Housing energy
+                      enhpc(t)              Housing energy per capita
+                      invff(t)              Investment in fossil fuels
+                      invre(t)              Investment in renewable energy
+                      ff(t)                 Fossil fuels
+                      invf(t)               Investment for capital infrastructure
+*                      kh(t)                 Capital for housing
+*                      invh(t)               Investment in housing
+*                      hspc(t)               Housing per capita           
+                      kf(t)                 Infrastructure capital
+*                      ktot(t)               Total capital stock
+*                      lqp(t)
+*                      lsub(t)
+*                      gov(t)                Government expenditure
+*                      gdptot(t)             Total GDP(? same as gdpt?)
+*                      pn(t)                 Price of non-tradeables
+                      debt(t)               Debt level
+                      debtgdp(t)            Debt-GDP ratio
+*                      cont12(t)
+*                      govgdp(t)             Government expenditure as % of GDP
+*                      reserve(t)            Reserve levels
+                      hlcost(t)             Health cost
+                      control(t)
+*                      healthpc(t)           Health per capita           
+                      hlcostgdp(t)          Health cost-GDP ratio       
+*                      schoolpop(t)          Total school population                   
+                      cont(a,t)             Continuation rate
+                      s(a,g,t)              Schooling as a function of age gender and year
+                      leave(a,a,g,t)        School dropout rate as a function of two age elements gender and year           
+*                      neet(a,a,t)           Not in education employment or training           
+                      school(e,t)           School enrollment at level           
+                      schooltot(t)          Total school enrollment           
+*                      schoolc(t)            School completion
+                      ps(t)                 Primary school
+                      ls(t)                 Lower secondary
+                      us(t)                 Upper secondary
+                      ts(t)                 Tertiary
+                      lse(t)                Lower secondary enrollment
+                      use(t)                Upper secondary enrollment
+                      tse(t)                Tertiary enrollment
+                      eattain(a,t)          Educational attainment           
+                      w(a,a,g,t)            Working population
+*                      worka(a,t)            Working age
+                      pop(a,g,t)            Age and gender-specific population
+                      poptot(t)             Total population
+                      noa(t)                Labor force that did not complete primary school
+                      pa(t)                 Primary attainment           
+                      lsa(t)                Lower secondary attainment
+                      usa(t)               Upper secondary attainment
+                      tsa(t)                Tertiary attainmen
+                      lf(t)                 Total labor force
+*                      h(t)                  Housing
+                      birth(t)              Birth number
+                      fert(a,a,t)           Fertility           
+                      inv(t)                Investment
+                      schoolyr(t)           Scooling years          
+                      cinv(t)               Cost of investment
+                      cinvff(t)             Cost of investment in fossil fuels
+                      cinvf(t)              Cost of investment in infrastructure
+                      cinvre(t)             Cost of investment in renewable energy
+                      schoolage(t)          Schooling age           
+                      enrollrate(t)         Enrollment rate
+                      birthrate(t)          Birth rate           
+                      fbyage(a,t)           Fertile female by age           
+                      tfr(t)                Total fertility rate
+                      invfgdp(t)            Investment in infrastructure-GDP ratio           
+                      pubgdp(t)             Cost of public administration as a percent of total GDP
+                      outlaygdp(t)          Percent of GDP spent on education\healthcare\public administration\infrastructure           
+                      edunitcost(t)         Cost of education per unit of consumption by the students           
+                      hlunitcost(t)         Cost of healthcare per unit of consumption by the total population           
+                      gcost(t)              Government spending
+                      ;               
+
+
 
 Variable            util            Main utility variable
                     ut(t)           Utility by year
                     wage(e,t)       Wage as a function of education level and time
                     nx(t)           Net exports by year
-                    test            Test variable (?);           
+                    test
+                    ;
 
-Equations           eq1(a,g,t)      Secondary school pop by age and gender at t+1
-                    eq2(g,t)        Population by gender and year starting primary school at age 6 (?)
-                    eq3(a,g,t)      Population survival each year by age and gender
-                    eq4(a,a,t)      Fertility dependent on age and education level
-                    eq5(t)          Expected births per year
-                    eq6(a,g,t)      Equalizes gender ratio at birth
-                    eq7(t)          Primary school enrollment assuming universal enrollment
-                    eq8(t)          Total population of lower secondary age
-                    eq9(t)          Total population of upper secondary age
-                    eq10(t)         Total population of tertiary education age
-                    eq11(t)         Lower secondary enrollment rate
-                    eq12(t)         Upper secondary enrollment rate
-                    eq13(t)         Tertiary education enrollment rate
-                    eq14(t)         Total population in school (primary lower sec upper sec tertiary)
-                    eq15(a,a,g,t)   Total dropouts per year as age-dependent dropout rate by school pop per year starting at grade 6 secondary school(?)
-                    eq16(a,a,g,t)   Working population at time t+1 starting at grade 6 secondary school(?)
-                    eq17(a,g,t)     Age 12 working population equals 0    
+
+Equations
+                    eq1(a,g,t)     Student population by age and gender at t+1 is those who continued at t
+                    eq2(g,t)       All 6 year-olds enroll in elementary school when they turn 7
+                    eq3(a,g,t)     Population by age and gender at t+1 is those who survived at t
+                    eq4(a,a,t)     Fertility rate depends on local values for females with less than 12 yrs of education and depends on a mix of local values and high income country average fertility rate for those with more than 12 yrs of education
+                    eq5(t)         Expected births at time t after accounting for female education
+                    eq6(a,g,t)     Equalizes gender ratio at birth
+                    eq7(t)         Total population enrolled in primary school (assuming 100% continuation)
+                    eq8(t)         Total population enrolled in lower secondary school
+                    eq9(t)         Total population enrolled in upper secondary school
+                    eq10(t)        Total population enrolled in tertiary school
+                    eq11(t)        Lower secondary school enrollment rate
+                    eq12(t)        Upper secondary school enrollment rate
+                    eq13(t)        Tertiary school enrollment rate
+                    eq14(t)        Total population in school (primary lower sec upper sec tertiary)
+                    eq15(a,a,g,t)  Total drop-outs from school at each age (without double counting)
+                    eq16(a,a,g,t)  Total eligible-for-work population by age and gender at t+1 equals those already working at t plus new drop-outs
+                    eq17(a,g,t)    No one of age 12 is eligible for work
 *eq18(a,t)
-                    eq19(a,t)       Educational attainment by age and time
-                    eq19a(t)
-                    eq19b(t)
-                    eq19c(t)
-                    eq19d(t)
-                    eq19e(t)
-                    eq20(t)         Total labor force summed by educational attainment per year
-                    eq21a(t)        No school attainment in year t as sum of attainment for 1 to 5 year olds
-                    eq21(t)         Primary attainment in year t as sum of attainment for 12 13 and 14 year olds
-                    eq22(t)         Lower sec attainment in year t as sum of attainment for 15 16 and 17 year olds
-                    eq23(t)         Upper sec attainment as sum of attainment for 18 19 20 and 21 year olds
-                    eq24(t)         Tertiary attainment as sum of attainment for 22 year olds
-                    eq25(t)         Total population summation at time t
-                    eq26(t)         Total population enrolled in primary at time t
-                    eq27(t)         Total population enrolled in lower secondary at time t
-                    eq28(t)         Total population enrolled in upper secondary at time t
-                    eq29(t)         Total population enrolled in tertiary at time t
-                    eq30a(t)        Labor force with no schooling at time t
-                    eq30(t)         Primary-educated labor force at time t
-                    eq31(t)         Lower sec educated labor force at time t
-                    eq32(t)         Upper sec educated labor force at time t
-                    eq33(t)         Tertiary educated labor force at time t
-                    eq34(t)         Percentage of total population in school at time t
-                    eq36(a,g)       Education for school-aged people in 2022
-                    eq37(a,g)       Population in 2022
-                    eq38(a,a,g)     Worker population in 2022
-                    eq39(t)         Set continuation rate = 0.95 at age 12
-                    eq40(t)         Set continuation rate = 1 at age 13
-                    eq41(t)         Set continuation rate = 1 at age 14
-                    eq42(t)         Set continuation rate = 1 at age 16
-                    eq43(t)         Set continuation rate = 1 at age 17
-                    eq44(t)         Set continuation rate = 1 at age 19
-                    eq45(t)         Set continuation rate = 1 at age 20
-                    eq46(t)         Set continuation rate = 1 at age 21
-                    eq47(t)         Set continuation rate = 1 at age 15
-                    eq48(t)         Set continuation rate = 0.5 at age 18
-                    eq49(t)         Set continuation rate = 0 at age 22 
+                    eq19(a,t)      Total eligible-for-work population given a certain level of education attainment
+                    eq19a(t)       No one of age 1 should be eligible for work
+                    eq19b(t)       No one of age 2 should be eligible for work
+                    eq19c(t)       No one of age 3 should be eligible for work
+                    eq19d(t)       No one of age 4 should be eligible for work
+                    eq19e(t)       No one of age 5 should be eligible for work
+                    eq20(t)        Total labor force summed by educational attainment per year
+                    eq21(t)        Primary attainment in year t as sum of attainment for 12 13 and 14 year olds
+                    eq21a(t)       Labor force that did not complete primary school (assumes 100% labor force participation here)
+                    eq22(t)        LS attainment in year t as sum of attainment for 15 16 and 17 year olds
+                    eq23(t)        US attainment as sum of attainment for 18 19 20 and 21 year olds
+                    eq24(t)        TER attainment as sum of attainment for 22 year olds
+                    eq25(t)        Total population summation at time t
+                    eq26(t)        Total population enrolled in primary at time t
+                    eq27(t)        Total population enrolled in lower secondary at time t
+                    eq28(t)        Total population enrolled in upper secondary at time t
+                    eq29(t)        Total population enrolled in tertiary at time t eq30(t)
+                    eq30a(t)       Enables "lfe" to track labor force that did not complete primary school
+                    eq30(t)        Enables "lfe" to track labor force that completed primary school but did not complete lower secondary school or higher
+                    eq31(t)        Enables "lfe" to track labor force that completed lower secondary school but did not complete upper secondary school or higher
+                    eq32(t)        Enables "lfe" to track labor force that completed upper secondary school but did not complete tertiary school
+                    eq33(t)        Enables "lfe" to track labor force that completed tertiary school
+                    eq34(t)        Percentage of total population in school at time t
+                    eq36(a,g)      Education for school-aged people in 2022
+                    eq37(a,g)      Population in 2022
+                    eq38(a,a,g)    Worker population in 2022
+                    eq39(t)        Set continuation rate = 0.95 at age 12
+                    eq40(t)        Set continuation rate = 1 at age 13
+                    eq41(t)        Set continuation rate = 1 at age 14
+                    eq42(t)        Set continuation rate = 1 at age 16
+                    eq43(t)        Set continuation rate = 1 at age 17
+                    eq44(t)        Set continuation rate = 1 at age 19
+                    eq45(t)        Set continuation rate = 1 at age 20
+                    eq46(t)        Set continuation rate = 1 at age 21
+                    eq47(t)        Set continuation rate = 1 at age 15
+                    eq48(t)        Set continuation rate = 0.5 at age 18
+                    eq49(t)        Set continuation rate = 0 at age 22 
                     eq50
-                    eq51(t)
-                    eq52(a,t)
-                    eq53(t)
-                    eq54(t)
-                    eq30a(t)
-                    eq55(t)         Set continuation rate = 1 at age 7
-                    eq56(t)         Set continuation rate = 1 at age 8
-                    eq57(t)         Set continuation rate = 1 at age 9
-                    eq58(t)         Set continuation rate = 1 at age 10
-                    eq59(t)         Set continuation rate = 1 at age 11
-                    eq60(t)         Set continuation rate = 1 at age 6
-                    eq61(t)         
-                    eq62(t)
-                    eq63(t)
-                    eq64(a,t)
-                    eq65(t);
-
+                    eq51(t)        Average years of schooling received by the country's work-eligible population
+                    eq52(a,t)      Labor measured in efficiency units by age (assuming each year of schooling makes a worker roughly 10% more efficient)
+                    eq53(t)        Total labor measured in efficiency units
+                    eq54(t)        Human capital equals average labor in efficiency units per worker
+                    eq55(t)        Set continuation rate = 1 at age 7
+                    eq56(t)        Set continuation rate = 1 at age 8
+                    eq57(t)        Set continuation rate = 1 at age 9
+                    eq58(t)        Set continuation rate = 1 at age 10
+                    eq59(t)        Set continuation rate = 1 at age 11
+                    eq60(t)        Set continuation rate = 1 at age 6
+                    eq61(t)        Total population of school age (7-22)
+                    eq62(t)        School enrollment rate
+                    eq63(t)        Expected brith rate equals expected births divided by total population at time t
+                    eq64(a,t)      Fertile female by age
+                    eq65(t)        Total fertility rate at time t equals the sum of fertility rates given years of education and age
+                    ;
+                 
 
 eq1(as+1,g,t+1)..  s(as+1,g,t+1) =e= cont(as,t)*s(as,g,t);
 eq2(g,t+1)..  s("7",g,t+1) =e= pop("6",g,t);
@@ -449,7 +469,7 @@ eq44(t).. cont("19",t) =e= 1;
 eq45(t).. cont("20",t) =e= 1;
 eq46(t).. cont("21",t) =e= 1;
 eq47(t).. cont("15",t) =e= 1;
-eq48(t).. cont("18",t) =e= 0.5;
+eq48(t).. cont("18",t) =e= .5;
 eq49(t).. cont("22",t) =e= 0;
 eq50.. test =e= sum(t,control(t)*control(t));
 eq51(t).. schoolyr(t) =e= sum(a,eattain(a,t)*(ord(a)-6))/sum(a,.000001+eattain(a,t));
@@ -463,54 +483,57 @@ eq58(t).. cont("10",t) =e= 1;
 eq59(t).. cont("11",t) =e= 1;
 eq60(t).. cont("6",t) =e= 1;
 
-Model   demo using /all/;
+model demo using /all/;
 
 *eattain.lo(a,t) = .00001;
 
-Equations   utilt(t)
-            utility
-            output(t)
-            outputpc(t)
-            ewage(e,t)
-            kstart(t)
-            kfstart(t)
-            kffstart(t)
-            krestart(t)
-            knext(t)
-            kfnext(t)
-            kffnext(t)
-            krenext(t)
-            kfend(t)
-            energy(t)
-            ffuel(t)
-            conlim(t)
-            education(t)
-            edugdp(t)
-            dstart(t)
-            tbalance(t)
-            totdebt(t)
-            debttogdp(t)
-            debtlimit(t)
-            conend(t)
-            consumetrpc(t)
-            kend(t)
-            kffend(t)
-            kreend(t)
-            ktotal(t)
-            costk(t)
-            costkre(t)
-            costkff(t)
-            costkf(t)
-            health(t)
-            govcost(t)
-            hlgdp(t)
-            pubadgdp(t)
-            infgdp(t)
-            poutlay(t)
-            educationuc(t)
-            healthuc(t),
+Equations 
+                    utilt(t)        Utility function by year
+                    utility         Total utility summed and discounted over time
+                    output(t)       Defines Cobb-Douglas style output func with energy capital infrustructure capital and labor
+                    outputpc(t)     Total GDP per capita at time t
+                    ewage(e,t)      Wage by education and time t given as marginal cost of labor
+                    kstart(t)       Initial capital stock for each sector at t0
+                    kfstart(t)      Initial infrastructure capital stock
+                    kffstart(t)     Initial capital stock for energy from fossil fuels given as 0
+                    krestart(t)     Initial capital stock for energy from renewables given as 0
+                    knext(t)        Motion of capital: next period equals current + invest - depreciate
+                    kfnext(t)       Motion of infrastructure capital
+                    kffnext(t)      Motion of fossil fuel capital
+                    krenext(t)      Motion of renewable capital
+                    kfend(t)        Infrastructure capital at end setting depreciation=investment
+                    ktotal(t)       Total capital stock in the economy
+                    energy(t)       Capital in the power sector is the sum of fossil and renewable capital
+                    ffuel(t)        FF energy generated as product of FF capital and FF capital intensity
+                    conlim(t)       Consumption limit 
+                    education(t)    Cost of education (assumes wages are the same for a output-producing worker and a teacher as long as they have the same level of education)
+                    edugdp(t)       Cost of education as a percent of total GDP
+                    dstart(t)       Initial debt at t0 given as 0
+                    tbalance(t)     GDP solved for net exports
+                    totdebt(t)      Debt incurred from foreign trade?
+                    debttogdp(t)    Debt-GDP ratio calculation
+                    debtlimit(t)    Defines the debt-GDP ratio limit
+                    conend(t)       Defines end output
+                    consumetrpc(t)  Consumption per capita in tradeable sectors
+                    kend(t)         Capital at end by sector setting final investment = depreciation
+                    kffend(t)       FF capital at end
+                    kreend(t)       RE capital at end
+                    costk(t)        Total cost of investment in output-producing and social service capital stock (unit cost increases linearly in growth rate)
+                    costkf(t)       Total cost of investment in infrastructure capital stock
+                    costkff(t)      Total cost of investment in fossil fuel capital stock
+                    costkre(t)      Total cost of investment in renewable energy capital stock
+                    health(t)       Cost of healthcare (assumes wages are the same for a output-producing worker and a healthcare worker as long as they have the same level of education)
+                    govcost(t)      Government spending (assumed to be 10% of output each year)
+                    hlgdp(t)        Cost of healthcare as a percent of total GDP
+                    pubadgdp(t)     Cost of public administration as a percent of total GDP    
+                    infgdp(t)       Cost of investment in infrastructure as a percent of total GDP
+                    poutlay(t)      Percent of GDP spent on education \ healthcare \ public administration \ infrastructure
+                    educationuc(t)  Cost of education per unit of consumption by the students
+                    healthuc(t)     Cost of healthcare per unit of consumption by the total population
 *taxmax(t),
-            marginalpk(t);
+                    marginalpk(t)   Marginal product of capital given as capital production over total capital
+                    ;
+
 
 *output(t)..           q(t) =e= tfp1*en(t)**ben*kf(t)**bkf*k(t)**bk*prod(e,lfep(e,t)**bled(e));
 output(t)..           q(t) =e= tfp1*en(t)**ben*kf(t)**bkf*k(t)**bk*efflabtot(t)**blab;
@@ -518,7 +541,6 @@ outputpc(t)..         qpc(t) =e= q(t)/poptotp(t);
 *ewage(e,t)..          wage(e,t) =e= bled(e)*q(t)/lfep(e,t);
 ewage(e,t)..          wage(e,t) =e= blab*q(t)/efflabtot(t)*exp(.1*years(e));
 marginalpk(t)..       mpk(t) =e= bk*q(t)/k(t);
-
 kstart(tstart)..      k(tstart) =e= k0;
 dstart(tstart)..      debt(tstart) =e= 0;
 kffstart(tstart)..    kff(tstart) =e= kff0;
@@ -559,101 +581,65 @@ infgdp(t)..           invfgdp(t) =e= cinvf(t)/q(t);
 utilt(t)..            ut(t) =e= log(conpc(t));
 utility..             util =e= sum(t,disc(t)* ut(t)) + (1/r)*sum(tend,disc(tend)*ut(tend));
 
-Model   sdgfinance using /all/;
 
-        poptot.lo(t) = .00001;
-        en.lo(t) = .001;
-        tsa.lo(t) = .00001;
-        pop.lo(a,g,t) = .00000001;
-        k.lo(t) = .001;
-        kf.lo(t) = .001;
-        kff.lo(t) = .001;
-        kre.lo(t) = .001;
-        conpc.lo(t) = .001;
-        q.lo(t) = .0001;
-        qpc.lo(t) = .0001;
-        enh.lo(t) = .001;
-        enhpc.lo(t) = .001;
-        kf.lo(t) = .001;
-        schooltot.lo(t) = .001;
-        schoolage.lo(t) = 001;
-        fbyage.lo(a,t) = .001;
+model sdgfinance using /all/;
 
-Parameter   debtqlim;
-            debtqlim = 10;
-            r=.05;
-
-Parameter   dlim(scen)
-            /low   10
-            high 10/;
-
-Parameter   rs(scen)
-            /low 0.15
-            high 0.05/;
-
-Parameter   taxmaxs(scen)
-            /low  0.1
-            high 0.4/;
-
-Parameter   fertshs
-            /low .5
-            high 0/;
-
-            debtqlim = 10;
-            r = .05;
-            taxlim = .4;
-            fertsh = .5;
-
-Solve demo minimizing test using dnlp;
-lfep(e,t) = lfe.L(e,t);
-lfp(t) = lf.L(t);
-poptotp(t) = poptot.L(t);
-schooltotp(t) = schooltot.L(t);
-
-Solve sdgfinance maximizing util using dnlp;
-
-Display qpc.L, edcostgdp.L, hlcostgdp.L, invfgdp.L, outlaygdp.L;
+poptot.lo(t) = .00001;
+en.lo(t) = .001;
+tsa.lo(t) = .00001;
+pop.lo(a,g,t) = .00000001;
+k.lo(t) = .001;
+kf.lo(t) = .001;
+kff.lo(t) = .001;
+kre.lo(t) = .001;
+conpc.lo(t) = .001;
+q.lo(t) = .0001;
+qpc.lo(t) = .0001;
+enh.lo(t) = .001;
+enhpc.lo(t) = .001;
+kf.lo(t) = .001;
+schooltot.lo(t) = .001;
+schoolage.lo(t) = 001;
+fbyage.lo(a,t) = .001;
 
 $onText
 
-loop(scen,
-*debtqlim = dlim(scen);
-*r = rs(scen);
-*taxlim = taxmaxs(scen);
-fertsh = fertshs(scen);
+parameter           debtqlim            Upper limit of debt to GDP ratio
+                    ;
+
+debtqlim = 10;
+r=.05;
+
+
+parameter           dlim(scen)          Upper limit of debt to GDP ratio by scenario
+
+/low   10
+ high 10/;
+
+parameter           rs(scen)            Interest rate by scenario
+
+/low 0.15
+high 0.05/;
+
+parameter           taxmaxs(scen)       Taxation limit by scenario
+/low  0.1
+high 0.4/;
+
+parameter           fertshs             Weight on high-income country fertility rate for females with more than 12 years of education
+/low .5
+ high 0/;
+
+debtqlim = 10;
+r = .05;
+taxlim = .4;
+fertsh = .5;
+$offText
+
+
 solve demo minimizing test using dnlp;
-lfep(e,t) = lfe.L(e,t);
-lfp(t) = lf.L(t);
+*lfep(e,t) = lfe.L(e,t);
+*lfp(t) = lf.L(t);
 poptotp(t) = poptot.L(t);
 schooltotp(t) = schooltot.L(t);
 solve sdgfinance maximizing util using dnlp;
-schoolyrs(scen,t) = schoolyr.L(t);
-ks(scen,t) = k.L(t);
-debtgdps(scen,t) = debtgdp.L(t);
-kffs(scen,t) = kff.L(t);
-kres(scen,t) = kre.L(t);
-kfs(scen,t) = kf.L(t);
-mpks(scen,t) = mpk.L(t);
-ktots(scen,t) = ktot.L(t);
-wages(scen,e,t) = wage.L(e,t);
-invs(scen,t) = inv.L(t);
-qs(scen,t) = q.L(t);
-qpcs(scen,t) = qpc.L(t);
-conpcs(scen,t) = conpc.L(t);
-edcosts(scen,t) = edcost.L(t);
-schoolshs(scen,t) = schoolsh.L(t);
-edcostgdps(scen,t) = edcostgdp.L(t);
-enrollrates(scen,t) = enrollrate.L(t);
-birthrates(scen,t) = birthrate.L(t);
-poptots(scen,t) = poptot.L(t);
-tfrs(scen,t) = tfr.L(t););
-
-
-display qs,tfrs, ks, mpks, invs, birthrates, poptots,schoolshs, enrollrates,schoolyrs, edcosts, edcostgdps, wages, kffs, kres;
-
-
-execute_unload 'data.gdx' qpcs, poptots, tfrs;
-execute 'gdxxrw data.gdx par=qpcs rng=qpcs!A1 par=poptots rng=poptots!A1 par = tfrs rng=tfrs!A1'
-
-$offText
-
+display qpc.L, edcostgdp.L, hlcostgdp.L, invfgdp.L, outlaygdp.L;
