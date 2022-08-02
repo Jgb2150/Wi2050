@@ -1,0 +1,215 @@
+--- Job SDG Egypt Model v4.gms Start 08/02/22 09:48:03 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\Program\37GAMS\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms"
+    PageSize 0
+    ScrDir "C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\225a\"
+    SysDir D:\Program\37GAMS\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Large MUD - 20 User License                    G211208|0002AR-WIN
+          Columbia University, Earth Institute                       DC4533
+          C:\Users\Yunjie\Documents\GAMS\gamslice.txt
+          License Admin: Jeffrey Sachs, sachs@columbia.edu                 
+Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
+GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
+--- Starting compilation
+--- SDG Egypt Model v4.gms(90) 3 Mb
+--- call GDXXRW .\input\paraminput.xlsx output=.\auxiliary\paraminput_bar.gdx Index=Index!a1 trace=3
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Excel version 12.0
+**** Input file not found = C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\input\paraminput.xlsx
+Total time = 2453 Ms
+--- SDG Egypt Model v4.gms(91) 3 Mb
+*** GDXIN failed C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\auxiliary\paraminput_bar.gdx
+*** Msg: No such file or directory
+--- SDG Egypt Model v4.gms(91) 3 Mb 1 Error
+*** Error 510 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Unable to open gdx file for $GDXIN
+--- SDG Egypt Model v4.gms(92) 3 Mb 2 Errors
+*** Error 502 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    GDXIN  file not open - ignore rest of line
+--- SDG Egypt Model v4.gms(95) 3 Mb 4 Errors
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SDG Egypt Model v4.gms(101) 3 Mb 7 Errors
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SDG Egypt Model v4.gms(102) 3 Mb 8 Errors
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SDG Egypt Model v4.gms(104) 3 Mb 23 Errors
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 300 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Remaining errors not printed for this line
+--- SDG Egypt Model v4.gms(119) 3 Mb
+--- call GDXXRW .\auxiliary\datainput.xlsx output=.\auxiliary\datainput.gdx Index=index!a1 trace=3
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Excel version 12.0
+Input file : C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\auxiliary\datainput.xlsx
+Output file: C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\auxiliary\datainput.gdx
+Substituting Index
+Loading sheet index
+Reading data from Excel; Rng = A1:E7
+Reading Slice: A1:E7
+par=D1 Rng=popg0!A1 Dim=2 Rdim=1
+par=D2 Rng=fert0!A1 Dim=2 Rdim=1
+par=D3 Rng=surv0!A1 Dim=2 Rdim=1
+par=D4 Rng=w0!A1 Dim=3 Rdim=2
+par=D5 Rng=s0!A1 Dim=2 Rdim=1
+par=D6 Rng=ferthic0!A1 Dim=2 Rdim=1
+Type Symbol       Dim      Sheet                Data          RowHeader     ColHeader     
+Loading sheet popg0
+Reading data from Excel; Rng = A1:C101
+Reading Slice: A1:C101
+Par  D1             2      popg0                B2:C101       A2:A101       B1:C1         
+Loading sheet fert0
+Reading data from Excel; Rng = A1:B36
+Reading Slice: A1:B36
+Par  D2             2      fert0                B2:B36        A2:A36        B1:B1         
+Loading sheet surv0
+Reading data from Excel; Rng = A1:E100
+Reading Slice: A1:E100
+Par  D3             2      surv0                B2:E100       A2:A100       B1:E1         
+Loading sheet w0
+Reading data from Excel; Rng = A1:D324
+Reading Slice: A1:D324
+Par  D4             3      w0                   C2:D324       A2:B324       C1:D1         
+Loading sheet s0
+Par  D5             2      s0                   --:--         --:--         --:--         
+Loading sheet ferthic0
+Reading data from Excel; Rng = A1:B36
+Reading Slice: A1:B36
+Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
+Total time = 2532 Ms
+--- SDG Egypt Model v4.gms(120) 3 Mb
+--- GDXin=C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\auxiliary\datainput.gdx
+--- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\auxiliary\datainput.gdx
+--- SDG Egypt Model v4.gms(457) 3 Mb 24 Errors
+*** Error 257 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Solve statement not checked because of previous errors
+--- SDG Egypt Model v4.gms(458) 3 Mb 29 Errors
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+*** Error 141 in C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\SDG Egypt Model v4.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SDG Egypt Model v4.gms(475) 3 Mb
+--- $echo File C:\Users\Yunjie\Desktop\v4_commented and cleaned - grace\auxiliary\outputsetting.txt
+--- SDG Egypt Model v4.gms(478) 3 Mb 29 Errors
+*** Status: Compilation error(s)
+--- Job SDG Egypt Model v4.gms Stop 08/02/22 09:48:09 elapsed 0:00:05.241
