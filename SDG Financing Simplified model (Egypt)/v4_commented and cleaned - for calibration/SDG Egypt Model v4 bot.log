@@ -1,5 +1,5 @@
 
---- Job SDG Egypt Model v4 bot.gms Start 08/04/22 11:10:22 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Egypt Model v4 bot.gms Start 08/04/22 11:25:50 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -118,26 +118,28 @@ Reading data from Excel; Rng = A1:D318
 Reading Slice: A1:D318
 Par  D4             3      w0                   C2:D318       A2:B318       C1:D1         
 Loading sheet s0
-Par  D5             2      s0                   --:--         --:--         --:--         
+Reading data from Excel; Rng = A1:C18
+Reading Slice: A1:C18
+Par  D5             2      s0                   B2:C18        A2:A18        B1:C1         
 Loading sheet ferthic0
 Reading data from Excel; Rng = A1:B36
 Reading Slice: A1:B36
 Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
-Total time = 2953 Ms
+Total time = 2844 Ms
 --- SDG Egypt Model v4 bot.gms(120) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 --- SDG Egypt Model v4 bot.gms(475) 3 Mb
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\outputsetting_bot.txt
 --- SDG Egypt Model v4 bot.gms(478) 3 Mb
---- Starting execution: elapsed 0:00:06.002
+--- Starting execution: elapsed 0:00:05.876
 --- SDG Egypt Model v4 bot.gms(454) 5 Mb
 --- Generating DNLP model sdgfinance
 --- SDG Egypt Model v4 bot.gms(457) 48 Mb
 ---   142,599 rows  144,914 columns  348,898 non-zeroes
 ---   98,092 nl-code  27,863 nl-non-zeroes
 --- SDG Egypt Model v4 bot.gms(457) 46 Mb
---- Executing CONOPT (Solvelink=2): elapsed 0:00:06.592
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:06.519
 
 CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 
@@ -150,13 +152,13 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
  
  
    Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
-      0   0        1.3000077676E+03 (Input point)
+      0   0        1.3005936385E+03 (Input point)
  
  ** An equation in the pre-triangular part of the model cannot
     be solved because the critical variable is at a bound.
  
 --- Reading solution for model sdgfinance
---- Executing after solve: elapsed 0:00:09.145
+--- Executing after solve: elapsed 0:00:09.288
 --- SDG Egypt Model v4 bot.gms(473) 46 Mb
 --- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
 --- SDG Egypt Model v4 bot.gms(478) 46 Mb
@@ -164,6 +166,6 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
 Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\output\modeloutput_bot.xlsx
-Total time = 2844 Ms
+Total time = 2563 Ms
 *** Status: Normal completion
---- Job SDG Egypt Model v4 bot.gms Stop 08/04/22 11:10:34 elapsed 0:00:12.087
+--- Job SDG Egypt Model v4 bot.gms Stop 08/04/22 11:26:02 elapsed 0:00:11.957

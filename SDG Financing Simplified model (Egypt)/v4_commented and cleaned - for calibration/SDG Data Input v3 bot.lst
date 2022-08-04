@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:10:10 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:25:17 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -206,7 +206,7 @@ GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4
  198  execute_unload '.\auxiliary\datainput_bot.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
  199   
  217  execute 'gdxxrw .\auxiliary\datainput_bot.gdx output=.\auxiliary\datainput_bot.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:10:10 Page 2
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:25:17 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -218,8 +218,8 @@ Include File Summary
      3       22 GDXIN          1      22  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\botswana_rawdata.gdx
 
 
-COMPILATION TIME     =        3.157 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:10:10 Page 3
+COMPILATION TIME     =        3.063 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:25:17 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -293,38 +293,52 @@ E x e c u t i o n
 
 ----     26 PARAMETER s0shf  
 
-            ps          ls          us          ts
+          s0sh          ps          ls          us          ts
 
-13      98.089
-14      98.089
-15      98.089
-16      13.622      84.466
-17      13.622      84.466
-18      13.622      17.642      66.824
-19      13.622      17.642      66.824
-20      13.622      17.642      66.824
-21      13.622      17.642      66.824
-22      13.622      17.642      66.824
-23      13.622      17.642      59.334       7.490
-24      13.622      17.642      59.334       7.490
+6       98.089
+7       98.089
+8       98.089
+9       98.089
+10      98.089
+11      98.089
+12      98.089
+13      84.466      98.089
+14      84.466      98.089
+15      84.466      98.089
+16      66.824      13.622      84.466
+17      66.824      13.622      84.466
+18      31.900      13.622      17.642      66.824
+19      31.900      13.622      17.642      66.824
+20      31.900      13.622      17.642      66.824
+21      31.900      13.622      17.642      66.824
+22      31.900      13.622      17.642      66.824
+23                  13.622      17.642      59.334       7.490
+24                  13.622      17.642      59.334       7.490
 
 
 ----     26 PARAMETER s0shm  
 
-            ps          ls          us          ts
+          s0sh          ps          ls          us          ts
 
-13      99.929
-14      99.929
-15      99.929
-16      18.383      81.546
-17      18.383      81.546
-18      18.383      30.338      51.208
-19      18.383      30.338      51.208
-20      18.383      30.338      51.208
-21      18.383      30.338      51.208
-22      18.383      30.338      51.208
-23      18.383      30.338      43.718       7.490
-24      18.383      30.338      43.718       7.490
+6       99.929
+7       99.929
+8       99.929
+9       99.929
+10      99.929
+11      99.929
+12      99.929
+13      81.546      99.929
+14      81.546      99.929
+15      81.546      99.929
+16      51.208      18.383      81.546
+17      51.208      18.383      81.546
+18      20.300      18.383      30.338      51.208
+19      20.300      18.383      30.338      51.208
+20      20.300      18.383      30.338      51.208
+21      20.300      18.383      30.338      51.208
+22      20.300      18.383      30.338      51.208
+23                  18.383      30.338      43.718       7.490
+24                  18.383      30.338      43.718       7.490
 
 
 ----     26 PARAMETER edattainf  
@@ -1150,11 +1164,29 @@ E x e c u t i o n
 
 ----    195 PARAMETER s0  
 
-                      ( ALL       0.000 )
+          male      female
+
+6        0.027       0.026
+7        0.027       0.026
+8        0.027       0.026
+9        0.026       0.025
+10       0.026       0.025
+11       0.025       0.024
+12       0.025       0.024
+13       0.020       0.020
+14       0.020       0.020
+15       0.019       0.020
+16       0.012       0.015
+17       0.012       0.015
+18       0.005       0.007
+19       0.004       0.007
+20       0.004       0.007
+21       0.004       0.007
+22       0.004       0.006
 
 
 
-EXECUTION TIME       =        3.078 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        2.843 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN
