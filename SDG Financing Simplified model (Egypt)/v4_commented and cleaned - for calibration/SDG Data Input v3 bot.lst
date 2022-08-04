@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:00:06 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:10:10 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -31,181 +31,182 @@ GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4
 --- LOAD  s0shm = 5:D5
 --- LOAD  edattainf = 6:D6
 --- LOAD  edattainm = 7:D7
-  25  display age5yr,asfr,survival,s0shf,s0shm,edattainf,edattainm;
-  26   
-  27  parameter avag(ag);
-  28  avag(ag) = (ord(ag)-1)*5+2;
-  29   
-  31   
-  32  display avag;
-  33   
-  34  loop(ag,
-  35  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+2) = age5yr(ag,g)/5000;
-  36  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+3) = (age5yr(ag,g)+(1/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
-  37  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+4) = (age5yr(ag,g)+(2/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
-  38  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+5) = (age5yr(ag,g)+(3/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
-  39  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+6) = (age5yr(ag,g)+(4/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;);
-  40   
-  41  popg0("1",g) = popg0("2",g) + (popg0("2",g) - popg0("3",g));
-  42   
-  43  display popg0;
-  44   
-  45  loop(agfert,
-  46  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"local")/1000;
-  47  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"local")/1000;
-  48  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"local")/1000;
-  49  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"local")/1000;
-  50  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"local")/1000;);
-  51   
-  52  display fert0;
-  53  parameter tfr0;
-  54  tfr0 = sum(a,fert0(a));
-  55  display tfr0;
-  56   
-  57  parameter ferthic0(a);
-  58   
-  59  loop(agfert,
-  60  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"hic")/1000;
-  61  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"hic")/1000;
-  62  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"hic")/1000;
-  63  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"hic")/1000;
-  64  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"hic")/1000;);
-  65   
-  66  display ferthic0;
-  67  parameter tfrhic0;
-  68  tfrhic0 = sum(a,ferthic0(a));
-  69  display tfrhic0;
-  70   
-  71  loop(ag,
-  72  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mlocal")*(survival(a+4,"mlocal")/survival(a-1,"mlocal"))**(1/5);
-  73  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mlocal")*(survival(a+3,"mlocal")/survival(a-2,"mlocal"))**(2/5);
-  74  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mlocal")*(survival(a+2,"mlocal")/survival(a-3,"mlocal"))**(3/5);
-  75  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mlocal")*(survival(a+1,"mlocal")/survival(a-4,"mlocal"))**(4/5);
-  76  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mlocal")*(survival(a  ,"mlocal")/survival(a-5,"mlocal"))**(5/5);
-  77  survival(a,"flocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"flocal")*(survival(a+4,"flocal")/survival(a-1,"mlocal"))**(1/5);
-  78  survival(a,"flocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"flocal")*(survival(a+3,"flocal")/survival(a-2,"mlocal"))**(2/5);
-  79  survival(a,"flocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"flocal")*(survival(a+2,"flocal")/survival(a-3,"mlocal"))**(3/5);
-  80  survival(a,"flocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"flocal")*(survival(a+1,"flocal")/survival(a-4,"mlocal"))**(4/5);
-  81  survival(a,"flocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"flocal")*(survival(a  ,"flocal")/survival(a-5,"mlocal"))**(5/5);
-  82  survival(a,"mhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mhic")*(survival(a+4,"mhic")/survival(a-1,"mhic"))**(1/5);
-  83  survival(a,"mhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mhic")*(survival(a+3,"mhic")/survival(a-2,"mhic"))**(2/5);
-  84  survival(a,"mhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mhic")*(survival(a+2,"mhic")/survival(a-3,"mhic"))**(3/5);
-  85  survival(a,"mhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mhic")*(survival(a+1,"mhic")/survival(a-4,"mhic"))**(4/5);
-  86  survival(a,"mhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mhic")* (survival(a,"mhic")/survival(a-5,"mhic"))**(5/5);
-  87  survival(a,"fhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"fhic")*(survival(a+4,"fhic")/survival(a-1,"fhic"))**(1/5);
-  88  survival(a,"fhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"fhic")*(survival(a+3,"fhic")/survival(a-2,"fhic"))**(2/5);
-  89  survival(a,"fhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"fhic")*(survival(a+2,"fhic")/survival(a-3,"fhic"))**(3/5);
-  90  survival(a,"fhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"fhic")*(survival(a+1,"fhic")/survival(a-4,"fhic"))**(4/5);
-  91  survival(a,"fhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"fhic")*(survival(a  ,"fhic")/survival(a-5,"fhic"))**(5/5););
-  92   
-  93  survival("2","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(1/4);
-  94  survival("3","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(2/4);
-  95  survival("4","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(3/4);
-  96  survival("2","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(1/4);
-  97  survival("3","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(2/4);
-  98  survival("4","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(3/4);
-  99  survival("2","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(1/4);
- 100  survival("3","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(2/4);
- 101  survival("4","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(3/4);
- 102  survival("2","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(1/4);
- 103  survival("3","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(2/4);
- 104  survival("4","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(3/4);
- 105   
- 106  display survival;
- 107   
- 108  surv0(a299,surv) = survival(a299+1,surv)/survival(a299,surv);
- 109   
- 110  surv0("1",surv) = survival("1",surv)/100000;
- 111   
- 112  display surv0;
- 113   
- 114  display edattainf, edattainm;
- 115   
- 116  wf0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ps");
- 117  wf0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ls");
- 118  wf0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"us");
- 119  wf0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ts");
- 120  wf0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","no");
- 121  wf0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","no");
- 122  wf0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","no");
- 123  wf0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","no");
- 124  wf0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ptotal") - edattainf("25","34","pc");
- 125  wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ptotal") - edattainf("35","44","pc");
- 126  wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ptotal") - edattainf("45","54","pc");
- 127  wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ptotal") - edattainf("55","64","pc");
- 128  wf0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","pc");
- 129  wf0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","pc");
- 130  wf0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","pc");
- 131  wf0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","pc");
- 132  wf0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","stotal")-edattainf("25","34","sc");
- 133  wf0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","stotal")-edattainf("35","44","sc");
- 134  wf0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","stotal")-edattainf("45","54","sc");
- 135  wf0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","stotal")-edattainf("55","64","sc");
- 136  wf0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","sc");
- 137  wf0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","sc");
- 138  wf0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","sc");
- 139  wf0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","sc");
- 140  wf0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ttotal")-edattainf("25","34","tc");
- 141  wf0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ttotal")-edattainf("35","44","tc");
- 142  wf0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ttotal")-edattainf("45","54","tc");
- 143  wf0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ttotal")-edattainf("55","64","tc");
- 144  wf0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","tc");
- 145  wf0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","tc");
- 146  wf0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","tc");
- 147  wf0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","tc");
- 148   
- 149  wm0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ps");
- 150  wm0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ls");
- 151  wm0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"us");
- 152  wm0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ts");
- 153  wm0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","no");
- 154  wm0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","no");
- 155  wm0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","no");
- 156  wm0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","no");
- 157  wm0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ptotal") - edattainm("25","34","pc");
- 158  wm0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ptotal") - edattainm("35","44","pc");
- 159  wm0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ptotal") - edattainm("45","54","pc");
- 160  wm0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ptotal") - edattainm("55","64","pc");
- 161  wm0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","pc");
- 162  wm0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","pc");
- 163  wm0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","pc");
- 164  wm0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","pc");
- 165  wm0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","stotal")-edattainm("25","34","sc");
- 166  wm0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","stotal")-edattainm("35","44","sc");
- 167  wm0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","stotal")-edattainm("45","54","sc");
- 168  wm0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","stotal")-edattainm("55","64","sc");
- 169  wm0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","sc");
- 170  wm0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","sc");
- 171  wm0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","sc");
- 172  wm0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","sc");
- 173  wm0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ttotal")-edattainm("25","34","tc");
- 174  wm0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ttotal")-edattainm("35","44","tc");
- 175  wm0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ttotal")-edattainm("45","54","tc");
- 176  wm0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ttotal")-edattainm("55","64","tc");
- 177  wm0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","tc");
- 178  wm0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","tc");
- 179  wm0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","tc");
- 180  wm0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","tc");
- 181   
+  25   
+  26  display age5yr,asfr,survival,s0shf,s0shm,edattainf,edattainm;
+  27   
+  28  parameter avag(ag);
+  29  avag(ag) = (ord(ag)-1)*5+2;
+  30   
+  32   
+  33  display avag;
+  34   
+  35  loop(ag,
+  36  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+2) = age5yr(ag,g)/5000;
+  37  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+3) = (age5yr(ag,g)+(1/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
+  38  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+4) = (age5yr(ag,g)+(2/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
+  39  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+5) = (age5yr(ag,g)+(3/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
+  40  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+6) = (age5yr(ag,g)+(4/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;);
+  41   
+  42  popg0("1",g) = popg0("2",g) + (popg0("2",g) - popg0("3",g));
+  43   
+  44  display popg0;
+  45   
+  46  loop(agfert,
+  47  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"local")/1000;
+  48  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"local")/1000;
+  49  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"local")/1000;
+  50  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"local")/1000;
+  51  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"local")/1000;);
+  52   
+  53  display fert0;
+  54  parameter tfr0;
+  55  tfr0 = sum(a,fert0(a));
+  56  display tfr0;
+  57   
+  58  parameter ferthic0(a);
+  59   
+  60  loop(agfert,
+  61  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"hic")/1000;
+  62  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"hic")/1000;
+  63  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"hic")/1000;
+  64  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"hic")/1000;
+  65  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"hic")/1000;);
+  66   
+  67  display ferthic0;
+  68  parameter tfrhic0;
+  69  tfrhic0 = sum(a,ferthic0(a));
+  70  display tfrhic0;
+  71   
+  72  loop(ag,
+  73  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mlocal")*(survival(a+4,"mlocal")/survival(a-1,"mlocal"))**(1/5);
+  74  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mlocal")*(survival(a+3,"mlocal")/survival(a-2,"mlocal"))**(2/5);
+  75  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mlocal")*(survival(a+2,"mlocal")/survival(a-3,"mlocal"))**(3/5);
+  76  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mlocal")*(survival(a+1,"mlocal")/survival(a-4,"mlocal"))**(4/5);
+  77  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mlocal")*(survival(a  ,"mlocal")/survival(a-5,"mlocal"))**(5/5);
+  78  survival(a,"flocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"flocal")*(survival(a+4,"flocal")/survival(a-1,"mlocal"))**(1/5);
+  79  survival(a,"flocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"flocal")*(survival(a+3,"flocal")/survival(a-2,"mlocal"))**(2/5);
+  80  survival(a,"flocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"flocal")*(survival(a+2,"flocal")/survival(a-3,"mlocal"))**(3/5);
+  81  survival(a,"flocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"flocal")*(survival(a+1,"flocal")/survival(a-4,"mlocal"))**(4/5);
+  82  survival(a,"flocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"flocal")*(survival(a  ,"flocal")/survival(a-5,"mlocal"))**(5/5);
+  83  survival(a,"mhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mhic")*(survival(a+4,"mhic")/survival(a-1,"mhic"))**(1/5);
+  84  survival(a,"mhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mhic")*(survival(a+3,"mhic")/survival(a-2,"mhic"))**(2/5);
+  85  survival(a,"mhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mhic")*(survival(a+2,"mhic")/survival(a-3,"mhic"))**(3/5);
+  86  survival(a,"mhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mhic")*(survival(a+1,"mhic")/survival(a-4,"mhic"))**(4/5);
+  87  survival(a,"mhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mhic")* (survival(a,"mhic")/survival(a-5,"mhic"))**(5/5);
+  88  survival(a,"fhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"fhic")*(survival(a+4,"fhic")/survival(a-1,"fhic"))**(1/5);
+  89  survival(a,"fhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"fhic")*(survival(a+3,"fhic")/survival(a-2,"fhic"))**(2/5);
+  90  survival(a,"fhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"fhic")*(survival(a+2,"fhic")/survival(a-3,"fhic"))**(3/5);
+  91  survival(a,"fhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"fhic")*(survival(a+1,"fhic")/survival(a-4,"fhic"))**(4/5);
+  92  survival(a,"fhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"fhic")*(survival(a  ,"fhic")/survival(a-5,"fhic"))**(5/5););
+  93   
+  94  survival("2","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(1/4);
+  95  survival("3","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(2/4);
+  96  survival("4","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(3/4);
+  97  survival("2","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(1/4);
+  98  survival("3","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(2/4);
+  99  survival("4","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(3/4);
+ 100  survival("2","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(1/4);
+ 101  survival("3","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(2/4);
+ 102  survival("4","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(3/4);
+ 103  survival("2","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(1/4);
+ 104  survival("3","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(2/4);
+ 105  survival("4","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(3/4);
+ 106   
+ 107  display survival;
+ 108   
+ 109  surv0(a299,surv) = survival(a299+1,surv)/survival(a299,surv);
+ 110   
+ 111  surv0("1",surv) = survival("1",surv)/100000;
+ 112   
+ 113  display surv0;
+ 114   
+ 115  display edattainf, edattainm;
+ 116   
+ 117  wf0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ps");
+ 118  wf0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ls");
+ 119  wf0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"us");
+ 120  wf0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ts");
+ 121  wf0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","no");
+ 122  wf0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","no");
+ 123  wf0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","no");
+ 124  wf0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","no");
+ 125  wf0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ptotal") - edattainf("25","34","pc");
+ 126  wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ptotal") - edattainf("35","44","pc");
+ 127  wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ptotal") - edattainf("45","54","pc");
+ 128  wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ptotal") - edattainf("55","64","pc");
+ 129  wf0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","pc");
+ 130  wf0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","pc");
+ 131  wf0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","pc");
+ 132  wf0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","pc");
+ 133  wf0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","stotal")-edattainf("25","34","sc");
+ 134  wf0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","stotal")-edattainf("35","44","sc");
+ 135  wf0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","stotal")-edattainf("45","54","sc");
+ 136  wf0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","stotal")-edattainf("55","64","sc");
+ 137  wf0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","sc");
+ 138  wf0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","sc");
+ 139  wf0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","sc");
+ 140  wf0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","sc");
+ 141  wf0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ttotal")-edattainf("25","34","tc");
+ 142  wf0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ttotal")-edattainf("35","44","tc");
+ 143  wf0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ttotal")-edattainf("45","54","tc");
+ 144  wf0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ttotal")-edattainf("55","64","tc");
+ 145  wf0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","tc");
+ 146  wf0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","tc");
+ 147  wf0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","tc");
+ 148  wf0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","tc");
+ 149   
+ 150  wm0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ps");
+ 151  wm0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ls");
+ 152  wm0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"us");
+ 153  wm0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ts");
+ 154  wm0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","no");
+ 155  wm0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","no");
+ 156  wm0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","no");
+ 157  wm0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","no");
+ 158  wm0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ptotal") - edattainm("25","34","pc");
+ 159  wm0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ptotal") - edattainm("35","44","pc");
+ 160  wm0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ptotal") - edattainm("45","54","pc");
+ 161  wm0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ptotal") - edattainm("55","64","pc");
+ 162  wm0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","pc");
+ 163  wm0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","pc");
+ 164  wm0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","pc");
+ 165  wm0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","pc");
+ 166  wm0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","stotal")-edattainm("25","34","sc");
+ 167  wm0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","stotal")-edattainm("35","44","sc");
+ 168  wm0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","stotal")-edattainm("45","54","sc");
+ 169  wm0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","stotal")-edattainm("55","64","sc");
+ 170  wm0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","sc");
+ 171  wm0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","sc");
+ 172  wm0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","sc");
+ 173  wm0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","sc");
+ 174  wm0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ttotal")-edattainm("25","34","tc");
+ 175  wm0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ttotal")-edattainm("35","44","tc");
+ 176  wm0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ttotal")-edattainm("45","54","tc");
+ 177  wm0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ttotal")-edattainm("55","64","tc");
+ 178  wm0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","tc");
+ 179  wm0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","tc");
+ 180  wm0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","tc");
+ 181  wm0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","tc");
  182   
- 183  display wf0,wm0;
- 184  parameter w0(a,educ,g);
- 185  w0(a,educ,"female") = wf0(a,educ)*.01*popg0(a,"female");
- 186  w0(a,educ,"male") = wm0(a,educ)*.01*popg0(a,"male");
- 187   
- 188  display w0;
- 189   
- 190  parameter s0(a,g);
- 191  s0(a,"female") = popg0(a,"female")*s0shf(a,"s0sh")*.01;
- 192  s0(a,"male") = popg0(a,"male")*s0shm(a,"s0sh")*.01;
- 193   
- 194  display s0;
- 195   
- 196  * dataloader.gdx corresponds to egyptdatainput.gdx in previous versions
- 197  execute_unload '.\auxiliary\datainput_bot.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
- 198   
- 216  execute 'gdxxrw .\auxiliary\datainput_bot.gdx output=.\auxiliary\datainput_bot.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:00:06 Page 2
+ 183   
+ 184  display wf0,wm0;
+ 185  parameter w0(a,educ,g);
+ 186  w0(a,educ,"female") = wf0(a,educ)*.01*popg0(a,"female");
+ 187  w0(a,educ,"male") = wm0(a,educ)*.01*popg0(a,"male");
+ 188   
+ 189  display w0;
+ 190   
+ 191  parameter s0(a,g);
+ 192  s0(a,"female") = popg0(a,"female")*s0shf(a,"s0sh")*.01;
+ 193  s0(a,"male") = popg0(a,"male")*s0shm(a,"s0sh")*.01;
+ 194   
+ 195  display s0;
+ 196   
+ 197  * dataloader.gdx corresponds to egyptdatainput.gdx in previous versions
+ 198  execute_unload '.\auxiliary\datainput_bot.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
+ 199   
+ 217  execute 'gdxxrw .\auxiliary\datainput_bot.gdx output=.\auxiliary\datainput_bot.xlsx @.\auxiliary\loadersetting.txt';
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:10:10 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -217,13 +218,13 @@ Include File Summary
      3       22 GDXIN          1      22  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\botswana_rawdata.gdx
 
 
-COMPILATION TIME     =        3.078 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:00:06 Page 3
+COMPILATION TIME     =        3.157 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 11:10:10 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----     25 PARAMETER age5yr  
+----     26 PARAMETER age5yr  
 
              male      female
 
@@ -250,7 +251,7 @@ E x e c u t i o n
 100+                    0.002
 
 
-----     25 PARAMETER asfr  
+----     26 PARAMETER asfr  
 
             local         hic
 
@@ -263,7 +264,7 @@ E x e c u t i o n
 45-49       2.600       1.430
 
 
-----     25 PARAMETER survival  
+----     26 PARAMETER survival  
 
          mlocal      flocal        mhic        fhic
 
@@ -290,7 +291,7 @@ E x e c u t i o n
 100      65.150     201.450    2308.821    5401.164
 
 
-----     25 PARAMETER s0shf  
+----     26 PARAMETER s0shf  
 
             ps          ls          us          ts
 
@@ -308,7 +309,7 @@ E x e c u t i o n
 24      13.622      17.642      59.334       7.490
 
 
-----     25 PARAMETER s0shm  
+----     26 PARAMETER s0shm  
 
             ps          ls          us          ts
 
@@ -326,7 +327,7 @@ E x e c u t i o n
 24      18.383      30.338      43.718       7.490
 
 
-----     25 PARAMETER edattainf  
+----     26 PARAMETER edattainf  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -337,7 +338,7 @@ E x e c u t i o n
 55.64      28.630      14.950       5.970      52.810      19.410       3.610       2.280      66.000
 
 
-----     25 PARAMETER edattainm  
+----     26 PARAMETER edattainm  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -348,12 +349,12 @@ E x e c u t i o n
 55.64      34.470      10.950       5.160      47.500      20.550       7.090       5.420      47.000
 
 
-----     32 PARAMETER avag  
+----     33 PARAMETER avag  
 
 0-4     2.000,    5-9     7.000,    10-14  12.000,    15-19  17.000,    20-24  22.000,    25-29  27.000,    30-34  32.000,    35-39  37.000,    40-44  42.000,    45-49  47.000,    50-54  52.000,    55-59  57.000,    60-64  62.000,    65-69  67.000,    70-74  72.000,    75-79  77.000,    80-84  82.000,    85-89  87.000,    90-94  92.000,    95-99  97.000,    100+  102.000
 
 
-----     43 PARAMETER popg0  
+----     44 PARAMETER popg0  
 
            male      female
 
@@ -459,21 +460,21 @@ E x e c u t i o n
 100 1.200000E-6 5.200000E-6
 
 
-----     52 PARAMETER fert0  
+----     53 PARAMETER fert0  
 
 15 0.043,    16 0.043,    17 0.043,    18 0.043,    19 0.043,    20 0.141,    21 0.141,    22 0.141,    23 0.141,    24 0.141,    25 0.170,    26 0.170,    27 0.170,    28 0.170,    29 0.170,    30 0.106,    31 0.106,    32 0.106,    33 0.106,    34 0.106,    35 0.055,    36 0.055,    37 0.055,    38 0.055,    39 0.055,    40 0.020,    41 0.020,    42 0.020,    43 0.020,    44 0.020,    45 0.003,    46 0.003,    47 0.003,    48 0.003,    49 0.003
 
 
-----     55 PARAMETER tfr0                 =        2.689  
+----     56 PARAMETER tfr0                 =        2.689  
 
-----     66 PARAMETER ferthic0  
+----     67 PARAMETER ferthic0  
 
 15 0.012,    16 0.012,    17 0.012,    18 0.012,    19 0.012,    20 0.046,    21 0.046,    22 0.046,    23 0.046,    24 0.046,    25 0.088,    26 0.088,    27 0.088,    28 0.088,    29 0.088,    30 0.107,    31 0.107,    32 0.107,    33 0.107,    34 0.107,    35 0.065,    36 0.065,    37 0.065,    38 0.065,    39 0.065,    40 0.015,    41 0.015,    42 0.015,    43 0.015,    44 0.015,    45 0.001,    46 0.001,    47 0.001,    48 0.001,    49 0.001
 
 
-----     69 PARAMETER tfrhic0              =        1.673  
+----     70 PARAMETER tfrhic0              =        1.673  
 
-----    106 PARAMETER survival  
+----    107 PARAMETER survival  
 
          mlocal      flocal        mhic        fhic
 
@@ -579,7 +580,7 @@ E x e c u t i o n
 100      65.150   14094.734    2308.821    5401.164
 
 
-----    112 PARAMETER surv0  
+----    113 PARAMETER surv0  
 
         mlocal      flocal        mhic        fhic
 
@@ -684,7 +685,7 @@ E x e c u t i o n
 99       0.612       0.767       0.757       0.785
 
 
-----    114 PARAMETER edattainf  
+----    115 PARAMETER edattainf  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -695,7 +696,7 @@ E x e c u t i o n
 55.64      28.630      14.950       5.970      52.810      19.410       3.610       2.280      66.000
 
 
-----    114 PARAMETER edattainm  
+----    115 PARAMETER edattainm  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -706,7 +707,7 @@ E x e c u t i o n
 55.64      34.470      10.950       5.160      47.500      20.550       7.090       5.420      47.000
 
 
-----    183 PARAMETER wf0  
+----    184 PARAMETER wf0  
 
              6           9          12          15          18          20          22
 
@@ -765,7 +766,7 @@ E x e c u t i o n
 65      28.630       8.980       5.970      33.400      19.410       1.330       2.280
 
 
-----    183 PARAMETER wm0  
+----    184 PARAMETER wm0  
 
              6           9          12          15          18          20          22
 
@@ -824,7 +825,7 @@ E x e c u t i o n
 65      34.470       5.790       5.160      26.950      20.550       1.670       5.420
 
 
-----    188 PARAMETER w0  
+----    189 PARAMETER w0  
 
              male      female
 
@@ -1147,13 +1148,13 @@ E x e c u t i o n
 65.22 2.233105E-4 1.374065E-4
 
 
-----    194 PARAMETER s0  
+----    195 PARAMETER s0  
 
                       ( ALL       0.000 )
 
 
 
-EXECUTION TIME       =        3.047 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        3.078 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN

@@ -1,4 +1,4 @@
---- Job SDG Egypt Model v4 bot.gms Start 08/04/22 10:54:54 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Egypt Model v4 bot.gms Start 08/04/22 11:07:15 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -78,7 +78,7 @@ Par  debtqlim       0      Hardcode             B17:B17       --:--         --:-
 Par  gcostsh        0      Hardcode             B18:B18       --:--         --:--         
 Par  pubgdpsh       0      Hardcode             B19:B19       --:--         --:--         
 Par  lowerbound     0      Hardcode             B20:B20       --:--         --:--         
-Total time = 2516 Ms
+Total time = 3000 Ms
 --- SDG Egypt Model v4 bot.gms(91) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
@@ -122,47 +122,18 @@ Loading sheet ferthic0
 Reading data from Excel; Rng = A1:B36
 Reading Slice: A1:B36
 Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
-Total time = 2750 Ms
+Total time = 2812 Ms
 --- SDG Egypt Model v4 bot.gms(120) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 --- SDG Egypt Model v4 bot.gms(475) 3 Mb
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\outputsetting_bot.txt
---- SDG Egypt Model v4 bot.gms(478) 3 Mb
---- Starting execution: elapsed 0:00:05.499
---- SDG Egypt Model v4 bot.gms(454) 5 Mb
---- Generating DNLP model sdgfinance
---- SDG Egypt Model v4 bot.gms(457) 48 Mb
----   142,599 rows  144,914 columns  348,898 non-zeroes
----   98,092 nl-code  27,863 nl-non-zeroes
---- SDG Egypt Model v4 bot.gms(457) 46 Mb
---- Executing CONOPT (Solvelink=2): elapsed 0:00:05.981
-
-CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-
- 
- 
-    C O N O P T 3   version 3.17K
-    Copyright (C)   ARKI Consulting and Development A/S
-                    Bagsvaerdvej 246 A
-                    DK-2880 Bagsvaerd, Denmark
- 
- 
-   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
-      0   0        1.3000077676E+03 (Input point)
- 
- ** An equation in the pre-triangular part of the model cannot
-    be solved because the critical variable is at a bound.
- 
---- Reading solution for model sdgfinance
---- Executing after solve: elapsed 0:00:08.012
---- SDG Egypt Model v4 bot.gms(473) 46 Mb
---- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
---- SDG Egypt Model v4 bot.gms(478) 46 Mb
-
-GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
-Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\output\modeloutput_bot.xlsx
-Total time = 2500 Ms
-*** Status: Normal completion
---- Job SDG Egypt Model v4 bot.gms Stop 08/04/22 10:55:05 elapsed 0:00:10.626
+--- SDG Egypt Model v4 bot.gms(478) 3 Mb 2 Errors
+*** Error 191 in C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Egypt Model v4 bot.gms
+    Closing quote missing
+*** Error 409 in C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Egypt Model v4 bot.gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- SDG Egypt Model v4 bot.gms(479) 3 Mb 2 Errors
+*** Status: Compilation error(s)
+--- Job SDG Egypt Model v4 bot.gms Stop 08/04/22 11:07:21 elapsed 0:00:06.071

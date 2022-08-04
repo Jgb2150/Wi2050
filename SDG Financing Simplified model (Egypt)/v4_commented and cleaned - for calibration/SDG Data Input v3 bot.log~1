@@ -1,10 +1,10 @@
---- Job SDG Data Input v3 bot.gms Start 08/04/22 10:39:43 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Data Input v3 bot.gms Start 08/04/22 11:00:06 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
     Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 bot.gms"
     PageSize 0
-    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225c\"
+    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225b\"
     SysDir D:\Program\37GAMS\
     LogOption 3
     ErrMsg 1
@@ -65,14 +65,14 @@ Loading sheet edattainm
 Reading data from Excel; Rng = A1:J6
 Reading Slice: A1:J6
 Par  D7             3      edattainm            C2:J6         A2:B6         C1:J1         
-Total time = 3171 Ms
+Total time = 2969 Ms
 --- SDG Data Input v3 bot.gms(22) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\botswana_rawdata.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\botswana_rawdata.gdx
 --- SDG Data Input v3 bot.gms(199) 3 Mb
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\loadersetting.txt
 --- SDG Data Input v3 bot.gms(216) 3 Mb
---- Starting execution: elapsed 0:00:03.337
+--- Starting execution: elapsed 0:00:03.095
 --- SDG Data Input v3 bot.gms(197) 4 Mb
 --- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 --- SDG Data Input v3 bot.gms(216) 4 Mb
@@ -80,6 +80,6 @@ Total time = 3171 Ms
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.xlsx
-Total time = 6515 Ms
+Total time = 2891 Ms
 *** Status: Normal completion
---- Job SDG Data Input v3 bot.gms Stop 08/04/22 10:39:53 elapsed 0:00:10.029
+--- Job SDG Data Input v3 bot.gms Stop 08/04/22 11:00:12 elapsed 0:00:06.134

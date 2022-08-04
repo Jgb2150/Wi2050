@@ -1,4 +1,4 @@
-$title SDG Financing Simplified model Egypt_ commented and cleaned_v4_bot
+$title SDG Financing Simplified model Egypt_ commented and cleaned_v4_bar
 $stitle Last Updated: July 27, 2022
 
 
@@ -469,7 +469,7 @@ parameter outputvar(outputvarlist, t);
         outputvar("Healthcare Cost (%GDP)", t) = hlcostgdp.L(t);
         outputvar("Infrastructure Investment (%GDP)", t) = invfgdp.L(t);
         outputvar("Reinvestment (%GDP)", t) = outlaygdp.L(t);
-        
+
 Execute_Unload '.\auxiliary\modeloutput_bot.gdx', outputvar;
 
 $onEcho > .\auxiliary\outputsetting_bot.txt

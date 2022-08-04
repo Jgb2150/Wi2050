@@ -22,6 +22,7 @@ $CALL GDXXRW .\input\botswana_rawdata.xlsx output=".\auxiliary\botswana_rawdata.
 $GDXIN ".\auxiliary\botswana_rawdata.gdx"
 $LOAD age5yr=D1 asfr=D2 survival=D3 s0shf=D4 s0shm=D5 edattainf=D6 edattainm=D7
 $GDXIN
+
 display age5yr,asfr,survival,s0shf,s0shm,edattainf,edattainm;
 
 parameter avag(ag);
