@@ -1,12 +1,11 @@
-
---- Job SDG Egypt Model v4 bot.gms Start 08/04/22 11:08:13 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Egypt Model v4 bot.gms Start 08/04/22 11:30:01 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
-    D:\Program\37GAMS\gmsprmNT.txt
+    C:\GAMS\37\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Egypt Model v4 bot.gms"
+    Input "D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Egypt Model v4 bot.gms"
     PageSize 0
-    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225b\"
-    SysDir D:\Program\37GAMS\
+    ScrDir "D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225b\"
+    SysDir C:\GAMS\37\
     LogOption 3
     ErrMsg 1
     ErrorLog 99
@@ -14,18 +13,18 @@
     LstTitleLeftAligned 1
 Licensee: Large MUD - 20 User License                    G211208|0002AR-WIN
           Columbia University, Earth Institute                       DC4533
-          C:\Users\Yunjie\Documents\GAMS\gamslice.txt
+          C:\Users\weiti\OneDrive\Documents\GAMS\gamslice.txt
           License Admin: Jeffrey Sachs, sachs@columbia.edu                 
-Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
+Processor information: 1 socket(s), 6 core(s), and 12 thread(s) available
 GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
 --- Starting compilation
 --- SDG Egypt Model v4 bot.gms(90) 3 Mb
 --- call GDXXRW .\input\paraminput_bot.xlsx output=.\auxiliary\paraminput_bot.gdx Index=Index!a1 trace=3
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Excel version 12.0
-Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\input\paraminput_bot.xlsx
-Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
+Excel version 16.0
+Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\input\paraminput_bot.xlsx
+Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
 Substituting Index
 Loading sheet Index
 Reading data from Excel; Rng = A1:E101
@@ -79,17 +78,17 @@ Par  debtqlim       0      Hardcode             B17:B17       --:--         --:-
 Par  gcostsh        0      Hardcode             B18:B18       --:--         --:--         
 Par  pubgdpsh       0      Hardcode             B19:B19       --:--         --:--         
 Par  lowerbound     0      Hardcode             B20:B20       --:--         --:--         
-Total time = 2828 Ms
+Total time = 875 Ms
 --- SDG Egypt Model v4 bot.gms(91) 3 Mb
---- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
---- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
+--- GDXin=D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
+--- GDX File ($gdxIn) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_bot.gdx
 --- SDG Egypt Model v4 bot.gms(119) 3 Mb
 --- call GDXXRW .\auxiliary\datainput_bot.xlsx output=.\auxiliary\datainput_bot.gdx Index=index!a1 trace=3
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Excel version 12.0
-Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.xlsx
-Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
+Excel version 16.0
+Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.xlsx
+
 Substituting Index
 Loading sheet index
 Reading data from Excel; Rng = A1:E7
@@ -118,26 +117,28 @@ Reading data from Excel; Rng = A1:D318
 Reading Slice: A1:D318
 Par  D4             3      w0                   C2:D318       A2:B318       C1:D1         
 Loading sheet s0
-Par  D5             2      s0                   --:--         --:--         --:--         
+Reading data from Excel; Rng = A1:C18
+Reading Slice: A1:C18
+Par  D5             2      s0                   B2:C18        A2:A18        B1:C1         
 Loading sheet ferthic0
 Reading data from Excel; Rng = A1:B36
 Reading Slice: A1:B36
 Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
-Total time = 3015 Ms
+Total time = 766 Ms
 --- SDG Egypt Model v4 bot.gms(120) 3 Mb
---- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
---- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
+--- GDXin=D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
+--- GDX File ($gdxIn) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 --- SDG Egypt Model v4 bot.gms(475) 3 Mb
---- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\outputsetting_bot.txt
+--- $echo File D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\outputsetting_bot.txt
 --- SDG Egypt Model v4 bot.gms(478) 3 Mb
---- Starting execution: elapsed 0:00:06.133
+--- Starting execution: elapsed 0:00:02.007
 --- SDG Egypt Model v4 bot.gms(454) 5 Mb
 --- Generating DNLP model sdgfinance
 --- SDG Egypt Model v4 bot.gms(457) 48 Mb
 ---   142,599 rows  144,914 columns  348,898 non-zeroes
 ---   98,092 nl-code  27,863 nl-non-zeroes
 --- SDG Egypt Model v4 bot.gms(457) 46 Mb
---- Executing CONOPT (Solvelink=2): elapsed 0:00:06.691
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:02.640
 
 CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 
@@ -150,20 +151,21 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
  
  
    Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
-      0   0        1.3000077676E+03 (Input point)
+      0   0        1.3005936385E+03 (Input point)
  
  ** An equation in the pre-triangular part of the model cannot
     be solved because the critical variable is at a bound.
  
 --- Reading solution for model sdgfinance
---- Executing after solve: elapsed 0:00:09.245
+--- SDG Egypt Model v4 bot.gms(457) 46 Mb  60 secs
+--- Executing after solve: elapsed 0:01:05.868
 --- SDG Egypt Model v4 bot.gms(473) 46 Mb
---- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
+--- GDX File (execute_unload) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
 --- SDG Egypt Model v4 bot.gms(478) 46 Mb
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
-Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\output\modeloutput_bot.xlsx
-Total time = 2937 Ms
+Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_bot.gdx
+Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\output\modeloutput_bot.xlsx
+Total time = 766 Ms
 *** Status: Normal completion
---- Job SDG Egypt Model v4 bot.gms Stop 08/04/22 11:08:25 elapsed 0:00:12.347
+--- Job SDG Egypt Model v4 bot.gms Stop 08/04/22 11:31:08 elapsed 0:01:06.772
