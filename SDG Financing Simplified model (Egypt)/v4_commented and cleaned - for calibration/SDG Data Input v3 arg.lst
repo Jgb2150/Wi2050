@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/03/22 15:45:19 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 10:52:00 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -22,8 +22,9 @@ C o m p i l a t i o n
   17  parameter popg0(a,g), fert0(a), surv0(a,surv), wf0(a,educ), wm0(a,educ);
   18  parameter age5yr(ag,g),asfr(agfert,fer),survival(a,surv),edattainf(a,a,edu),edattainm(a,a,edu),s0shf(a,age624),s0shm(a,age624),bed(secp,eda);
   19   
-  20  * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
-GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\argentina_rawdata.gdx
+  20   
+  21  * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
+GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\argentina_rawdata.gdx
 --- LOAD  age5yr = 1:D1
 --- LOAD  asfr = 2:D2
 --- LOAD  survival = 3:D3
@@ -31,200 +32,200 @@ GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4
 --- LOAD  s0shm = 5:D5
 --- LOAD  edattainf = 6:D6
 --- LOAD  edattainm = 7:D7
-  25   
-  26  display age5yr,asfr,survival,s0shf,s0shm,edattainf,edattainm;
-  27   
-  28  parameter avag(ag);
-  29  avag(ag) = (ord(ag)-1)*5+2;
-  30   
-  32   
-  33  display avag;
-  34   
-  35  loop(ag,
-  36  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+2) = age5yr(ag,g)/5000;
-  37  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+3) = (age5yr(ag,g)+(1/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
-  38  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+4) = (age5yr(ag,g)+(2/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
-  39  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+5) = (age5yr(ag,g)+(3/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
-  40  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+6) = (age5yr(ag,g)+(4/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;);
-  41   
-  42  popg0("1",g) = popg0("2",g) + (popg0("2",g) - popg0("3",g));
-  43   
-  44  display popg0;
-  45   
-  46  loop(agfert,
-  47  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"local")/1000;
-  48  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"local")/1000;
-  49  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"local")/1000;
-  50  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"local")/1000;
-  51  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"local")/1000;);
-  52   
-  53  display fert0;
-  54  parameter tfr0;
-  55  tfr0 = sum(a,fert0(a));
-  56  display tfr0;
-  57   
-  58  parameter ferthic0(a);
-  59   
-  60  loop(agfert,
-  61  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"hic")/1000;
-  62  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"hic")/1000;
-  63  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"hic")/1000;
-  64  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"hic")/1000;
-  65  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"hic")/1000;);
-  66   
-  67  display ferthic0;
-  68  parameter tfrhic0;
-  69  tfrhic0 = sum(a,ferthic0(a));
-  70  display tfrhic0;
-  71   
-  72  loop(ag,
-  73  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mlocal")*(survival(a+4,"mlocal")/survival(a-1,"mlocal"))**(1/5);
-  74  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mlocal")*(survival(a+3,"mlocal")/survival(a-2,"mlocal"))**(2/5);
-  75  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mlocal")*(survival(a+2,"mlocal")/survival(a-3,"mlocal"))**(3/5);
-  76  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mlocal")*(survival(a+1,"mlocal")/survival(a-4,"mlocal"))**(4/5);
-  77  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mlocal")*(survival(a  ,"mlocal")/survival(a-5,"mlocal"))**(5/5);
-  78  survival(a,"flocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"flocal")*(survival(a+4,"flocal")/survival(a-1,"mlocal"))**(1/5);
-  79  survival(a,"flocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"flocal")*(survival(a+3,"flocal")/survival(a-2,"mlocal"))**(2/5);
-  80  survival(a,"flocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"flocal")*(survival(a+2,"flocal")/survival(a-3,"mlocal"))**(3/5);
-  81  survival(a,"flocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"flocal")*(survival(a+1,"flocal")/survival(a-4,"mlocal"))**(4/5);
-  82  survival(a,"flocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"flocal")*(survival(a  ,"flocal")/survival(a-5,"mlocal"))**(5/5);
-  83  survival(a,"mhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mhic")*(survival(a+4,"mhic")/survival(a-1,"mhic"))**(1/5);
-  84  survival(a,"mhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mhic")*(survival(a+3,"mhic")/survival(a-2,"mhic"))**(2/5);
-  85  survival(a,"mhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mhic")*(survival(a+2,"mhic")/survival(a-3,"mhic"))**(3/5);
-  86  survival(a,"mhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mhic")*(survival(a+1,"mhic")/survival(a-4,"mhic"))**(4/5);
-  87  survival(a,"mhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mhic")* (survival(a,"mhic")/survival(a-5,"mhic"))**(5/5);
-  88  survival(a,"fhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"fhic")*(survival(a+4,"fhic")/survival(a-1,"fhic"))**(1/5);
-  89  survival(a,"fhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"fhic")*(survival(a+3,"fhic")/survival(a-2,"fhic"))**(2/5);
-  90  survival(a,"fhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"fhic")*(survival(a+2,"fhic")/survival(a-3,"fhic"))**(3/5);
-  91  survival(a,"fhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"fhic")*(survival(a+1,"fhic")/survival(a-4,"fhic"))**(4/5);
-  92  survival(a,"fhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"fhic")*(survival(a  ,"fhic")/survival(a-5,"fhic"))**(5/5););
-  93   
-  94  survival("2","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(1/4);
-  95  survival("3","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(2/4);
-  96  survival("4","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(3/4);
-  97  survival("2","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(1/4);
-  98  survival("3","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(2/4);
-  99  survival("4","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(3/4);
- 100  survival("2","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(1/4);
- 101  survival("3","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(2/4);
- 102  survival("4","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(3/4);
- 103  survival("2","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(1/4);
- 104  survival("3","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(2/4);
- 105  survival("4","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(3/4);
- 106   
- 107  display survival;
- 108   
- 109  surv0(a299,surv) = survival(a299+1,surv)/survival(a299,surv);
- 110   
- 111  surv0("1",surv) = survival("1",surv)/100000;
- 112   
- 113  display surv0;
- 114   
- 115  display edattainf, edattainm;
- 116   
- 117  wf0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ps");
- 118  wf0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ls");
- 119  wf0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"us");
- 120  wf0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ts");
- 121  wf0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","no");
- 122  wf0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","no");
- 123  wf0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","no");
- 124  wf0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","no");
- 125  wf0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ptotal") - edattainf("25","34","pc");
- 126  wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("25","34","ptotal") - edattainf("35","44","pc");
- 127  wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("25","34","ptotal") - edattainf("45","54","pc");
- 128  wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("25","34","ptotal") - edattainf("55","64","pc");
- 129  wf0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","pc");
- 130  wf0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","pc");
- 131  wf0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","pc");
- 132  wf0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","pc");
- 133  wf0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","stotal")-edattainf("25","34","sc");
- 134  wf0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","stotal")-edattainf("35","44","sc");
- 135  wf0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","stotal")-edattainf("45","54","sc");
- 136  wf0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","stotal")-edattainf("55","64","sc");
- 137  wf0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","sc");
- 138  wf0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","sc");
- 139  wf0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","sc");
- 140  wf0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","sc");
- 141  wf0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ttotal")-edattainf("25","34","tc");
- 142  wf0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ttotal")-edattainf("35","44","tc");
- 143  wf0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ttotal")-edattainf("45","54","tc");
- 144  wf0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ttotal")-edattainf("55","64","tc");
- 145  wf0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","tc");
- 146  wf0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","tc");
- 147  wf0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","tc");
- 148  wf0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","tc");
- 149   
- 150  wm0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ps");
- 151  wm0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ls");
- 152  wm0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"us");
- 153  wm0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ts");
- 154  wm0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","no");
- 155  wm0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","no");
- 156  wm0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","no");
- 157  wm0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","no");
- 158  wm0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ptotal") - edattainm("25","34","pc");
- 159  wm0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ptotal") - edattainm("35","44","pc");
- 160  wm0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ptotal") - edattainm("45","54","pc");
- 161  wm0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ptotal") - edattainm("55","64","pc");
- 162  wm0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","pc");
- 163  wm0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","pc");
- 164  wm0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","pc");
- 165  wm0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","pc");
- 166  wm0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","stotal")-edattainm("25","34","sc");
- 167  wm0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","stotal")-edattainm("35","44","sc");
- 168  wm0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","stotal")-edattainm("45","54","sc");
- 169  wm0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","stotal")-edattainm("55","64","sc");
- 170  wm0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","sc");
- 171  wm0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","sc");
- 172  wm0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","sc");
- 173  wm0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","sc");
- 174  wm0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ttotal")-edattainm("25","34","tc");
- 175  wm0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ttotal")-edattainm("35","44","tc");
- 176  wm0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ttotal")-edattainm("45","54","tc");
- 177  wm0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ttotal")-edattainm("55","64","tc");
- 178  wm0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","tc");
- 179  wm0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","tc");
- 180  wm0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","tc");
- 181  wm0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","tc");
- 182   
+  26   
+  27  display age5yr,asfr,survival,s0shf,s0shm,edattainf,edattainm;
+  28   
+  29  parameter avag(ag);
+  30  avag(ag) = (ord(ag)-1)*5+2;
+  31   
+  33   
+  34  display avag;
+  35   
+  36  loop(ag,
+  37  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+2) = age5yr(ag,g)/5000;
+  38  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+3) = (age5yr(ag,g)+(1/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
+  39  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+4) = (age5yr(ag,g)+(2/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
+  40  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+5) = (age5yr(ag,g)+(3/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;
+  41  popg0(a,g)$(ord(a) eq (ord(ag)-1)*5+6) = (age5yr(ag,g)+(4/5)*(age5yr(ag+1,g)-age5yr(ag,g)))/5000;);
+  42   
+  43  popg0("1",g) = popg0("2",g) + (popg0("2",g) - popg0("3",g));
+  44   
+  45  display popg0;
+  46   
+  47  loop(agfert,
+  48  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"local")/1000;
+  49  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"local")/1000;
+  50  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"local")/1000;
+  51  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"local")/1000;
+  52  fert0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"local")/1000;);
+  53   
+  54  display fert0;
+  55  parameter tfr0;
+  56  tfr0 = sum(a,fert0(a));
+  57  display tfr0;
+  58   
+  59  parameter ferthic0(a);
+  60   
+  61  loop(agfert,
+  62  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+15) = asfr(agfert,"hic")/1000;
+  63  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+16) = asfr(agfert,"hic")/1000;
+  64  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+17) = asfr(agfert,"hic")/1000;
+  65  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+18) = asfr(agfert,"hic")/1000;
+  66  ferthic0(a)$(ord(a) eq (ord(agfert)-1)*5+19) = asfr(agfert,"hic")/1000;);
+  67   
+  68  display ferthic0;
+  69  parameter tfrhic0;
+  70  tfrhic0 = sum(a,ferthic0(a));
+  71  display tfrhic0;
+  72   
+  73  loop(ag,
+  74  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mlocal")*(survival(a+4,"mlocal")/survival(a-1,"mlocal"))**(1/5);
+  75  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mlocal")*(survival(a+3,"mlocal")/survival(a-2,"mlocal"))**(2/5);
+  76  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mlocal")*(survival(a+2,"mlocal")/survival(a-3,"mlocal"))**(3/5);
+  77  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mlocal")*(survival(a+1,"mlocal")/survival(a-4,"mlocal"))**(4/5);
+  78  survival(a,"mlocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mlocal")*(survival(a  ,"mlocal")/survival(a-5,"mlocal"))**(5/5);
+  79  survival(a,"flocal")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"flocal")*(survival(a+4,"flocal")/survival(a-1,"mlocal"))**(1/5);
+  80  survival(a,"flocal")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"flocal")*(survival(a+3,"flocal")/survival(a-2,"mlocal"))**(2/5);
+  81  survival(a,"flocal")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"flocal")*(survival(a+2,"flocal")/survival(a-3,"mlocal"))**(3/5);
+  82  survival(a,"flocal")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"flocal")*(survival(a+1,"flocal")/survival(a-4,"mlocal"))**(4/5);
+  83  survival(a,"flocal")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"flocal")*(survival(a  ,"flocal")/survival(a-5,"mlocal"))**(5/5);
+  84  survival(a,"mhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"mhic")*(survival(a+4,"mhic")/survival(a-1,"mhic"))**(1/5);
+  85  survival(a,"mhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"mhic")*(survival(a+3,"mhic")/survival(a-2,"mhic"))**(2/5);
+  86  survival(a,"mhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"mhic")*(survival(a+2,"mhic")/survival(a-3,"mhic"))**(3/5);
+  87  survival(a,"mhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"mhic")*(survival(a+1,"mhic")/survival(a-4,"mhic"))**(4/5);
+  88  survival(a,"mhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"mhic")* (survival(a,"mhic")/survival(a-5,"mhic"))**(5/5);
+  89  survival(a,"fhic")$(ord(a) eq ord(ag)*5+1) = survival(a-1,"fhic")*(survival(a+4,"fhic")/survival(a-1,"fhic"))**(1/5);
+  90  survival(a,"fhic")$(ord(a) eq ord(ag)*5+2) = survival(a-2,"fhic")*(survival(a+3,"fhic")/survival(a-2,"fhic"))**(2/5);
+  91  survival(a,"fhic")$(ord(a) eq ord(ag)*5+3) = survival(a-3,"fhic")*(survival(a+2,"fhic")/survival(a-3,"fhic"))**(3/5);
+  92  survival(a,"fhic")$(ord(a) eq ord(ag)*5+4) = survival(a-4,"fhic")*(survival(a+1,"fhic")/survival(a-4,"fhic"))**(4/5);
+  93  survival(a,"fhic")$(ord(a) eq ord(ag)*5+5) = survival(a-5,"fhic")*(survival(a  ,"fhic")/survival(a-5,"fhic"))**(5/5););
+  94   
+  95  survival("2","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(1/4);
+  96  survival("3","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(2/4);
+  97  survival("4","fhic") = survival("1","fhic")*(survival("5","fhic")/survival("1","fhic"))**(3/4);
+  98  survival("2","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(1/4);
+  99  survival("3","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(2/4);
+ 100  survival("4","mhic") = survival("1","mhic")*(survival("5","mhic")/survival("1","mhic"))**(3/4);
+ 101  survival("2","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(1/4);
+ 102  survival("3","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(2/4);
+ 103  survival("4","flocal") = survival("1","flocal")*(survival("5","flocal")/survival("1","flocal"))**(3/4);
+ 104  survival("2","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(1/4);
+ 105  survival("3","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(2/4);
+ 106  survival("4","mlocal") = survival("1","mlocal")*(survival("5","mlocal")/survival("1","mlocal"))**(3/4);
+ 107   
+ 108  display survival;
+ 109   
+ 110  surv0(a299,surv) = survival(a299+1,surv)/survival(a299,surv);
+ 111   
+ 112  surv0("1",surv) = survival("1",surv)/100000;
+ 113   
+ 114  display surv0;
+ 115   
+ 116  display edattainf, edattainm;
+ 117   
+ 118  wf0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ps");
+ 119  wf0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ls");
+ 120  wf0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"us");
+ 121  wf0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shf(a,"ts");
+ 122  wf0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","no");
+ 123  wf0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","no");
+ 124  wf0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","no");
+ 125  wf0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","no");
+ 126  wf0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ptotal") - edattainf("25","34","pc");
+ 127  wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ptotal") - edattainf("35","44","pc");
+ 128  wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ptotal") - edattainf("45","54","pc");
+ 129  wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ptotal") - edattainf("55","64","pc");
+ 130  wf0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","pc");
+ 131  wf0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","pc");
+ 132  wf0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","pc");
+ 133  wf0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","pc");
+ 134  wf0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","stotal")-edattainf("25","34","sc");
+ 135  wf0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","stotal")-edattainf("35","44","sc");
+ 136  wf0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","stotal")-edattainf("45","54","sc");
+ 137  wf0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","stotal")-edattainf("55","64","sc");
+ 138  wf0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","sc");
+ 139  wf0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","sc");
+ 140  wf0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","sc");
+ 141  wf0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","sc");
+ 142  wf0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ttotal")-edattainf("25","34","tc");
+ 143  wf0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ttotal")-edattainf("35","44","tc");
+ 144  wf0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ttotal")-edattainf("45","54","tc");
+ 145  wf0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ttotal")-edattainf("55","64","tc");
+ 146  wf0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","tc");
+ 147  wf0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","tc");
+ 148  wf0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","tc");
+ 149  wf0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","tc");
+ 150   
+ 151  wm0(a,"12")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ps");
+ 152  wm0(a,"15")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ls");
+ 153  wm0(a,"18")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"us");
+ 154  wm0(a,"22")$(ord(a) ge 13 and ord(a) le 24) = s0shm(a,"ts");
+ 155  wm0(a,"6")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","no");
+ 156  wm0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","no");
+ 157  wm0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","no");
+ 158  wm0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","no");
+ 159  wm0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ptotal") - edattainm("25","34","pc");
+ 160  wm0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ptotal") - edattainm("35","44","pc");
+ 161  wm0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ptotal") - edattainm("45","54","pc");
+ 162  wm0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ptotal") - edattainm("55","64","pc");
+ 163  wm0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","pc");
+ 164  wm0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","pc");
+ 165  wm0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","pc");
+ 166  wm0(a,"12")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","pc");
+ 167  wm0(a,"15")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","stotal")-edattainm("25","34","sc");
+ 168  wm0(a,"15")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","stotal")-edattainm("35","44","sc");
+ 169  wm0(a,"15")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","stotal")-edattainm("45","54","sc");
+ 170  wm0(a,"15")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","stotal")-edattainm("55","64","sc");
+ 171  wm0(a,"18")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","sc");
+ 172  wm0(a,"18")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","sc");
+ 173  wm0(a,"18")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","sc");
+ 174  wm0(a,"18")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","sc");
+ 175  wm0(a,"20")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","ttotal")-edattainm("25","34","tc");
+ 176  wm0(a,"20")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","ttotal")-edattainm("35","44","tc");
+ 177  wm0(a,"20")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","ttotal")-edattainm("45","54","tc");
+ 178  wm0(a,"20")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","ttotal")-edattainm("55","64","tc");
+ 179  wm0(a,"22")$(ord(a) ge 25 and ord(a) le 34) = edattainm("25","34","tc");
+ 180  wm0(a,"22")$(ord(a) ge 35 and ord(a) le 44) = edattainm("35","44","tc");
+ 181  wm0(a,"22")$(ord(a) ge 45 and ord(a) le 54) = edattainm("45","54","tc");
+ 182  wm0(a,"22")$(ord(a) ge 55 and ord(a) le 65) = edattainm("55","64","tc");
  183   
- 184  display wf0,wm0;
- 185  parameter w0(a,educ,g);
- 186  w0(a,educ,"female") = wf0(a,educ)*.01*popg0(a,"female");
- 187  w0(a,educ,"male") = wm0(a,educ)*.01*popg0(a,"male");
- 188   
- 189  display w0;
- 190   
- 191  parameter s0(a,g);
- 192  s0(a,"female") = popg0(a,"female")*s0shf(a,"s0sh")*.01;
- 193  s0(a,"male") = popg0(a,"male")*s0shm(a,"s0sh")*.01;
- 194   
- 195  display s0;
- 196   
- 197  * dataloader.gdx corresponds to egyptdatainput.gdx in previous versions
- 198  execute_unload '.\auxiliary\datainput_arg.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
- 199   
- 217  execute 'gdxxrw .\auxiliary\datainput_arg.gdx output=.\auxiliary\datainput_arg.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/03/22 15:45:19 Page 2
+ 184   
+ 185  display wf0,wm0;
+ 186  parameter w0(a,educ,g);
+ 187  w0(a,educ,"female") = wf0(a,educ)*.01*popg0(a,"female");
+ 188  w0(a,educ,"male") = wm0(a,educ)*.01*popg0(a,"male");
+ 189   
+ 190  display w0;
+ 191   
+ 192  parameter s0(a,g);
+ 193  s0(a,"female") = popg0(a,"female")*s0shf(a,"s0sh")*.01;
+ 194  s0(a,"male") = popg0(a,"male")*s0shm(a,"s0sh")*.01;
+ 195   
+ 196  display s0;
+ 197   
+ 198  * dataloader.gdx corresponds to egyptdatainput.gdx in previous versions
+ 199  execute_unload '.\auxiliary\datainput_arg.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
+ 200   
+ 218  execute 'gdxxrw .\auxiliary\datainput_arg.gdx output=.\auxiliary\datainput_arg.xlsx @.\auxiliary\loadersetting.txt';
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 10:52:00 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\SDG Data Input v3 arg.gms
-     2       21 CALL           1      21  GDXXRW .\input\argentina_rawdata.xlsx output=".\auxiliary\argentina_rawdata.gdx" Index=Index!a1 trace=3
-     3       22 GDXIN          1      22  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\argentina_rawdata.gdx
+     1        1 INPUT          0       0  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 arg.gms
+     2       22 CALL           1      22  GDXXRW .\input\argentina_rawdata.xlsx output=".\auxiliary\argentina_rawdata.gdx" Index=Index!a1 trace=3
+     3       23 GDXIN          1      23  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\argentina_rawdata.gdx
 
 
-COMPILATION TIME     =        1.640 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/03/22 15:45:19 Page 3
+COMPILATION TIME     =        2.921 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 10:52:00 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----     26 PARAMETER age5yr  
+----     27 PARAMETER age5yr  
 
              male      female
 
@@ -251,7 +252,7 @@ E x e c u t i o n
 100+        0.695       3.423
 
 
-----     26 PARAMETER asfr  
+----     27 PARAMETER asfr  
 
             local         hic
 
@@ -264,7 +265,7 @@ E x e c u t i o n
 45-49       2.800       1.430
 
 
-----     26 PARAMETER survival  
+----     27 PARAMETER survival  
 
          mlocal      flocal        mhic        fhic
 
@@ -291,7 +292,7 @@ E x e c u t i o n
 100     577.540    2207.000    2308.821    5401.164
 
 
-----     26 PARAMETER s0shf  
+----     27 PARAMETER s0shf  
 
             ps          ls          us          ts
 
@@ -310,7 +311,7 @@ E x e c u t i o n
 24       0.831       5.360      66.666      26.720
 
 
-----     26 PARAMETER s0shm  
+----     27 PARAMETER s0shm  
 
             ps          ls          us          ts
 
@@ -329,7 +330,7 @@ E x e c u t i o n
 24       0.213      13.932      72.388      12.062
 
 
-----     26 PARAMETER edattainf  
+----     27 PARAMETER edattainf  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -340,7 +341,7 @@ E x e c u t i o n
 55.64       0.070      49.060      48.570      34.600      24.140      16.270       7.410    1993.000
 
 
-----     26 PARAMETER edattainm  
+----     27 PARAMETER edattainm  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -351,12 +352,12 @@ E x e c u t i o n
 55.64       0.080      52.990      52.460      34.260      21.020      12.660       3.540    1776.000
 
 
-----     33 PARAMETER avag  
+----     34 PARAMETER avag  
 
 0-4     2.000,    5-9     7.000,    10-14  12.000,    15-19  17.000,    20-24  22.000,    25-29  27.000,    30-34  32.000,    35-39  37.000,    40-44  42.000,    45-49  47.000,    50-54  52.000,    55-59  57.000,    60-64  62.000,    65-69  67.000,    70-74  72.000,    75-79  77.000,    80-84  82.000,    85-89  87.000,    90-94  92.000,    95-99  97.000,    100+  102.000
 
 
-----     44 PARAMETER popg0  
+----     45 PARAMETER popg0  
 
            male      female
 
@@ -462,21 +463,21 @@ E x e c u t i o n
 100 6.662800E-4       0.003
 
 
-----     53 PARAMETER fert0  
+----     54 PARAMETER fert0  
 
 15 0.062,    16 0.062,    17 0.062,    18 0.062,    19 0.062,    20 0.097,    21 0.097,    22 0.097,    23 0.097,    24 0.097,    25 0.094,    26 0.094,    27 0.094,    28 0.094,    29 0.094,    30 0.098,    31 0.098,    32 0.098,    33 0.098,    34 0.098,    35 0.067,    36 0.067,    37 0.067,    38 0.067,    39 0.067,    40 0.019,    41 0.019,    42 0.019,    43 0.019,    44 0.019,    45 0.003,    46 0.003,    47 0.003,    48 0.003,    49 0.003
 
 
-----     56 PARAMETER tfr0                 =        2.198  
+----     57 PARAMETER tfr0                 =        2.198  
 
-----     67 PARAMETER ferthic0  
+----     68 PARAMETER ferthic0  
 
 15 0.012,    16 0.012,    17 0.012,    18 0.012,    19 0.012,    20 0.046,    21 0.046,    22 0.046,    23 0.046,    24 0.046,    25 0.088,    26 0.088,    27 0.088,    28 0.088,    29 0.088,    30 0.107,    31 0.107,    32 0.107,    33 0.107,    34 0.107,    35 0.065,    36 0.065,    37 0.065,    38 0.065,    39 0.065,    40 0.015,    41 0.015,    42 0.015,    43 0.015,    44 0.015,    45 0.001,    46 0.001,    47 0.001,    48 0.001,    49 0.001
 
 
-----     70 PARAMETER tfrhic0              =        1.673  
+----     71 PARAMETER tfrhic0              =        1.673  
 
-----    107 PARAMETER survival  
+----    108 PARAMETER survival  
 
          mlocal      flocal        mhic        fhic
 
@@ -582,7 +583,7 @@ E x e c u t i o n
 100     577.540   94137.791    2308.821    5401.164
 
 
-----    113 PARAMETER surv0  
+----    114 PARAMETER surv0  
 
         mlocal      flocal        mhic        fhic
 
@@ -687,7 +688,7 @@ E x e c u t i o n
 99       0.696       0.910       0.757       0.785
 
 
-----    115 PARAMETER edattainf  
+----    116 PARAMETER edattainf  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -698,7 +699,7 @@ E x e c u t i o n
 55.64       0.070      49.060      48.570      34.600      24.140      16.270       7.410    1993.000
 
 
-----    115 PARAMETER edattainm  
+----    116 PARAMETER edattainm  
 
                no      ptotal          pc      stotal          sc      ttotal          tc         pop
 
@@ -709,7 +710,7 @@ E x e c u t i o n
 55.64       0.080      52.990      52.460      34.260      21.020      12.660       3.540    1776.000
 
 
-----    184 PARAMETER wf0  
+----    185 PARAMETER wf0  
 
              6           9          12          15          18          20          22
 
@@ -735,40 +736,40 @@ E x e c u t i o n
 32       2.700      12.240      26.050       5.360      27.930      23.040       2.680
 33       2.700      12.240      26.050       5.360      27.930      23.040       2.680
 34       2.700      12.240      26.050       5.360      27.930      23.040       2.680
-35       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-36       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-37       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-38       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-39       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-40       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-41       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-42       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-43       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-44       0.040       7.100      31.190      12.100      31.550      20.330       4.480
-45       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-46       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-47       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-48       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-49       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-50       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-51       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-52       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-53       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-54       0.050      -1.680      39.970      12.450      25.570      15.370       6.190
-55       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-56       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-57       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-58       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-59       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-60       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-61       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-62       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-63       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-64       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
-65       0.070     -10.280      48.570      10.460      24.140       8.860       7.410
+35       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+36       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+37       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+38       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+39       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+40       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+41       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+42       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+43       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+44       0.040       0.310      31.190      12.100      31.550      20.330       4.480
+45       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+46       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+47       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+48       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+49       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+50       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+51       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+52       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+53       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+54       0.050       0.410      39.970      12.450      25.570      15.370       6.190
+55       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+56       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+57       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+58       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+59       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+60       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+61       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+62       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+63       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+64       0.070       0.490      48.570      10.460      24.140       8.860       7.410
+65       0.070       0.490      48.570      10.460      24.140       8.860       7.410
 
 
-----    184 PARAMETER wm0  
+----    185 PARAMETER wm0  
 
              6           9          12          15          18          20          22
 
@@ -827,7 +828,7 @@ E x e c u t i o n
 65       0.080       0.530      52.460      13.240      21.020       9.120       3.540
 
 
-----    189 PARAMETER w0  
+----    190 PARAMETER w0  
 
              male      female
 
@@ -933,217 +934,217 @@ E x e c u t i o n
 34.20       0.055       0.075
 34.22       0.001       0.009
 35.6  1.593676E-4 1.285900E-4
-35.9        0.001       0.023
+35.9        0.001 9.965727E-4
 35.12       0.114       0.100
 35.15       0.050       0.039
 35.18       0.098       0.101
 35.20       0.053       0.065
 35.22       0.001       0.014
 36.6  1.571986E-4 1.271804E-4
-36.9        0.001       0.023
+36.9        0.001 9.856482E-4
 36.12       0.113       0.099
 36.15       0.050       0.038
 36.18       0.097       0.100
 36.20       0.052       0.065
 36.22       0.001       0.014
 37.6  1.550297E-4 1.257708E-4
-37.9        0.001       0.022
+37.9        0.001 9.747237E-4
 37.12       0.111       0.098
 37.15       0.049       0.038
 37.18       0.096       0.099
 37.20       0.052       0.064
 37.22       0.001       0.014
 38.6  1.543869E-4 1.257646E-4
-38.9        0.001       0.022
+38.9        0.001 9.746753E-4
 38.12       0.111       0.098
 38.15       0.049       0.038
 38.18       0.095       0.099
 38.20       0.051       0.064
 38.22       0.001       0.014
 39.6  1.537441E-4 1.257583E-4
-39.9        0.001       0.022
+39.9        0.001 9.746270E-4
 39.12       0.110       0.098
 39.15       0.049       0.038
 39.18       0.095       0.099
 39.20       0.051       0.064
 39.22       0.001       0.014
 40.6  1.531012E-4 1.257521E-4
-40.9        0.001       0.022
+40.9        0.001 9.745786E-4
 40.12       0.110       0.098
 40.15       0.048       0.038
 40.18       0.095       0.099
 40.20       0.051       0.064
 40.22       0.001       0.014
 41.6  1.524584E-4 1.257458E-4
-41.9        0.001       0.022
+41.9        0.001 9.745303E-4
 41.12       0.109       0.098
 41.15       0.048       0.038
 41.18       0.094       0.099
 41.20       0.051       0.064
 41.22       0.001       0.014
 42.6  1.518156E-4 1.257396E-4
-42.9        0.001       0.022
+42.9        0.001 9.744819E-4
 42.12       0.109       0.098
 42.15       0.048       0.038
 42.18       0.094       0.099
 42.20       0.050       0.064
 42.22       0.001       0.014
 43.6  1.470179E-4 1.223449E-4
-43.9        0.001       0.022
+43.9        0.001 9.481727E-4
 43.12       0.105       0.095
 43.15       0.047       0.037
 43.18       0.091       0.096
 43.20       0.049       0.062
 43.22       0.001       0.014
 44.6  1.422201E-4 1.189501E-4
-44.9        0.001       0.021
+44.9        0.001 9.218635E-4
 44.12       0.102       0.093
 44.15       0.045       0.036
 44.18       0.088       0.094
 44.20       0.047       0.060
 44.22       0.001       0.013
 45.6  1.649069E-4 1.444442E-4
-45.9        0.001      -0.005
+45.9        0.001       0.001
 45.12       0.120       0.115
 45.15       0.043       0.036
 45.18       0.069       0.074
 45.20       0.037       0.044
 45.22       0.004       0.018
 46.6  1.591496E-4 1.402008E-4
-46.9        0.001      -0.005
+46.9        0.001       0.001
 46.12       0.116       0.112
 46.15       0.041       0.035
 46.18       0.066       0.072
 46.20       0.036       0.043
 46.22       0.004       0.017
 47.6  1.533923E-4 1.359574E-4
-47.9        0.001      -0.005
+47.9        0.001       0.001
 47.12       0.112       0.109
 47.15       0.040       0.034
 47.18       0.064       0.070
 47.20       0.035       0.042
 47.22       0.004       0.017
 48.6  1.491971E-4 1.327312E-4
-48.9        0.001      -0.004
+48.9        0.001       0.001
 48.12       0.109       0.106
 48.15       0.039       0.033
 48.18       0.062       0.068
 48.20       0.034       0.041
 48.22       0.004       0.016
 49.6  1.450019E-4 1.295049E-4
-49.9        0.001      -0.004
+49.9        0.001       0.001
 49.12       0.106       0.104
 49.15       0.038       0.032
 49.18       0.060       0.066
 49.20       0.033       0.040
 49.22       0.004       0.016
 50.6  1.408067E-4 1.262787E-4
-50.9        0.001      -0.004
+50.9        0.001       0.001
 50.12       0.103       0.101
 50.15       0.037       0.031
 50.18       0.059       0.065
 50.20       0.032       0.039
 50.22       0.004       0.016
 51.6  1.366115E-4 1.230524E-4
-51.9        0.001      -0.004
+51.9        0.001       0.001
 51.12       0.100       0.098
 51.15       0.036       0.031
 51.18       0.057       0.063
 51.20       0.031       0.038
 51.22       0.003       0.015
 52.6  1.324163E-4 1.198262E-4
-52.9  9.710527E-4      -0.004
+52.9  9.710527E-4 9.825748E-4
 52.12       0.097       0.096
 52.15       0.034       0.030
 52.18       0.055       0.061
 52.20       0.030       0.037
 52.22       0.003       0.015
 53.6  1.300145E-4 1.182573E-4
-53.9  9.534393E-4      -0.004
+53.9  9.534393E-4 9.697097E-4
 53.12       0.095       0.095
 53.15       0.034       0.029
 53.18       0.054       0.060
 53.20       0.029       0.036
 53.22       0.003       0.015
 54.6  1.276126E-4 1.166884E-4
-54.9  9.358260E-4      -0.004
+54.9  9.358260E-4 9.568446E-4
 54.12       0.093       0.093
 54.15       0.033       0.029
 54.18       0.053       0.060
 54.20       0.029       0.036
 54.22       0.003       0.014
 55.6  1.669477E-4 1.611672E-4
-55.9        0.001      -0.024
+55.9        0.001       0.001
 55.12       0.109       0.112
 55.15       0.028       0.024
 55.18       0.044       0.056
 55.20       0.019       0.020
 55.22       0.007       0.017
 56.6  1.637453E-4 1.589707E-4
-56.9        0.001      -0.023
+56.9        0.001       0.001
 56.12       0.107       0.110
 56.15       0.027       0.024
 56.18       0.043       0.055
 56.20       0.019       0.020
 56.22       0.007       0.017
 57.6  1.605429E-4 1.567742E-4
-57.9        0.001      -0.023
+57.9        0.001       0.001
 57.12       0.105       0.109
 57.15       0.027       0.023
 57.18       0.042       0.054
 57.20       0.018       0.020
 57.22       0.007       0.017
 58.6  1.565004E-4 1.536061E-4
-58.9        0.001      -0.023
+58.9        0.001       0.001
 58.12       0.103       0.107
 58.15       0.026       0.023
 58.18       0.041       0.053
 58.20       0.018       0.019
 58.22       0.007       0.016
 59.6  1.524579E-4 1.504380E-4
-59.9        0.001      -0.022
+59.9        0.001       0.001
 59.12       0.100       0.104
 59.15       0.025       0.022
 59.18       0.040       0.052
 59.20       0.017       0.019
 59.22       0.007       0.016
 60.6  1.484154E-4 1.472698E-4
-60.9  9.832520E-4      -0.022
+60.9  9.832520E-4       0.001
 60.12       0.097       0.102
 60.15       0.025       0.022
 60.18       0.039       0.051
 60.20       0.017       0.019
 60.22       0.007       0.016
 61.6  1.443729E-4 1.441017E-4
-61.9  9.564704E-4      -0.021
+61.9  9.564704E-4       0.001
 61.12       0.095       0.100
 61.15       0.024       0.022
 61.18       0.038       0.050
 61.20       0.016       0.018
 61.22       0.006       0.015
 62.6  1.403304E-4 1.409335E-4
-62.9  9.296889E-4      -0.021
+62.9  9.296889E-4 9.865346E-4
 62.12       0.092       0.098
 62.15       0.023       0.021
 62.18       0.037       0.049
 62.20       0.016       0.018
 62.22       0.006       0.015
 63.6  1.361284E-4 1.379260E-4
-63.9  9.018503E-4      -0.020
+63.9  9.018503E-4 9.654823E-4
 63.12       0.089       0.096
 63.15       0.023       0.021
 63.18       0.036       0.048
 63.20       0.016       0.017
 63.22       0.006       0.015
 64.6  1.319263E-4 1.349186E-4
-64.9  8.740118E-4      -0.020
+64.9  8.740118E-4 9.444299E-4
 64.12       0.087       0.094
 64.15       0.022       0.020
 64.18       0.035       0.047
 64.20       0.015       0.017
 64.22       0.006       0.014
 65.6  1.277243E-4 1.319111E-4
-65.9  8.461732E-4      -0.019
+65.9  8.461732E-4 9.233776E-4
 65.12       0.084       0.092
 65.15       0.021       0.020
 65.18       0.034       0.045
@@ -1151,13 +1152,13 @@ E x e c u t i o n
 65.22       0.006       0.014
 
 
-----    195 PARAMETER s0  
+----    196 PARAMETER s0  
 
                       ( ALL       0.000 )
 
 
 
-EXECUTION TIME       =        1.953 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        3.141 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN
@@ -1167,5 +1168,5 @@ USER: Large MUD - 20 User License                    G211208|0002AR-WIN
 
 **** FILE SUMMARY
 
-Input      C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\SDG Data Input v3 arg.gms
-Output     C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\SDG Data Input v3 arg.lst
+Input      C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 arg.gms
+Output     C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 arg.lst

@@ -278,7 +278,7 @@ Equations
 ;
 
 eq1(as+1,g,t+1)..  s(as+1,g,t+1) =e= cont(as,t)*s(as,g,t);
-eq2(g,t+1)..  s("7",g,t+1) =e= pop("6",g,t);
+eq2(g,t+1)..  s("6",g,t+1) =e= pop("5",g,t);
 eq3(a+1,g,t+1)..  pop(a+1,g,t+1) =e= pop(a,g,t)*survive0(a,g);
 eq4(af,as,t)..  fert(af,as,t) =e= w(af,as,"female",t)*fert0(af,"local")$(ord(as) lt 12) + w(af,as,"female",t)*(fertsh*fert0(af,"local")+(1-fertsh)*fert0(af,"hic"))$(ord(as) ge 12);
 eq5(t)..   birth(t) =e= sum(af,sum(as,fert(af,as,t)));
@@ -394,8 +394,8 @@ krenext(t+1)..        kre(t+1) =e= kre(t)*(1-dep) + invre(t);
 kfnext(t+1)..         kf(t+1) =e= kf(t)*(1-dep) + invf(t);
 energy(t)..           en(t) =e= kff(t) + kre(t);
 ffuel(t)..            ff(t) =e= aff*kff(t);
-costkff(t)..          cinvff(t) =e= costff*invff(t)*(1+phi*(invff(t)/kff(t)));
-costkre(t)..          cinvre(t) =e= costre*invre(t)*(1+phi*(invre(t)/kre(t)));
+costkff(t)..          cinvff(t) =e= costff/(10**9)*invff(t)*(1+phi*(invff(t)/kff(t)));
+costkre(t)..          cinvre(t) =e= costre/(10**9)*invre(t)*(1+phi*(invre(t)/kre(t)));
 costkf(t)..           cinvf(t) =e= invf(t)*(1+phi*(invf(t)/kf(t)));
 costk(t)..            cinv(t) =e= inv(t)*(1+phi*(inv(t)/k(t)));
 tbalance(t)..         nx(t) =e= q(t) - cinv(t) - cinvf(t) - con(t) - hlcost(t) - edcost(t) - gcost(t) - cinvff(t) - cinvre(t) - ff(t);
@@ -469,7 +469,7 @@ parameter outputvar(outputvarlist, t);
         outputvar("Healthcare Cost (%GDP)", t) = hlcostgdp.L(t);
         outputvar("Infrastructure Investment (%GDP)", t) = invfgdp.L(t);
         outputvar("Reinvestment (%GDP)", t) = outlaygdp.L(t);
-
+        
 Execute_Unload '.\auxiliary\modeloutput_arg.gdx', outputvar;
 
 $onEcho > .\auxiliary\outputsetting_arg.txt

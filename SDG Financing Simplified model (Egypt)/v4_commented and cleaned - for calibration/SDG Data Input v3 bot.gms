@@ -22,7 +22,6 @@ $CALL GDXXRW .\input\botswana_rawdata.xlsx output=".\auxiliary\botswana_rawdata.
 $GDXIN ".\auxiliary\botswana_rawdata.gdx"
 $LOAD age5yr=D1 asfr=D2 survival=D3 s0shf=D4 s0shm=D5 edattainf=D6 edattainm=D7
 $GDXIN
-
 display age5yr,asfr,survival,s0shf,s0shm,edattainf,edattainm;
 
 parameter avag(ag);
@@ -123,9 +122,9 @@ wf0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","no");
 wf0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","no");
 wf0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","no");
 wf0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ptotal") - edattainf("25","34","pc");
-wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("25","34","ptotal") - edattainf("35","44","pc");
-wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("25","34","ptotal") - edattainf("45","54","pc");
-wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("25","34","ptotal") - edattainf("55","64","pc");
+wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ptotal") - edattainf("35","44","pc");
+wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ptotal") - edattainf("45","54","pc");
+wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ptotal") - edattainf("55","64","pc");
 wf0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","pc");
 wf0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","pc");
 wf0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","pc");

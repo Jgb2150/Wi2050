@@ -1,5 +1,4 @@
-
---- Job SDG Egypt Model v4 arg.gms Start 08/03/22 16:13:36 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Egypt Model v4 arg.gms Start 08/03/22 16:16:25 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -79,7 +78,7 @@ Par  debtqlim       0      Hardcode             B17:B17       --:--         --:-
 Par  gcostsh        0      Hardcode             B18:B18       --:--         --:--         
 Par  pubgdpsh       0      Hardcode             B19:B19       --:--         --:--         
 Par  lowerbound     0      Hardcode             B20:B20       --:--         --:--         
-Total time = 1594 Ms
+Total time = 1500 Ms
 --- SDG Egypt Model v4 arg.gms(91) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_arg.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_arg.gdx
@@ -123,21 +122,21 @@ Loading sheet ferthic0
 Reading data from Excel; Rng = A1:B36
 Reading Slice: A1:B36
 Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
-Total time = 2218 Ms
+Total time = 2391 Ms
 --- SDG Egypt Model v4 arg.gms(120) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_arg.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_arg.gdx
 --- SDG Egypt Model v4 arg.gms(475) 3 Mb
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\outputsetting_arg.txt
 --- SDG Egypt Model v4 arg.gms(478) 3 Mb
---- Starting execution: elapsed 0:00:04.056
+--- Starting execution: elapsed 0:00:04.097
 --- SDG Egypt Model v4 arg.gms(454) 5 Mb
 --- Generating DNLP model sdgfinance
 --- SDG Egypt Model v4 arg.gms(457) 48 Mb
 ---   142,599 rows  144,912 columns  348,898 non-zeroes
 ---   98,092 nl-code  27,863 nl-non-zeroes
 --- SDG Egypt Model v4 arg.gms(457) 46 Mb
---- Executing CONOPT (Solvelink=2): elapsed 0:00:04.678
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:04.805
 
 CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 
@@ -157,7 +156,7 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
     Scale the variables and/or equations or add bounds.
  
 --- Reading solution for model sdgfinance
---- Executing after solve: elapsed 0:00:06.285
+--- Executing after solve: elapsed 0:00:07.072
 --- SDG Egypt Model v4 arg.gms(473) 46 Mb
 --- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_arg.gdx
 --- SDG Egypt Model v4 arg.gms(478) 46 Mb
@@ -165,6 +164,6 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_arg.gdx
 Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\output\modeloutput_arg.xlsx
-Total time = 1625 Ms
+Total time = 2844 Ms
 *** Status: Normal completion
---- Job SDG Egypt Model v4 arg.gms Stop 08/03/22 16:13:44 elapsed 0:00:08.025
+--- Job SDG Egypt Model v4 arg.gms Stop 08/03/22 16:16:35 elapsed 0:00:10.029

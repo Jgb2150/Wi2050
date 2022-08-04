@@ -1,4 +1,5 @@
---- Job SDG Data Input v3 bar.gms Start 08/03/22 22:26:10 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+
+--- Job SDG Data Input v3 bar.gms Start 08/03/22 22:37:46 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\37\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -65,14 +66,14 @@ Loading sheet edattainm
 Reading data from Excel; Rng = A1:J10
 Reading Slice: A1:J10
 Par  D7             3      edattainm            C2:J10        A2:B10        C1:J1         
-Total time = 516 Ms
+Total time = 453 Ms
 --- SDG Data Input v3 bar.gms(22) 3 Mb
 --- GDXin=D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\barbados_rawdata.gdx
 --- GDX File ($gdxIn) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\barbados_rawdata.gdx
 --- SDG Data Input v3 bar.gms(200) 3 Mb
 --- $echo File D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\loadersetting.txt
 --- SDG Data Input v3 bar.gms(217) 3 Mb
---- Starting execution: elapsed 0:00:00.738
+--- Starting execution: elapsed 0:00:00.534
 --- SDG Data Input v3 bar.gms(198) 4 Mb
 --- GDX File (execute_unload) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bar.gdx
 --- SDG Data Input v3 bar.gms(217) 4 Mb
@@ -80,6 +81,6 @@ Total time = 516 Ms
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bar.gdx
 Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bar.xlsx
-Total time = 578 Ms
+Total time = 563 Ms
 *** Status: Normal completion
---- Job SDG Data Input v3 bar.gms Stop 08/03/22 22:26:11 elapsed 0:00:01.370
+--- Job SDG Data Input v3 bar.gms Stop 08/03/22 22:37:47 elapsed 0:00:01.149

@@ -17,6 +17,7 @@ set g /male, female/;
 parameter popg0(a,g), fert0(a), surv0(a,surv), wf0(a,educ), wm0(a,educ);
 parameter age5yr(ag,g),asfr(agfert,fer),survival(a,surv),edattainf(a,a,edu),edattainm(a,a,edu),s0shf(a,age624),s0shm(a,age624),bed(secp,eda);
 
+
 * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
 $CALL GDXXRW .\input\argentina_rawdata.xlsx output=".\auxiliary\argentina_rawdata.gdx" Index=Index!a1 trace=3
 $GDXIN ".\auxiliary\argentina_rawdata.gdx"
@@ -123,9 +124,9 @@ wf0(a,"6")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","no");
 wf0(a,"6")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","no");
 wf0(a,"6")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","no");
 wf0(a,"9")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","ptotal") - edattainf("25","34","pc");
-wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("25","34","ptotal") - edattainf("35","44","pc");
-wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("25","34","ptotal") - edattainf("45","54","pc");
-wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("25","34","ptotal") - edattainf("55","64","pc");
+wf0(a,"9")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","ptotal") - edattainf("35","44","pc");
+wf0(a,"9")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","ptotal") - edattainf("45","54","pc");
+wf0(a,"9")$(ord(a) ge 55 and ord(a) le 65) = edattainf("55","64","ptotal") - edattainf("55","64","pc");
 wf0(a,"12")$(ord(a) ge 25 and ord(a) le 34) = edattainf("25","34","pc");
 wf0(a,"12")$(ord(a) ge 35 and ord(a) le 44) = edattainf("35","44","pc");
 wf0(a,"12")$(ord(a) ge 45 and ord(a) le 54) = edattainf("45","54","pc");
