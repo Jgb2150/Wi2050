@@ -1,10 +1,10 @@
---- Job SDG Data Input v3 arg.gms Start 08/03/22 15:45:19 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Data Input v3 arg.gms Start 08/04/22 10:39:46 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\SDG Data Input v3 arg.gms"
+    Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 arg.gms"
     PageSize 0
-    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\225a\"
+    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225d\"
     SysDir D:\Program\37GAMS\
     LogOption 3
     ErrMsg 1
@@ -23,8 +23,8 @@ GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Excel version 12.0
-Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\input\argentina_rawdata.xlsx
-Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\argentina_rawdata.gdx
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\input\argentina_rawdata.xlsx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\argentina_rawdata.gdx
 Substituting Index
 Loading sheet index
 Reading data from Excel; Rng = A1:E8
@@ -65,27 +65,21 @@ Loading sheet edattainm
 Reading data from Excel; Rng = A1:J6
 Reading Slice: A1:J6
 Par  D7             3      edattainm            C2:J6         A2:B6         C1:J1         
-Total time = 1547 Ms
+Total time = 4906 Ms
 --- SDG Data Input v3 arg.gms(22) 3 Mb
---- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\argentina_rawdata.gdx
---- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\argentina_rawdata.gdx
+--- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\argentina_rawdata.gdx
+--- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\argentina_rawdata.gdx
 --- SDG Data Input v3 arg.gms(200) 3 Mb
---- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\loadersetting.txt
+--- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\loadersetting.txt
 --- SDG Data Input v3 arg.gms(217) 3 Mb
---- Starting execution: elapsed 0:00:01.639
+--- Starting execution: elapsed 0:00:05.144
 --- SDG Data Input v3 arg.gms(198) 4 Mb
---- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\datainput_arg.gdx
+--- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_arg.gdx
 --- SDG Data Input v3 arg.gms(217) 4 Mb
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\datainput_arg.gdx
-Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - grace\auxiliary\datainput_arg.xlsx
-Adding new sheet: fert0
-Adding new sheet: ferthic0
-Adding new sheet: surv0
-Adding new sheet: w0
-Adding new sheet: s0
-Adding new sheet: index
-Total time = 1797 Ms
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_arg.gdx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_arg.xlsx
+Total time = 4000 Ms
 *** Status: Normal completion
---- Job SDG Data Input v3 arg.gms Stop 08/03/22 15:45:22 elapsed 0:00:03.584
+--- Job SDG Data Input v3 arg.gms Stop 08/04/22 10:39:55 elapsed 0:00:09.329
