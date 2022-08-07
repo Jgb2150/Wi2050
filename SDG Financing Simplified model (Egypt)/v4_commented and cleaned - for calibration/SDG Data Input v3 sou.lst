@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 13:02:50 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/07/22 09:03:45 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -23,7 +23,7 @@ C o m p i l a t i o n
   18  parameter age5yr(ag,g),asfr(agfert,fer),survival(a,surv),edattainf(a,a,edu),edattainm(a,a,edu),s0shf(a,age624),s0shm(a,age624),bed(secp,eda);
   19   
   20  * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
-GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+GDXIN   D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
 --- LOAD  age5yr = 1:D1
 --- LOAD  asfr = 2:D2
 --- LOAD  survival = 3:D3
@@ -206,20 +206,20 @@ GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4
  198  execute_unload '.\auxiliary\datainput_sou.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
  199   
  217  execute 'gdxxrw .\auxiliary\datainput_sou.gdx output=.\auxiliary\datainput_sou.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 13:02:50 Page 2
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/07/22 09:03:45 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
+     1        1 INPUT          0       0  D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
      2       21 CALL           1      21  GDXXRW .\input\southafrica_rawdata.xlsx output=".\auxiliary\southafrica_rawdata.gdx" Index=Index!a1 trace=3
-     3       22 GDXIN          1      22  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+     3       22 GDXIN          1      22  D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
 
 
-COMPILATION TIME     =        1.532 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 13:02:50 Page 3
+COMPILATION TIME     =        0.766 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/07/22 09:03:45 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -295,49 +295,48 @@ E x e c u t i o n
 
           s0sh          ps          ls          us          ts
 
-7       96.617
-8       96.617
-9       96.617
-10      96.617
-11      96.617
-12      96.617
-13      96.617
-14     103.083      96.617
-15     103.083      96.617
-16     107.463      -6.466     103.083
-17     107.463      -6.466     103.083
-18     107.463      -6.466     103.083
-19      31.900      -6.466     103.083     107.463
-20      31.900      -6.466     103.083     107.463
-21      31.900      -6.466     103.083     107.463
-22      31.900      -6.466     103.083     107.463
-23      31.900      -6.466     103.083     107.463
-24                  -6.466     103.083      93.113      14.350
+7       89.831
+8       89.831
+9       89.831
+10      89.831
+11      89.831
+12      89.831
+13      89.831
+14      86.821      89.831
+15      86.821      89.831
+16      80.309       3.009      86.821
+17      80.309       3.009      86.821
+18      80.309       3.009      86.821
+19      28.300       3.009       6.512      80.309
+20      28.300       3.009       6.512      80.309
+21      28.300       3.009       6.512      80.309
+22      28.300       3.009       6.512      80.309
+23      28.300       3.009       6.512      80.309
+24                   3.009       6.512      66.589      13.720
 
 
 ----     26 PARAMETER s0shm  
 
           s0sh          ps          ls          us          ts
 
-6      100.096
-7      100.096
-8      100.096
-9      100.096
-10     100.096
-11     100.096
-12     100.096
-13     102.128     100.096
-14     102.128     100.096
-15     102.128     100.096
-16      97.649      -2.032     102.128
-17      97.649      -2.032     102.128
-18      20.300      -2.032       4.478      97.649
-19      20.300      -2.032       4.478      97.649
-20      20.300      -2.032       4.478      97.649
-21      20.300      -2.032       4.478      97.649
-22      20.300      -2.032       4.478      97.649
-23                  -2.032       4.478      89.149       8.500
-24                  -2.032       4.478      89.149       8.500
+7       88.170
+8       88.170
+9       88.170
+10      88.170
+11      88.170
+12      88.170
+13      88.170
+14      84.468      88.170
+15      84.468      88.170
+16      78.406       3.702      84.468
+17      78.406       3.702      84.468
+18      78.406       3.702      84.468
+19      19.400       3.702       6.062      78.406
+20      19.400       3.702       6.062      78.406
+21      19.400       3.702       6.062      78.406
+22      19.400       3.702       6.062      78.406
+23      19.400       3.702       6.062      78.406
+24                   3.702       6.062      70.206       8.200
 
 
 ----     26 PARAMETER edattainf  
@@ -724,17 +723,17 @@ E x e c u t i o n
 
              6           9          12          15          18          20          22
 
-14                              96.617
-15                              96.617
-16                              -6.466     103.083
-17                              -6.466     103.083
-18                              -6.466     103.083
-19                              -6.466     103.083     107.463
-20                              -6.466     103.083     107.463
-21                              -6.466     103.083     107.463
-22                              -6.466     103.083     107.463
-23                              -6.466     103.083     107.463
-24                              -6.466     103.083      93.113                  14.350
+14                              89.831
+15                              89.831
+16                               3.009      86.821
+17                               3.009      86.821
+18                               3.009      86.821
+19                               3.009       6.512      80.309
+20                               3.009       6.512      80.309
+21                               3.009       6.512      80.309
+22                               3.009       6.512      80.309
+23                               3.009       6.512      80.309
+24                               3.009       6.512      66.589                  13.720
 25       1.620       3.940       2.430      11.300      72.000       3.830       4.880
 26       1.620       3.940       2.430      11.300      72.000       3.830       4.880
 27       1.620       3.940       2.430      11.300      72.000       3.830       4.880
@@ -782,18 +781,17 @@ E x e c u t i o n
 
              6           9          12          15          18          20          22
 
-13                             100.096
-14                             100.096
-15                             100.096
-16                              -2.032     102.128
-17                              -2.032     102.128
-18                              -2.032       4.478      97.649
-19                              -2.032       4.478      97.649
-20                              -2.032       4.478      97.649
-21                              -2.032       4.478      97.649
-22                              -2.032       4.478      97.649
-23                              -2.032       4.478      89.149                   8.500
-24                              -2.032       4.478      89.149                   8.500
+14                              88.170
+15                              88.170
+16                               3.702      84.468
+17                               3.702      84.468
+18                               3.702      84.468
+19                               3.702       6.062      78.406
+20                               3.702       6.062      78.406
+21                               3.702       6.062      78.406
+22                               3.702       6.062      78.406
+23                               3.702       6.062      78.406
+24                               3.702       6.062      70.206                   8.200
 25       1.500       4.170       1.860       7.810      75.760       3.740       5.160
 26       1.500       4.170       1.860       7.810      75.760       3.740       5.160
 27       1.500       4.170       1.860       7.810      75.760       3.740       5.160
@@ -841,36 +839,33 @@ E x e c u t i o n
 
              male      female
 
-13.12       0.543
-14.12       0.531       0.504
-15.12       0.519       0.493
-16.12      -0.010      -0.032
-16.15       0.517       0.515
-17.12      -0.010      -0.032
-17.15       0.505       0.503
-18.12      -0.010      -0.032
-18.15       0.022       0.503
-18.18       0.483
-19.12      -0.010      -0.032
-19.15       0.022       0.504
-19.18       0.483       0.525
-20.12      -0.010      -0.032
-20.15       0.022       0.504
-20.18       0.483       0.525
-21.12      -0.010      -0.032
-21.15       0.022       0.504
-21.18       0.484       0.526
-22.12      -0.010      -0.032
-22.15       0.022       0.505
-22.18       0.484       0.526
-23.12      -0.010      -0.032
-23.15       0.022       0.510
-23.18       0.447       0.532
-23.22       0.043
-24.12      -0.010      -0.032
-24.15       0.023       0.516
-24.18       0.452       0.466
-24.22       0.043       0.072
+14.12       0.468       0.469
+15.12       0.457       0.459
+16.12       0.019       0.015
+16.15       0.428       0.434
+17.12       0.018       0.015
+17.15       0.418       0.424
+18.12       0.018       0.015
+18.15       0.418       0.424
+19.12       0.018       0.015
+19.15       0.030       0.032
+19.18       0.388       0.392
+20.12       0.018       0.015
+20.15       0.030       0.032
+20.18       0.388       0.393
+21.12       0.018       0.015
+21.15       0.030       0.032
+21.18       0.388       0.393
+22.12       0.018       0.015
+22.15       0.030       0.032
+22.18       0.388       0.393
+23.12       0.019       0.015
+23.15       0.030       0.032
+23.18       0.393       0.398
+24.12       0.019       0.015
+24.15       0.031       0.033
+24.18       0.356       0.333
+24.22       0.042       0.069
 25.6        0.008       0.008
 25.9        0.021       0.020
 25.12       0.010       0.012
@@ -1164,28 +1159,27 @@ E x e c u t i o n
 
           male      female
 
-6        0.588
-7        0.589       0.556
-8        0.582       0.550
-9        0.576       0.544
-10       0.569       0.538
-11       0.562       0.532
-12       0.555       0.526
-13       0.554       0.515
-14       0.542       0.538
-15       0.530       0.526
-16       0.495       0.537
-17       0.483       0.525
-18       0.100       0.525
-19       0.100       0.156
-20       0.100       0.156
-21       0.101       0.156
-22       0.101       0.156
-23                   0.158
+7        0.519       0.517
+8        0.513       0.511
+9        0.507       0.506
+10       0.501       0.500
+11       0.495       0.495
+12       0.489       0.489
+13       0.479       0.479
+14       0.448       0.453
+15       0.438       0.443
+16       0.397       0.401
+17       0.388       0.392
+18       0.388       0.392
+19       0.096       0.138
+20       0.096       0.138
+21       0.096       0.138
+22       0.096       0.139
+23       0.097       0.140
 
 
 
-EXECUTION TIME       =        1.890 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        0.734 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN
@@ -1195,5 +1189,5 @@ USER: Large MUD - 20 User License                    G211208|0002AR-WIN
 
 **** FILE SUMMARY
 
-Input      C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
-Output     C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.lst
+Input      D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
+Output     D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.lst
