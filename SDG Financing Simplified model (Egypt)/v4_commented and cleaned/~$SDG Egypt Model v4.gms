@@ -81,10 +81,10 @@ parameter bk        bk coefficient on business capital stock (plant and equipmen
           aff       Percentage of fossil fuel capital required as input to produce energy
           tfp1      Total factor productivity at time period 1(?)
           phi       Unit cost of investment increases with growth rate
-          fertsh    fertility rate of educated women (weight for hic and local country in fraction)
+          fertsh    fertility rate of educated women (weight for hic and local country)
           gcostsh
           pubgdpsh
-          lowerbound lowerbound of some positive variables (make sure investment is not negative)
+          lowerbound
           continuation(a, conti) Continuation rate of school level;
 
 $CALL GDXXRW .\input\paraminput.xlsx output=.\auxiliary\paraminput.gdx Index=Index!a1 trace=3
