@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 12:09:11 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 10:51:11 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -207,7 +207,7 @@ GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4
  199  execute_unload '.\auxiliary\datainput_arg.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
  200   
  218  execute 'gdxxrw .\auxiliary\datainput_arg.gdx output=.\auxiliary\datainput_arg.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 12:09:11 Page 2
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 10:51:11 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -219,8 +219,8 @@ Include File Summary
      3       23 GDXIN          1      23  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\argentina_rawdata.gdx
 
 
-COMPILATION TIME     =        3.219 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/04/22 12:09:11 Page 3
+COMPILATION TIME     =        8.157 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 10:51:11 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -1188,7 +1188,7 @@ E x e c u t i o n
 
 
 
-EXECUTION TIME       =        3.687 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        2.750 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN

@@ -1,4 +1,4 @@
---- Job SDG Data Input v3 bot.gms Start 08/04/22 11:00:06 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Data Input v3 bot.gms Start 08/04/22 11:10:10 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -65,21 +65,21 @@ Loading sheet edattainm
 Reading data from Excel; Rng = A1:J6
 Reading Slice: A1:J6
 Par  D7             3      edattainm            C2:J6         A2:B6         C1:J1         
-Total time = 2969 Ms
+Total time = 3015 Ms
 --- SDG Data Input v3 bot.gms(22) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\botswana_rawdata.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\botswana_rawdata.gdx
---- SDG Data Input v3 bot.gms(199) 3 Mb
+--- SDG Data Input v3 bot.gms(200) 3 Mb
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\loadersetting.txt
---- SDG Data Input v3 bot.gms(216) 3 Mb
---- Starting execution: elapsed 0:00:03.095
---- SDG Data Input v3 bot.gms(197) 4 Mb
+--- SDG Data Input v3 bot.gms(217) 3 Mb
+--- Starting execution: elapsed 0:00:03.176
+--- SDG Data Input v3 bot.gms(198) 4 Mb
 --- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
---- SDG Data Input v3 bot.gms(216) 4 Mb
+--- SDG Data Input v3 bot.gms(217) 4 Mb
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.gdx
 Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_bot.xlsx
-Total time = 2891 Ms
+Total time = 2938 Ms
 *** Status: Normal completion
---- Job SDG Data Input v3 bot.gms Stop 08/04/22 11:00:12 elapsed 0:00:06.134
+--- Job SDG Data Input v3 bot.gms Stop 08/04/22 11:10:16 elapsed 0:00:06.253

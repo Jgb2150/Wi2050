@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/07/22 09:03:45 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 11:11:03 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -23,7 +23,7 @@ C o m p i l a t i o n
   18  parameter age5yr(ag,g),asfr(agfert,fer),survival(a,surv),edattainf(a,a,edu),edattainm(a,a,edu),s0shf(a,age624),s0shm(a,age624),bed(secp,eda);
   19   
   20  * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
-GDXIN   D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
 --- LOAD  age5yr = 1:D1
 --- LOAD  asfr = 2:D2
 --- LOAD  survival = 3:D3
@@ -206,20 +206,20 @@ GDXIN   D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and
  198  execute_unload '.\auxiliary\datainput_sou.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
  199   
  217  execute 'gdxxrw .\auxiliary\datainput_sou.gdx output=.\auxiliary\datainput_sou.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/07/22 09:03:45 Page 2
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 11:11:03 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
+     1        1 INPUT          0       0  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
      2       21 CALL           1      21  GDXXRW .\input\southafrica_rawdata.xlsx output=".\auxiliary\southafrica_rawdata.gdx" Index=Index!a1 trace=3
-     3       22 GDXIN          1      22  D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+     3       22 GDXIN          1      22  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
 
 
-COMPILATION TIME     =        0.766 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/07/22 09:03:45 Page 3
+COMPILATION TIME     =        3.016 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 11:11:03 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -1179,7 +1179,7 @@ E x e c u t i o n
 
 
 
-EXECUTION TIME       =        0.734 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        2.812 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN
@@ -1189,5 +1189,5 @@ USER: Large MUD - 20 User License                    G211208|0002AR-WIN
 
 **** FILE SUMMARY
 
-Input      D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
-Output     D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.lst
+Input      C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms
+Output     C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.lst

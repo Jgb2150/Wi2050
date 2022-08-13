@@ -1,0 +1,170 @@
+--- Job SDG Egypt Model v4 sou.gms Start 08/04/22 13:04:21 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\Program\37GAMS\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Egypt Model v4 sou.gms"
+    PageSize 0
+    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225c\"
+    SysDir D:\Program\37GAMS\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Large MUD - 20 User License                    G211208|0002AR-WIN
+          Columbia University, Earth Institute                       DC4533
+          C:\Users\Yunjie\Documents\GAMS\gamslice.txt
+          License Admin: Jeffrey Sachs, sachs@columbia.edu                 
+Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
+GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
+--- Starting compilation
+--- SDG Egypt Model v4 sou.gms(90) 3 Mb
+--- call GDXXRW .\input\paraminput_sou.xlsx output=.\auxiliary\paraminput_sou.gdx Index=Index!a1 trace=3
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Excel version 12.0
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\input\paraminput_sou.xlsx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_sou.gdx
+Substituting Index
+Loading sheet Index
+Reading data from Excel; Rng = A1:E101
+Reading Slice: A1:E101
+par=continuation Rng=Continuation!A1 Dim=2 Rdim=1
+par=costff Rng=Hardcode!B1 Dim=0 Rdim=0
+par=costre Rng=Hardcode!B2 Dim=0 Rdim=0
+par=dep Rng=Hardcode!B3 Dim=0 Rdim=0
+par=r Rng=Hardcode!B4 Dim=0 Rdim=0
+par=kff0 Rng=Hardcode!B5 Dim=0 Rdim=0
+par=kre0 Rng=Hardcode!B6 Dim=0 Rdim=0
+par=aff Rng=Hardcode!B7 Dim=0 Rdim=0
+par=taxlim Rng=Hardcode!B8 Dim=0 Rdim=0
+par=tfp1 Rng=Hardcode!B9 Dim=0 Rdim=0
+par=phi Rng=Hardcode!B10 Dim=0 Rdim=0
+par=fertsh Rng=Hardcode!B11 Dim=0 Rdim=0
+par=bk Rng=Hardcode!B12 Dim=0 Rdim=0
+par=bkf Rng=Hardcode!B13 Dim=0 Rdim=0
+par=ben Rng=Hardcode!B14 Dim=0 Rdim=0
+par=k0 Rng=Hardcode!B15 Dim=0 Rdim=0
+par=kf0 Rng=Hardcode!B16 Dim=0 Rdim=0
+par=debtqlim Rng=Hardcode!B17 Dim=0 Rdim=0
+par=gcostsh Rng=Hardcode!B18 Dim=0 Rdim=0
+par=pubgdpsh Rng=Hardcode!B19 Dim=0 Rdim=0
+par=lowerbound Rng=Hardcode!B20 Dim=0 Rdim=0
+Type Symbol       Dim      Sheet                Data          RowHeader     ColHeader     
+Loading sheet Continuation
+Reading data from Excel; Rng = A1:B19
+Reading Slice: A1:B19
+Par  continuation   2      Continuation         B2:B19        A2:A19        B1:B1         
+Loading sheet Hardcode
+Reading data from Excel; Rng = A1:B20
+Reading Slice: A1:B20
+Par  costff         0      Hardcode             B1:B1         --:--         --:--         
+Par  costre         0      Hardcode             B2:B2         --:--         --:--         
+Par  dep            0      Hardcode             B3:B3         --:--         --:--         
+Par  r              0      Hardcode             B4:B4         --:--         --:--         
+Par  kff0           0      Hardcode             B5:B5         --:--         --:--         
+Par  kre0           0      Hardcode             B6:B6         --:--         --:--         
+Par  aff            0      Hardcode             B7:B7         --:--         --:--         
+Par  taxlim         0      Hardcode             B8:B8         --:--         --:--         
+Par  tfp1           0      Hardcode             B9:B9         --:--         --:--         
+Par  phi            0      Hardcode             B10:B10       --:--         --:--         
+Par  fertsh         0      Hardcode             B11:B11       --:--         --:--         
+Par  bk             0      Hardcode             B12:B12       --:--         --:--         
+Par  bkf            0      Hardcode             B13:B13       --:--         --:--         
+Par  ben            0      Hardcode             B14:B14       --:--         --:--         
+Par  k0             0      Hardcode             B15:B15       --:--         --:--         
+Par  kf0            0      Hardcode             B16:B16       --:--         --:--         
+Par  debtqlim       0      Hardcode             B17:B17       --:--         --:--         
+Par  gcostsh        0      Hardcode             B18:B18       --:--         --:--         
+Par  pubgdpsh       0      Hardcode             B19:B19       --:--         --:--         
+Par  lowerbound     0      Hardcode             B20:B20       --:--         --:--         
+Total time = 1359 Ms
+--- SDG Egypt Model v4 sou.gms(91) 3 Mb
+--- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_sou.gdx
+--- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\paraminput_sou.gdx
+--- SDG Egypt Model v4 sou.gms(119) 3 Mb
+--- call GDXXRW .\auxiliary\datainput_sou.xlsx output=.\auxiliary\datainput_sou.gdx Index=index!a1 trace=3
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Excel version 12.0
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.xlsx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
+Substituting Index
+Loading sheet index
+Reading data from Excel; Rng = A1:E7
+Reading Slice: A1:E7
+par=D1 Rng=popg0!A1 Dim=2 Rdim=1
+par=D2 Rng=fert0!A1 Dim=2 Rdim=1
+par=D3 Rng=surv0!A1 Dim=2 Rdim=1
+par=D4 Rng=w0!A1 Dim=3 Rdim=2
+par=D5 Rng=s0!A1 Dim=2 Rdim=1
+par=D6 Rng=ferthic0!A1 Dim=2 Rdim=1
+Type Symbol       Dim      Sheet                Data          RowHeader     ColHeader     
+Loading sheet popg0
+Reading data from Excel; Rng = A1:C101
+Reading Slice: A1:C101
+Par  D1             2      popg0                B2:C101       A2:A101       B1:C1         
+Loading sheet fert0
+Reading data from Excel; Rng = A1:B36
+Reading Slice: A1:B36
+Par  D2             2      fert0                B2:B36        A2:A36        B1:B1         
+Loading sheet surv0
+Reading data from Excel; Rng = A1:E100
+Reading Slice: A1:E100
+Par  D3             2      surv0                B2:E100       A2:A100       B1:E1         
+Loading sheet w0
+Reading data from Excel; Rng = A1:D318
+Reading Slice: A1:D318
+Par  D4             3      w0                   C2:D318       A2:B318       C1:D1         
+Loading sheet s0
+Reading data from Excel; Rng = A1:C19
+Reading Slice: A1:C19
+Par  D5             2      s0                   B2:C19        A2:A19        B1:C1         
+Loading sheet ferthic0
+Reading data from Excel; Rng = A1:B36
+Reading Slice: A1:B36
+Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
+Total time = 1547 Ms
+--- SDG Egypt Model v4 sou.gms(120) 3 Mb
+--- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
+--- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
+--- SDG Egypt Model v4 sou.gms(475) 3 Mb
+--- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\outputsetting_sou.txt
+--- SDG Egypt Model v4 sou.gms(478) 3 Mb
+--- Starting execution: elapsed 0:00:03.136
+--- SDG Egypt Model v4 sou.gms(454) 5 Mb
+--- Generating DNLP model sdgfinance
+--- SDG Egypt Model v4 sou.gms(457) 48 Mb
+---   142,599 rows  144,914 columns  348,898 non-zeroes
+---   98,092 nl-code  27,863 nl-non-zeroes
+--- SDG Egypt Model v4 sou.gms(457) 46 Mb
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:03.569
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        4.2063589347E+03 (Input point)
+ 
+ ** An equation in the pre-triangular part of the model cannot
+    be solved because the critical variable is at a bound.
+ 
+--- Reading solution for model sdgfinance
+--- Executing after solve: elapsed 0:00:05.271
+--- SDG Egypt Model v4 sou.gms(473) 46 Mb
+--- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_sou.gdx
+--- SDG Egypt Model v4 sou.gms(478) 46 Mb
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\modeloutput_sou.gdx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\output\modeloutput_sou.xlsx
+Total time = 1468 Ms
+*** Status: Normal completion
+--- Job SDG Egypt Model v4 sou.gms Stop 08/04/22 13:04:28 elapsed 0:00:06.828

@@ -1,11 +1,11 @@
---- Job SDG Data Input v3 sou.gms Start 08/07/22 09:03:45 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Data Input v3 sou.gms Start 08/13/22 11:11:03 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
-    C:\GAMS\37\gmsprmNT.txt
+    D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms"
+    Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\SDG Data Input v3 sou.gms"
     PageSize 0
-    ScrDir "D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225c\"
-    SysDir C:\GAMS\37\
+    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\225a\"
+    SysDir D:\Program\37GAMS\
     LogOption 3
     ErrMsg 1
     ErrorLog 99
@@ -13,18 +13,18 @@
     LstTitleLeftAligned 1
 Licensee: Large MUD - 20 User License                    G211208|0002AR-WIN
           Columbia University, Earth Institute                       DC4533
-          C:\Users\weiti\OneDrive\Documents\GAMS\gamslice.txt
+          C:\Users\Yunjie\Documents\GAMS\gamslice.txt
           License Admin: Jeffrey Sachs, sachs@columbia.edu                 
-Processor information: 1 socket(s), 6 core(s), and 12 thread(s) available
+Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
 GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
 --- Starting compilation
 --- SDG Data Input v3 sou.gms(21) 3 Mb
 --- call GDXXRW .\input\southafrica_rawdata.xlsx output=".\auxiliary\southafrica_rawdata.gdx" Index=Index!a1 trace=3
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Excel version 16.0
-Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\input\southafrica_rawdata.xlsx
-Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+Excel version 12.0
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\input\southafrica_rawdata.xlsx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
 Substituting Index
 Loading sheet index
 Reading data from Excel; Rng = A1:E8
@@ -65,21 +65,21 @@ Loading sheet edattainm
 Reading data from Excel; Rng = A1:J6
 Reading Slice: A1:J6
 Par  D7             3      edattainm            C2:J6         A2:B6         C1:J1         
-Total time = 547 Ms
+Total time = 2859 Ms
 --- SDG Data Input v3 sou.gms(22) 3 Mb
---- GDXin=D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
---- GDX File ($gdxIn) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+--- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
+--- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\southafrica_rawdata.gdx
 --- SDG Data Input v3 sou.gms(200) 3 Mb
---- $echo File D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\loadersetting.txt
+--- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\loadersetting.txt
 --- SDG Data Input v3 sou.gms(217) 3 Mb
---- Starting execution: elapsed 0:00:00.792
+--- Starting execution: elapsed 0:00:03.020
 --- SDG Data Input v3 sou.gms(198) 4 Mb
---- GDX File (execute_unload) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
+--- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
 --- SDG Data Input v3 sou.gms(217) 4 Mb
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
-Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.xlsx
-Total time = 672 Ms
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.gdx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v4_commented and cleaned - for calibration\auxiliary\datainput_sou.xlsx
+Total time = 2672 Ms
 *** Status: Normal completion
---- Job SDG Data Input v3 sou.gms Stop 08/07/22 09:03:47 elapsed 0:00:01.531
+--- Job SDG Data Input v3 sou.gms Stop 08/13/22 11:11:09 elapsed 0:00:05.842
