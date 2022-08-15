@@ -7,7 +7,6 @@ $stitle Last Updated: July 27, 2022
 ************
 *This section contains the set declaration and imported parameters(to be added).
 
-
 *Set Declaration
 *****************
 
@@ -382,7 +381,7 @@ Equations
 output(t)..           q(t) =e= tfp1*en(t)**ben*kf(t)**bkf*k(t)**bk*efflabtot(t)**blab;
 outputpc(t)..         qpc(t) =e= q(t)/poptot(t);
 ewage(e,t)..          wage(e,t) =e= (blab*q(t)/(lowerbound+efflabtot(t)))*exp(.1*years(e));
-marginalpk(t)..       mpk(t) =e= bk*q(t)/k(t);
+marginalpk(t)..       mpk(t) =e= bk*q(t)/(0.0001 + k(t));
 kstart(tstart)..      k(tstart) =e= k0;
 dstart(tstart)..      debt(tstart) =e= 0;
 kffstart(tstart)..    kff(tstart) =e= kff0;
@@ -394,8 +393,10 @@ krenext(t+1)..        kre(t+1) =e= kre(t)*(1-dep) + invre(t);
 kfnext(t+1)..         kf(t+1) =e= kf(t)*(1-dep) + invf(t);
 energy(t)..           en(t) =e= kff(t) + kre(t);
 ffuel(t)..            ff(t) =e= aff*kff(t);
-costkff(t)..          cinvff(t) =e= costff/(10**9)*invff(t)*(1+phi*(invff(t)/kff(t)));
-costkre(t)..          cinvre(t) =e= costre/(10**9)*invre(t)*(1+phi*(invre(t)/kre(t)));
+*costkff(t)..          cinvff(t) =e= costff/(10**9)*invff(t)*(1+phi*(invff(t)/kff(t)));
+*costkre(t)..          cinvre(t) =e= costre/(10**9)*invre(t)*(1+phi*(invre(t)/kre(t)));
+costkff(t)..          cinvff(t) =e= invff(t)*(1+phi*(invff(t)/kff(t)));
+costkre(t)..          cinvre(t) =e= costre/costff*invre(t)*(1+phi*(invre(t)/kre(t)));
 costkf(t)..           cinvf(t) =e= invf(t)*(1+phi*(invf(t)/kf(t)));
 costk(t)..            cinv(t) =e= inv(t)*(1+phi*(inv(t)/k(t)));
 tbalance(t)..         nx(t) =e= q(t) - cinv(t) - cinvf(t) - con(t) - hlcost(t) - edcost(t) - gcost(t) - cinvff(t) - cinvre(t) - ff(t);
@@ -453,9 +454,8 @@ invf.lo(t) = lowerbound;
 invff.lo(t) = lowerbound;
 invre.lo(t) = lowerbound;
 
-
 solve sdgfinance maximizing util using dnlp;
-display efflabtot.L, qpc.L, edcostgdp.L, hlcostgdp.L, invfgdp.L, outlaygdp.L;
+display q.L, qpc.L, efflabtot.L, kff.L, kre.L, debt.L;
 
 set outputvarlist
 /"Output per Capita",

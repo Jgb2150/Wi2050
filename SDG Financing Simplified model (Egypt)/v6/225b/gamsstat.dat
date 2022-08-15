@@ -1,0 +1,102 @@
+=1
+=2
+=0CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+=1
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+=2
+    1  INPUT                                                                  (DEFAULT)
+    2  BRANCH * MAJERR MINERR JACERR                                          (DEFAULT)
+    3  OPTIMIZE                                                               (DEFAULT)
+    4  BRANCH * * * * * * MAJERR                                              (DEFAULT)
+    5  OUTPUT                                                                 (DEFAULT)
+    6  EXIT                                                                   (DEFAULT)
+    7  MAJERR MESSAGE MAJOR ERROR - TERMINATE                                 (DEFAULT)
+    8  EXIT                                                                   (DEFAULT)
+    9  MINERR MESSAGE MINOR ERROR - TERMINATE                                 (DEFAULT)
+   10  EXIT                                                                   (DEFAULT)
+   11  JACERR MESSAGE FUNCTION OR DERIVATIVE ERROR                            (DEFAULT)
+   12  OUTPUT                                                                 (DEFAULT)
+   13  EXIT                                                                   (DEFAULT)
+ 
+  ***  Line    1  INPUT
+ 
+  ***  Line    0  SET       LSAZRW   = TRUE
+ 
+  ***  Line    0  SET       LFEERR   =           0
+ 
+  ***  Line    0  SET       LFITER   =  2147483647
+ 
+  ***  Line    0  SET       RVTIME   =     1.0000000000E+10
+=1
+ 
+    The model has 144943 variables and 142715 constraints
+    with 349156 Jacobian elements, 27921 of which are nonlinear.
+    The Hessian of the Lagrangian has 4988 elements on the diagonal,
+    165984 elements below the diagonal, and 25299 nonlinear variables.
+=2
+=1
+ 
+ ** Warning **  The value of LFITER is out of range.
+                LFITER is decreased from 2147483647 to 1000000000.
+=2
+ 
+Search for a first feasible solution
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.2199281447E+03 (Input point)
+=1
+ 
+ ** An equation in the pre-triangular part of the model cannot
+    be solved because the critical variable is at a bound.
+ 
+    Residual=           1.01457852E-07
+    Tolerance (Rtnwtr)= 2.00000000E-08
+ 
+=2
+=5 6497 Infeasibility in pre-triangular part of model.                                  
+=6 124673 Infeasibility in pre-triangular part of model.                                  
+=1
+ 
+    The critical pre-triangular constraints and the variables they are
+    solved for in solution order:
+ 
+=2
+=E "    Equation " 137338 " has been solved with respect to"
+=V "    Variable " 124556 ". Value = 2.4e-06"
+=E "    Equation " 6441 " has been solved with respect to"
+=V "    Variable " 124615 ". Value = 1.4685e-06"
+=E "    Equation " 6498 " has been solved with respect to"
+=V "    Variable " 124674 ". Value = 1e-06"
+=C    After the last operation the residual is still 1.01458e-07
+ 
+  ***  Line    4  BRANCH with Lbranch =  2
+ 
+  ***  Line    5  OUTPUT
+ 
+  ***  Line    6  EXIT
+=1
+ 
+ CONOPT time Total                            0.109 seconds
+   of which: Function evaluations             0.008 =  7.3%
+             1st Derivative evaluations       0.006 =  5.5%
+ 
+=2
+ 
+ Work length =   42615087 double words  =  325.13 Mbytes
+    Estimate =   42615087 double words  =  325.13 Mbytes
+    Max used =   17298685 double words  =  131.98 Mbytes
+ 
+ Timing for Function Evaluations:
+ 
+ Statistics for FDEval-Fnc Calls:      7881. Time:      0.008 T/C:    1.0151E-06
+ Statistics for FDEval-Drv Calls:      5333. Time:      0.006 T/C:    1.1251E-06
+ Statistics for 2DDirLag   Calls:         0. Time:      0.000 T/C:    0.0000E+00
+ Statistics for 2DLagr     Calls:         0. Time:      0.000 T/C:    0.0000E+00
+ 

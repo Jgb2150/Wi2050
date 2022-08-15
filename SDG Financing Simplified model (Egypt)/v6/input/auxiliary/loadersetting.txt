@@ -1,0 +1,15 @@
+par=popg0 rng=popg0!A1
+par=fert0 rng=fert0!A2 rdim=1
+text="local" rng=fert0!B1
+par=ferthic0 rng=ferthic0!A2 rdim=1
+text="hic" rng=ferthic0!B1
+par=surv0 rng=surv0!A1
+par=w0 rng=w0!A1
+par=s0 rng=s0!A1
+text="Dim" rng=index!D1 text="Rdim" rng=index!E1
+text="par" rng=index!A2 text="D1" rng=index!B2 text="popg0!A1" rng=index!C2 text="2" rng=index!D2 text="1" rng=index!E2
+text="par" rng=index!A3 text="D2" rng=index!B3 text="fert0!A1" rng=index!C3 text="2" rng=index!D3 text="1" rng=index!E3
+text="par" rng=index!A4 text="D3" rng=index!B4 text="surv0!A1" rng=index!C4 text="2" rng=index!D4 text="1" rng=index!E4
+text="par" rng=index!A5 text="D4" rng=index!B5 text="w0!A1" rng=index!C5 text="3" rng=index!D5 text="2" rng=index!E5
+text="par" rng=index!A6 text="D5" rng=index!B6 text="s0!A1" rng=index!C6 text="2" rng=index!D6 text="1" rng=index!E6
+text="par" rng=index!A7 text="D6" rng=index!B7 text="ferthic0!A1" rng=index!C7 text="2" rng=index!D7 text="1" rng=index!E7
