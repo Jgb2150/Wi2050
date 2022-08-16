@@ -1,12 +1,11 @@
-
---- Job SDG Data Input v5 arg.gms Start 08/13/22 14:19:04 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Data Input v5 arg.gms Start 08/16/22 11:21:12 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
-    C:\GAMS\37\gmsprmNT.txt
+    D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\SDG Data Input v5 arg.gms"
+    Input "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\SDG Data Input v5 arg.gms"
     PageSize 0
-    ScrDir "D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\225a\"
-    SysDir C:\GAMS\37\
+    ScrDir "C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\225a\"
+    SysDir D:\Program\37GAMS\
     LogOption 3
     ErrMsg 1
     ErrorLog 99
@@ -14,18 +13,18 @@
     LstTitleLeftAligned 1
 Licensee: Large MUD - 20 User License                    G211208|0002AR-WIN
           Columbia University, Earth Institute                       DC4533
-          C:\Users\weiti\OneDrive\Documents\GAMS\gamslice.txt
+          C:\Users\Yunjie\Documents\GAMS\gamslice.txt
           License Admin: Jeffrey Sachs, sachs@columbia.edu                 
-Processor information: 1 socket(s), 6 core(s), and 12 thread(s) available
+Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
 GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
 --- Starting compilation
 --- SDG Data Input v5 arg.gms(22) 3 Mb
 --- call GDXXRW .\rawdata\rawdata_arg.xlsx output=".\auxiliary\rawdata_arg.gdx" Index=Index!a1 trace=3
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Excel version 16.0
-Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\rawdata\rawdata_arg.xlsx
-Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\rawdata_arg.gdx
+Excel version 12.0
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\rawdata\rawdata_arg.xlsx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\rawdata_arg.gdx
 Substituting Index
 Loading sheet index
 Reading data from Excel; Rng = A1:E8
@@ -66,27 +65,21 @@ Loading sheet edattainm
 Reading data from Excel; Rng = A1:J6
 Reading Slice: A1:J6
 Par  D7             3      edattainm            C2:J6         A2:B6         C1:J1         
-Total time = 515 Ms
+Total time = 3297 Ms
 --- SDG Data Input v5 arg.gms(23) 3 Mb
---- GDXin=D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\rawdata_arg.gdx
---- GDX File ($gdxIn) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\rawdata_arg.gdx
+--- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\rawdata_arg.gdx
+--- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\rawdata_arg.gdx
 --- SDG Data Input v5 arg.gms(201) 3 Mb
---- $echo File D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\loadersetting.txt
+--- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\loadersetting.txt
 --- SDG Data Input v5 arg.gms(218) 3 Mb
---- Starting execution: elapsed 0:00:00.587
+--- Starting execution: elapsed 0:00:03.432
 --- SDG Data Input v5 arg.gms(199) 4 Mb
---- GDX File (execute_unload) D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\datainput_arg.gdx
+--- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.gdx
 --- SDG Data Input v5 arg.gms(218) 4 Mb
 
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
-Input file : D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\datainput_arg.gdx
-Output file: D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\datainput_arg.xlsx
-Adding new sheet: fert0
-Adding new sheet: ferthic0
-Adding new sheet: surv0
-Adding new sheet: w0
-Adding new sheet: s0
-Adding new sheet: index
-Total time = 563 Ms
+Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.gdx
+Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.xlsx
+Total time = 3359 Ms
 *** Status: Normal completion
---- Job SDG Data Input v5 arg.gms Stop 08/13/22 14:19:05 elapsed 0:00:01.202
+--- Job SDG Data Input v5 arg.gms Stop 08/16/22 11:21:19 elapsed 0:00:06.962

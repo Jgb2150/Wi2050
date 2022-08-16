@@ -1,4 +1,4 @@
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 14:19:04 Page 1
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/16/22 11:21:12 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -24,7 +24,7 @@ C o m p i l a t i o n
   19   
   20   
   21  * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
-GDXIN   D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\rawdata_arg.gdx
+GDXIN   C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\rawdata_arg.gdx
 --- LOAD  age5yr = 1:D1
 --- LOAD  asfr = 2:D2
 --- LOAD  survival = 3:D3
@@ -207,20 +207,20 @@ GDXIN   D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxilia
  199  execute_unload '.\auxiliary\datainput_arg.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
  200   
  218  execute 'gdxxrw .\auxiliary\datainput_arg.gdx output=.\auxiliary\datainput_arg.xlsx @.\auxiliary\loadersetting.txt';
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 14:19:04 Page 2
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/16/22 11:21:12 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\SDG Data Input v5 arg.gms
+     1        1 INPUT          0       0  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\SDG Data Input v5 arg.gms
      2       22 CALL           1      22  GDXXRW .\rawdata\rawdata_arg.xlsx output=".\auxiliary\rawdata_arg.gdx" Index=Index!a1 trace=3
-     3       23 GDXIN          1      23  D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\auxiliary\rawdata_arg.gdx
+     3       23 GDXIN          1      23  C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\rawdata_arg.gdx
 
 
-COMPILATION TIME     =        0.578 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
-GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/13/22 14:19:04 Page 3
+COMPILATION TIME     =        3.422 SECONDS      3 MB  37.1.0 r07954d5 WEX-WEI
+GAMS 37.1.0  r07954d5 Released Nov 11, 2021 WEX-WEI x86 64bit/MS Windows - 08/16/22 11:21:12 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -1188,7 +1188,7 @@ E x e c u t i o n
 
 
 
-EXECUTION TIME       =        0.609 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
+EXECUTION TIME       =        3.531 SECONDS      4 MB  37.1.0 r07954d5 WEX-WEI
 
 
 USER: Large MUD - 20 User License                    G211208|0002AR-WIN
@@ -1198,5 +1198,5 @@ USER: Large MUD - 20 User License                    G211208|0002AR-WIN
 
 **** FILE SUMMARY
 
-Input      D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\SDG Data Input v5 arg.gms
-Output     D:\Github\Wi2050\SDG Financing Simplified model (Egypt)\v5\input\SDG Data Input v5 arg.lst
+Input      C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\SDG Data Input v5 arg.gms
+Output     C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\SDG Data Input v5 arg.lst

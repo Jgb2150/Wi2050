@@ -19,8 +19,8 @@ parameter age5yr(ag,g),asfr(agfert,fer),survival(a,surv),edattainf(a,a,edu),edat
 
 
 * rawdata.xlsx corresponds to egyptdata.xlsx in previous versions
-$CALL GDXXRW .\rawdata\rawdata_arg.xlsx output=".\auxiliary\rawdata_arg.gdx" Index=Index!a1 trace=3
-$GDXIN ".\auxiliary\rawdata_arg.gdx"
+$CALL GDXXRW .\rawdata\rawdata_%country%.xlsx output=".\auxiliary\rawdata_%country%.gdx" Index=Index!a1 trace=3
+$GDXIN ".\auxiliary\rawdata_%country%.gdx"
 $LOAD age5yr=D1 asfr=D2 survival=D3 s0shf=D4 s0shm=D5 edattainf=D6 edattainm=D7
 $GDXIN
 
@@ -196,7 +196,7 @@ s0(a,"male") = popg0(a,"male")*s0shm(a,"s0sh")*.01;
 display s0;
 
 * dataloader.gdx corresponds to egyptdatainput.gdx in previous versions
-execute_unload '.\auxiliary\datainput_arg.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
+execute_unload '.\auxiliary\datainput_%country%.gdx' popg0,fert0,ferthic0,surv0,w0,s0;
 
 $onEcho > .\auxiliary\loadersetting.txt
 par=popg0 rng=popg0!A1
@@ -215,4 +215,4 @@ text="par" rng=index!A5 text="D4" rng=index!B5 text="w0!A1" rng=index!C5 text="3
 text="par" rng=index!A6 text="D5" rng=index!B6 text="s0!A1" rng=index!C6 text="2" rng=index!D6 text="1" rng=index!E6
 text="par" rng=index!A7 text="D6" rng=index!B7 text="ferthic0!A1" rng=index!C7 text="2" rng=index!D7 text="1" rng=index!E7
 $offEcho
-execute 'gdxxrw .\auxiliary\datainput_arg.gdx output=.\auxiliary\datainput_arg.xlsx @.\auxiliary\loadersetting.txt';
+execute 'gdxxrw .\auxiliary\datainput_%country%.gdx output=.\auxiliary\datainput_%country%.xlsx @.\auxiliary\loadersetting.txt';
