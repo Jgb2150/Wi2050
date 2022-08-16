@@ -1,5 +1,5 @@
 
---- Job SDG Egypt Model v7 arg.gms Start 08/16/22 11:21:30 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Egypt Model v7 arg.gms Start 08/16/22 11:25:55 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -61,7 +61,7 @@ par=stratio Rng=Hardcode!B22 Dim=0 Rdim=0
 par=hwratio Rng=Hardcode!B23 Dim=0 Rdim=0
 par=hcaccum Rng=Hardcode!B24 Dim=0 Rdim=0
 **** Bad Cell entry in Index
-Total time = 3172 Ms
+Total time = 3203 Ms
 --- SDG Egypt Model v7 arg.gms(96) 3 Mb
 *** GDXIN failed C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\paraminput_arg.gdx
 *** Msg: No such file or directory
@@ -209,7 +209,7 @@ Loading sheet ferthic0
 Reading data from Excel; Rng = A1:B36
 Reading Slice: A1:B36
 Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
-Total time = 2859 Ms
+Total time = 3094 Ms
 --- SDG Egypt Model v7 arg.gms(125) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.gdx
@@ -259,4 +259,4 @@ Total time = 2859 Ms
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\outputsetting_arg.txt
 --- SDG Egypt Model v7 arg.gms(507) 3 Mb 33 Errors
 *** Status: Compilation error(s)
---- Job SDG Egypt Model v7 arg.gms Stop 08/16/22 11:21:37 elapsed 0:00:06.694
+--- Job SDG Egypt Model v7 arg.gms Stop 08/16/22 11:26:01 elapsed 0:00:06.606

@@ -1,5 +1,4 @@
-
---- Job SDG Egypt Model v7 arg.gms Start 08/16/22 11:29:43 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Job SDG Egypt Model v7 arg.gms Start 08/16/22 12:44:08 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     D:\Program\37GAMS\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -85,7 +84,7 @@ Par  discr          0      Hardcode             B20:B20       --:--         --:-
 Par  stratio        0      Hardcode             B21:B21       --:--         --:--         
 Par  hwratio        0      Hardcode             B22:B22       --:--         --:--         
 Par  hcaccum        0      Hardcode             B23:B23       --:--         --:--         
-Total time = 3235 Ms
+Total time = 1359 Ms
 --- SDG Egypt Model v7 arg.gms(96) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\paraminput_arg.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\paraminput_arg.gdx
@@ -131,225 +130,225 @@ Loading sheet ferthic0
 Reading data from Excel; Rng = A1:B36
 Reading Slice: A1:B36
 Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
-Total time = 2672 Ms
+Total time = 1547 Ms
 --- SDG Egypt Model v7 arg.gms(125) 3 Mb
 --- GDXin=C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.gdx
 --- GDX File ($gdxIn) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\datainput_arg.gdx
 --- SDG Egypt Model v7 arg.gms(504) 3 Mb
 --- $echo File C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\outputsetting_arg.txt
 --- SDG Egypt Model v7 arg.gms(507) 3 Mb
---- Starting execution: elapsed 0:00:06.267
+--- Starting execution: elapsed 0:00:03.137
 --- SDG Egypt Model v7 arg.gms(472) 5 Mb
 --- Generating DNLP model sdgfinance
 --- SDG Egypt Model v7 arg.gms(287) 7 Mb
---- Starting Equ eq1: elapsed 0:00:06.272
+--- Starting Equ eq1: elapsed 0:00:03.140
 --- SDG Egypt Model v7 arg.gms(288) 7 Mb
---- Starting Equ eq2: elapsed 0:00:06.276
+--- Starting Equ eq2: elapsed 0:00:03.143
 --- SDG Egypt Model v7 arg.gms(289) 7 Mb
---- Starting Equ eq3: elapsed 0:00:06.276
+--- Starting Equ eq3: elapsed 0:00:03.143
 --- SDG Egypt Model v7 arg.gms(290) 9 Mb
---- Starting Equ eq4: elapsed 0:00:06.288
+--- Starting Equ eq4: elapsed 0:00:03.152
 --- SDG Egypt Model v7 arg.gms(291) 16 Mb
---- Starting Equ eq5: elapsed 0:00:06.355
+--- Starting Equ eq5: elapsed 0:00:03.182
 --- SDG Egypt Model v7 arg.gms(295) 17 Mb
---- Starting Equ eq6: elapsed 0:00:06.415
+--- Starting Equ eq6: elapsed 0:00:03.220
 --- SDG Egypt Model v7 arg.gms(296) 17 Mb
---- Starting Equ eq7: elapsed 0:00:06.416
+--- Starting Equ eq7: elapsed 0:00:03.221
 --- SDG Egypt Model v7 arg.gms(297) 17 Mb
---- Starting Equ eq8: elapsed 0:00:06.417
+--- Starting Equ eq8: elapsed 0:00:03.221
 --- SDG Egypt Model v7 arg.gms(298) 17 Mb
---- Starting Equ eq9: elapsed 0:00:06.417
+--- Starting Equ eq9: elapsed 0:00:03.221
 --- SDG Egypt Model v7 arg.gms(299) 17 Mb
---- Starting Equ eq10: elapsed 0:00:06.418
+--- Starting Equ eq10: elapsed 0:00:03.221
 --- SDG Egypt Model v7 arg.gms(302) 17 Mb
---- Starting Equ eq11: elapsed 0:00:06.419
+--- Starting Equ eq11: elapsed 0:00:03.221
 --- SDG Egypt Model v7 arg.gms(303) 17 Mb
---- Starting Equ eq12: elapsed 0:00:06.419
+--- Starting Equ eq12: elapsed 0:00:03.222
 --- SDG Egypt Model v7 arg.gms(304) 17 Mb
---- Starting Equ eq13: elapsed 0:00:06.420
+--- Starting Equ eq13: elapsed 0:00:03.222
 --- SDG Egypt Model v7 arg.gms(305) 17 Mb
---- Starting Equ eq14: elapsed 0:00:06.421
+--- Starting Equ eq14: elapsed 0:00:03.222
 --- SDG Egypt Model v7 arg.gms(306) 17 Mb
---- Starting Equ eq15: elapsed 0:00:06.421
+--- Starting Equ eq15: elapsed 0:00:03.222
 --- SDG Egypt Model v7 arg.gms(307) 29 Mb
---- Starting Equ eq16: elapsed 0:00:06.553
+--- Starting Equ eq16: elapsed 0:00:03.271
 --- SDG Egypt Model v7 arg.gms(308) 45 Mb
---- Starting Equ eq17: elapsed 0:00:06.792
+--- Starting Equ eq17: elapsed 0:00:03.361
 --- SDG Egypt Model v7 arg.gms(309) 45 Mb
---- Starting Equ eq19: elapsed 0:00:06.794
+--- Starting Equ eq19: elapsed 0:00:03.362
 --- SDG Egypt Model v7 arg.gms(310) 45 Mb
---- Starting Equ eq19a: elapsed 0:00:06.918
+--- Starting Equ eq19a: elapsed 0:00:03.404
 --- SDG Egypt Model v7 arg.gms(311) 45 Mb
---- Starting Equ eq19b: elapsed 0:00:06.918
+--- Starting Equ eq19b: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(312) 45 Mb
---- Starting Equ eq19c: elapsed 0:00:06.918
+--- Starting Equ eq19c: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(313) 45 Mb
---- Starting Equ eq19d: elapsed 0:00:06.918
+--- Starting Equ eq19d: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(314) 45 Mb
---- Starting Equ eq19e: elapsed 0:00:06.918
+--- Starting Equ eq19e: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(315) 45 Mb
---- Starting Equ eq20: elapsed 0:00:06.919
+--- Starting Equ eq20: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(317) 45 Mb
---- Starting Equ eq21: elapsed 0:00:06.920
+--- Starting Equ eq21: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(316) 45 Mb
---- Starting Equ eq21a: elapsed 0:00:06.920
+--- Starting Equ eq21a: elapsed 0:00:03.405
 --- SDG Egypt Model v7 arg.gms(318) 45 Mb
---- Starting Equ eq22: elapsed 0:00:06.921
+--- Starting Equ eq22: elapsed 0:00:03.406
 --- SDG Egypt Model v7 arg.gms(319) 45 Mb
---- Starting Equ eq23: elapsed 0:00:06.921
+--- Starting Equ eq23: elapsed 0:00:03.406
 --- SDG Egypt Model v7 arg.gms(320) 45 Mb
---- Starting Equ eq24: elapsed 0:00:06.922
+--- Starting Equ eq24: elapsed 0:00:03.406
 --- SDG Egypt Model v7 arg.gms(321) 45 Mb
---- Starting Equ eq25: elapsed 0:00:06.922
+--- Starting Equ eq25: elapsed 0:00:03.406
 --- SDG Egypt Model v7 arg.gms(322) 45 Mb
---- Starting Equ eq26: elapsed 0:00:06.941
+--- Starting Equ eq26: elapsed 0:00:03.412
 --- SDG Egypt Model v7 arg.gms(323) 45 Mb
---- Starting Equ eq27: elapsed 0:00:06.941
+--- Starting Equ eq27: elapsed 0:00:03.412
 --- SDG Egypt Model v7 arg.gms(324) 45 Mb
---- Starting Equ eq28: elapsed 0:00:06.942
+--- Starting Equ eq28: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(325) 45 Mb
---- Starting Equ eq29: elapsed 0:00:06.942
+--- Starting Equ eq29: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(326) 45 Mb
---- Starting Equ eq30a: elapsed 0:00:06.942
+--- Starting Equ eq30a: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(327) 45 Mb
---- Starting Equ eq30: elapsed 0:00:06.942
+--- Starting Equ eq30: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(328) 45 Mb
---- Starting Equ eq31: elapsed 0:00:06.942
+--- Starting Equ eq31: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(329) 45 Mb
---- Starting Equ eq32: elapsed 0:00:06.943
+--- Starting Equ eq32: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(330) 45 Mb
---- Starting Equ eq33: elapsed 0:00:06.943
+--- Starting Equ eq33: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(331) 45 Mb
---- Starting Equ eq34: elapsed 0:00:06.943
+--- Starting Equ eq34: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(332) 45 Mb
---- Starting Equ eq36: elapsed 0:00:06.944
+--- Starting Equ eq36: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(333) 45 Mb
---- Starting Equ eq37: elapsed 0:00:06.944
+--- Starting Equ eq37: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(334) 45 Mb
---- Starting Equ eq38: elapsed 0:00:06.944
+--- Starting Equ eq38: elapsed 0:00:03.413
 --- SDG Egypt Model v7 arg.gms(335) 45 Mb
---- Starting Equ eq51: elapsed 0:00:06.949
+--- Starting Equ eq51: elapsed 0:00:03.415
 --- SDG Egypt Model v7 arg.gms(336) 45 Mb
---- Starting Equ eq52: elapsed 0:00:06.961
+--- Starting Equ eq52: elapsed 0:00:03.422
 --- SDG Egypt Model v7 arg.gms(337) 45 Mb
---- Starting Equ eq53: elapsed 0:00:06.962
+--- Starting Equ eq53: elapsed 0:00:03.424
 --- SDG Egypt Model v7 arg.gms(338) 45 Mb
---- Starting Equ eq54: elapsed 0:00:06.964
+--- Starting Equ eq54: elapsed 0:00:03.424
 --- SDG Egypt Model v7 arg.gms(300) 45 Mb
---- Starting Equ eq61: elapsed 0:00:06.964
+--- Starting Equ eq61: elapsed 0:00:03.424
 --- SDG Egypt Model v7 arg.gms(301) 45 Mb
---- Starting Equ eq62: elapsed 0:00:06.968
+--- Starting Equ eq62: elapsed 0:00:03.426
 --- SDG Egypt Model v7 arg.gms(292) 45 Mb
---- Starting Equ eq63: elapsed 0:00:06.968
+--- Starting Equ eq63: elapsed 0:00:03.426
 --- SDG Egypt Model v7 arg.gms(293) 45 Mb
---- Starting Equ eq64: elapsed 0:00:06.968
+--- Starting Equ eq64: elapsed 0:00:03.426
 --- SDG Egypt Model v7 arg.gms(294) 46 Mb
---- Starting Equ eq65: elapsed 0:00:07.004
+--- Starting Equ eq65: elapsed 0:00:03.443
 --- SDG Egypt Model v7 arg.gms(339) 47 Mb
---- Starting Equ eq66: elapsed 0:00:07.113
+--- Starting Equ eq66: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(340) 47 Mb
---- Starting Equ eq70: elapsed 0:00:07.114
+--- Starting Equ eq70: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(341) 47 Mb
---- Starting Equ eq71: elapsed 0:00:07.115
+--- Starting Equ eq71: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(342) 47 Mb
---- Starting Equ eq72: elapsed 0:00:07.115
+--- Starting Equ eq72: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(441) 47 Mb
---- Starting Equ utilt: elapsed 0:00:07.115
+--- Starting Equ utilt: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(442) 47 Mb
---- Starting Equ utility: elapsed 0:00:07.115
+--- Starting Equ utility: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(393) 47 Mb
---- Starting Equ output: elapsed 0:00:07.116
+--- Starting Equ output: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(394) 47 Mb
---- Starting Equ outputpc: elapsed 0:00:07.117
+--- Starting Equ outputpc: elapsed 0:00:03.484
 --- SDG Egypt Model v7 arg.gms(395) 47 Mb
---- Starting Equ ewage: elapsed 0:00:07.117
+--- Starting Equ ewage: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(397) 47 Mb
---- Starting Equ kstart: elapsed 0:00:07.118
+--- Starting Equ kstart: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(401) 47 Mb
---- Starting Equ kfstart: elapsed 0:00:07.119
+--- Starting Equ kfstart: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(399) 47 Mb
---- Starting Equ kffstart: elapsed 0:00:07.119
+--- Starting Equ kffstart: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(400) 47 Mb
---- Starting Equ krestart: elapsed 0:00:07.119
+--- Starting Equ krestart: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(402) 47 Mb
---- Starting Equ knext: elapsed 0:00:07.119
+--- Starting Equ knext: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(405) 47 Mb
---- Starting Equ kfnext: elapsed 0:00:07.119
+--- Starting Equ kfnext: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(403) 47 Mb
---- Starting Equ kffnext: elapsed 0:00:07.119
+--- Starting Equ kffnext: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(404) 47 Mb
---- Starting Equ krenext: elapsed 0:00:07.120
+--- Starting Equ krenext: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(423) 47 Mb
---- Starting Equ kfend: elapsed 0:00:07.120
+--- Starting Equ kfend: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(424) 47 Mb
---- Starting Equ ktotal: elapsed 0:00:07.120
+--- Starting Equ ktotal: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(406) 47 Mb
---- Starting Equ energy: elapsed 0:00:07.121
+--- Starting Equ energy: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(407) 47 Mb
---- Starting Equ ffuel: elapsed 0:00:07.121
+--- Starting Equ ffuel: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(418) 47 Mb
---- Starting Equ conlim: elapsed 0:00:07.121
+--- Starting Equ conlim: elapsed 0:00:03.485
 --- SDG Egypt Model v7 arg.gms(432) 47 Mb
---- Starting Equ education: elapsed 0:00:07.122
+--- Starting Equ education: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(435) 47 Mb
---- Starting Equ edugdp: elapsed 0:00:07.122
+--- Starting Equ edugdp: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(398) 47 Mb
---- Starting Equ dstart: elapsed 0:00:07.122
+--- Starting Equ dstart: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(412) 47 Mb
---- Starting Equ tbalance: elapsed 0:00:07.123
+--- Starting Equ tbalance: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(413) 47 Mb
---- Starting Equ totdebt: elapsed 0:00:07.123
+--- Starting Equ totdebt: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(414) 47 Mb
---- Starting Equ debttogdp: elapsed 0:00:07.123
+--- Starting Equ debttogdp: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(415) 47 Mb
---- Starting Equ debtlimit: elapsed 0:00:07.124
+--- Starting Equ debtlimit: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(419) 47 Mb
---- Starting Equ conend: elapsed 0:00:07.124
+--- Starting Equ conend: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(425) 47 Mb
---- Starting Equ consumetrpc: elapsed 0:00:07.124
+--- Starting Equ consumetrpc: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(420) 47 Mb
---- Starting Equ kend: elapsed 0:00:07.124
+--- Starting Equ kend: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(421) 47 Mb
---- Starting Equ kffend: elapsed 0:00:07.125
+--- Starting Equ kffend: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(422) 47 Mb
---- Starting Equ kreend: elapsed 0:00:07.125
+--- Starting Equ kreend: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(411) 47 Mb
---- Starting Equ costk: elapsed 0:00:07.125
+--- Starting Equ costk: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(410) 47 Mb
---- Starting Equ costkf: elapsed 0:00:07.125
+--- Starting Equ costkf: elapsed 0:00:03.486
 --- SDG Egypt Model v7 arg.gms(408) 47 Mb
---- Starting Equ costkff: elapsed 0:00:07.126
+--- Starting Equ costkff: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(409) 47 Mb
---- Starting Equ costkre: elapsed 0:00:07.127
+--- Starting Equ costkre: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(433) 47 Mb
---- Starting Equ health: elapsed 0:00:07.127
+--- Starting Equ health: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(434) 47 Mb
---- Starting Equ govcost: elapsed 0:00:07.127
+--- Starting Equ govcost: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(436) 47 Mb
---- Starting Equ hlgdp: elapsed 0:00:07.128
+--- Starting Equ hlgdp: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(438) 47 Mb
---- Starting Equ pubadgdp: elapsed 0:00:07.128
+--- Starting Equ pubadgdp: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(439) 47 Mb
---- Starting Equ infgdp: elapsed 0:00:07.128
+--- Starting Equ infgdp: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(437) 47 Mb
---- Starting Equ poutlay: elapsed 0:00:07.128
+--- Starting Equ poutlay: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(429) 47 Mb
---- Starting Equ educationuc: elapsed 0:00:07.129
+--- Starting Equ educationuc: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(430) 47 Mb
---- Starting Equ healthuc: elapsed 0:00:07.129
+--- Starting Equ healthuc: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(396) 47 Mb
---- Starting Equ marginalpk: elapsed 0:00:07.130
+--- Starting Equ marginalpk: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(440) 47 Mb
---- Starting Equ enktotratio: elapsed 0:00:07.130
+--- Starting Equ enktotratio: elapsed 0:00:03.487
 --- SDG Egypt Model v7 arg.gms(426) 47 Mb
---- Starting Equ endconpclim: elapsed 0:00:07.130
+--- Starting Equ endconpclim: elapsed 0:00:03.488
 --- SDG Egypt Model v7 arg.gms(416) 47 Mb
---- Starting Equ nodebtbyend: elapsed 0:00:07.130
+--- Starting Equ nodebtbyend: elapsed 0:00:03.488
 --- SDG Egypt Model v7 arg.gms(474) 48 Mb
 ---   142,717 rows  144,943 columns  349,188 non-zeroes
 ---   98,236 nl-code  27,979 nl-non-zeroes
 --- SDG Egypt Model v7 arg.gms(474) 46 Mb
---- Executing CONOPT (Solvelink=2): elapsed 0:00:07.333
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:03.609
 
 CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 
@@ -724,7 +723,6 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
     294   4        2.6005890921E+01 4.5E+00    43 1.0E+00   12 T  T
     295   4        2.6053263272E+01 5.3E+00    42 1.0E+00   13 F  T
     296   4        2.6068142787E+01 9.0E+00    41 1.0E+00    8 T  T
-   Elapsed time       30.4 seconds.
  
    Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
     297   4        2.6103549687E+01 1.5E-01    44 1.0E+00   19 T  T
@@ -880,8 +878,8 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
  ** Optimal solution. Reduced gradient less than tolerance.
  
 --- Reading solution for model sdgfinance
---- SDG Egypt Model v7 arg.gms(474) 46 Mb  42 secs
---- Executing after solve: elapsed 0:00:51.964
+--- SDG Egypt Model v7 arg.gms(474) 46 Mb  19 secs
+--- Executing after solve: elapsed 0:00:22.642
 --- SDG Egypt Model v7 arg.gms(502) 46 Mb
 --- GDX File (execute_unload) C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\modeloutput_arg.gdx
 --- SDG Egypt Model v7 arg.gms(507) 46 Mb
@@ -889,17 +887,17 @@ CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
 Input file : C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\input\auxiliary\modeloutput_arg.gdx
 Output file: C:\Users\Yunjie\Desktop\Wi2050\SDG Financing Simplified model (Egypt)\v7\output\modeloutput_arg.xlsx
-Total time = 3188 Ms
+Total time = 1156 Ms
 --- Profile Summary (168 records processed)
-    42.391   0.046GB       474 Solve Alg  sdgfinance
-     3.343   0.046GB       507 Execute    
-     2.250   0.046GB       474 Solve Read sdgfinance
-     0.250   0.045GB       307 Equation   eq16 (53424)
-     0.203   0.046GB       474 Solve Fini sdgfinance (349188)
-     0.125   0.045GB       309 Equation   eq19 (522)
-     0.125   0.029GB       306 Equation   eq15 (56376)
-     0.109   0.047GB       294 Equation   eq65 (29)
-     0.078   0.016GB       290 Equation   eq4 (18270)
-     0.063   0.017GB       291 Equation   eq5 (29)
+    18.234   0.046GB       474 Solve Alg  sdgfinance
+     1.234   0.046GB       507 Execute    
+     0.797   0.046GB       474 Solve Read sdgfinance
+     0.125   0.046GB       474 Solve Fini sdgfinance (349188)
+     0.094   0.045GB       307 Equation   eq16 (53424)
+     0.047   0.017GB       291 Equation   eq5 (29)
+     0.047   0.029GB       306 Equation   eq15 (56376)
+     0.047   0.047GB       294 Equation   eq65 (29)
+     0.031   0.045GB       309 Equation   eq19 (522)
+     0.031   0.016GB       290 Equation   eq4 (18270)
 *** Status: Normal completion
---- Job SDG Egypt Model v7 arg.gms Stop 08/16/22 11:30:38 elapsed 0:00:55.310
+--- Job SDG Egypt Model v7 arg.gms Stop 08/16/22 12:44:32 elapsed 0:00:23.883
