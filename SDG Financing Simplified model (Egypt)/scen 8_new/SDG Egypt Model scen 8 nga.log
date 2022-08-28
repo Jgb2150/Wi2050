@@ -1,0 +1,1628 @@
+--- Job SDG Egypt Model scen 8 nga.gms Start 08/28/22 23:28:37 37.1.0 r07954d5 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\37\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\SDG Egypt Model scen 8 nga.gms"
+    PageSize 0
+    ScrDir "C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\225b\"
+    SysDir C:\GAMS\37\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Large MUD - 20 User License                    G211208|0002AR-WIN
+          Columbia University, Earth Institute                       DC4533
+          \\Mac\Home\Documents\GAMS\gamslice.txt
+          License Admin: Jeffrey Sachs, sachs@columbia.edu                 
+Processor information: 1 socket(s), 2 core(s), and 2 thread(s) available
+GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
+--- Starting compilation
+--- SDG Egypt Model scen 8 nga.gms(135) 3 Mb
+--- call GDXXRW .\input\paraminput\paraminput_nga.xlsx output=.\input\auxiliary\paraminput_nga.gdx Index=Index!a1 trace=3
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Excel version 16.0
+Input file : C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\paraminput\paraminput_nga.xlsx
+Output file: C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\paraminput_nga.gdx
+Substituting Index
+
+Reading data from Excel; Rng = A1:E98
+Reading Slice: A1:E98
+par=continuation Rng=Continuation!A1 Dim=2 Rdim=1
+par=costff Rng=Hardcode!B1 Dim=0 Rdim=0
+par=costre Rng=Hardcode!B2 Dim=0 Rdim=0
+par=dep Rng=Hardcode!B3 Dim=0 Rdim=0
+par=kff0 Rng=Hardcode!B4 Dim=0 Rdim=0
+par=kre0 Rng=Hardcode!B5 Dim=0 Rdim=0
+par=aff Rng=Hardcode!B6 Dim=0 Rdim=0
+par=taxlim Rng=Hardcode!B7 Dim=0 Rdim=0
+par=tfp1 Rng=Hardcode!B8 Dim=0 Rdim=0
+par=phi Rng=Hardcode!B9 Dim=0 Rdim=0
+par=fertsh Rng=Hardcode!B10 Dim=0 Rdim=0
+par=bk Rng=Hardcode!B11 Dim=0 Rdim=0
+par=bkf Rng=Hardcode!B12 Dim=0 Rdim=0
+par=ben Rng=Hardcode!B13 Dim=0 Rdim=0
+par=k0 Rng=Hardcode!B14 Dim=0 Rdim=0
+par=kf0 Rng=Hardcode!B15 Dim=0 Rdim=0
+par=pubgdpsh Rng=Hardcode!B16 Dim=0 Rdim=0
+par=lowerbound Rng=Hardcode!B17 Dim=0 Rdim=0
+par=discr Rng=Hardcode!B18 Dim=0 Rdim=0
+par=stratio Rng=Hardcode!B19 Dim=0 Rdim=0
+par=hwratio Rng=Hardcode!B20 Dim=0 Rdim=0
+par=hcaccum Rng=Hardcode!B21 Dim=0 Rdim=0
+Type Symbol       Dim      Sheet                Data          RowHeader     ColHeader     
+Loading sheet Continuation
+Reading data from Excel; Rng = A1:B19
+Reading Slice: A1:B19
+Par  continuation   2      Continuation         B2:B19        A2:A19        B1:B1         
+Loading sheet Hardcode
+Reading data from Excel; Rng = A1:B21
+Reading Slice: A1:B21
+Par  costff         0      Hardcode             B1:B1         --:--         --:--         
+Par  costre         0      Hardcode             B2:B2         --:--         --:--         
+Par  dep            0      Hardcode             B3:B3         --:--         --:--         
+Par  kff0           0      Hardcode             B4:B4         --:--         --:--         
+Par  kre0           0      Hardcode             B5:B5         --:--         --:--         
+Par  aff            0      Hardcode             B6:B6         --:--         --:--         
+Par  taxlim         0      Hardcode             B7:B7         --:--         --:--         
+Par  tfp1           0      Hardcode             B8:B8         --:--         --:--         
+Par  phi            0      Hardcode             B9:B9         --:--         --:--         
+Par  fertsh         0      Hardcode             B10:B10       --:--         --:--         
+Par  bk             0      Hardcode             B11:B11       --:--         --:--         
+Par  bkf            0      Hardcode             B12:B12       --:--         --:--         
+Par  ben            0      Hardcode             B13:B13       --:--         --:--         
+Par  k0             0      Hardcode             B14:B14       --:--         --:--         
+Par  kf0            0      Hardcode             B15:B15       --:--         --:--         
+Par  pubgdpsh       0      Hardcode             B16:B16       --:--         --:--         
+Par  lowerbound     0      Hardcode             B17:B17       --:--         --:--         
+Par  discr          0      Hardcode             B18:B18       --:--         --:--         
+Par  stratio        0      Hardcode             B19:B19       --:--         --:--         
+Par  hwratio        0      Hardcode             B20:B20       --:--         --:--         
+Par  hcaccum        0      Hardcode             B21:B21       --:--         --:--         
+Total time = 20828 Ms
+--- SDG Egypt Model scen 8 nga.gms(136) 3 Mb
+--- GDXin=C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\paraminput_nga.gdx
+--- GDX File ($gdxIn) C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\paraminput_nga.gdx
+--- SDG Egypt Model scen 8 nga.gms(164) 3 Mb
+--- call GDXXRW .\input\auxiliary\datainput_nga.xlsx output=.\input\auxiliary\datainput_nga.gdx Index=index!a1 trace=3
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Excel version 16.0
+Input file : C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\datainput_nga.xlsx
+Output file: C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\datainput_nga.gdx
+Substituting Index
+Loading sheet index
+Reading data from Excel; Rng = A1:E7
+Reading Slice: A1:E7
+par=D1 Rng=popg0!A1 Dim=2 Rdim=1
+par=D2 Rng=fert0!A1 Dim=2 Rdim=1
+par=D3 Rng=surv0!A1 Dim=2 Rdim=1
+par=D4 Rng=w0!A1 Dim=3 Rdim=2
+par=D5 Rng=s0!A1 Dim=2 Rdim=1
+par=D6 Rng=ferthic0!A1 Dim=2 Rdim=1
+Type Symbol       Dim      Sheet                Data          RowHeader     ColHeader     
+Loading sheet popg0
+Reading data from Excel; Rng = A1:C101
+Reading Slice: A1:C101
+Par  D1             2      popg0                B2:C101       A2:A101       B1:C1         
+Loading sheet fert0
+Reading data from Excel; Rng = A1:B36
+Reading Slice: A1:B36
+Par  D2             2      fert0                B2:B36        A2:A36        B1:B1         
+Loading sheet surv0
+Reading data from Excel; Rng = A1:E100
+Reading Slice: A1:E100
+Par  D3             2      surv0                B2:E100       A2:A100       B1:E1         
+Loading sheet w0
+Reading data from Excel; Rng = A1:D319
+Reading Slice: A1:D319
+Par  D4             3      w0                   C2:D319       A2:B319       C1:D1         
+Loading sheet s0
+Reading data from Excel; Rng = A1:C18
+Reading Slice: A1:C18
+Par  D5             2      s0                   B2:C18        A2:A18        B1:C1         
+Loading sheet ferthic0
+Reading data from Excel; Rng = A1:B36
+Reading Slice: A1:B36
+Par  D6             2      ferthic0             B2:B36        A2:A36        B1:B1         
+Total time = 10891 Ms
+--- SDG Egypt Model scen 8 nga.gms(165) 3 Mb
+--- GDXin=C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\datainput_nga.gdx
+--- GDX File ($gdxIn) C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\datainput_nga.gdx
+--- SDG Egypt Model scen 8 nga.gms(606) 3 Mb
+--- $echo File C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\outputsetting_nga.txt
+--- SDG Egypt Model scen 8 nga.gms(609) 3 Mb
+--- Starting execution: elapsed 0:00:33.430
+--- SDG Egypt Model scen 8 nga.gms(536) 5 Mb
+--- Generating DNLP model sdgfinance
+--- SDG Egypt Model scen 8 nga.gms(329) 7 Mb
+--- Starting Equ eq1: elapsed 0:00:33.501
+--- SDG Egypt Model scen 8 nga.gms(330) 7 Mb
+--- Starting Equ eq2: elapsed 0:00:33.505
+--- SDG Egypt Model scen 8 nga.gms(331) 7 Mb
+--- Starting Equ eq3: elapsed 0:00:33.505
+--- SDG Egypt Model scen 8 nga.gms(332) 9 Mb
+--- Starting Equ eq4: elapsed 0:00:33.512
+--- SDG Egypt Model scen 8 nga.gms(333) 16 Mb
+--- Starting Equ eq5: elapsed 0:00:33.578
+--- SDG Egypt Model scen 8 nga.gms(337) 17 Mb
+--- Starting Equ eq6: elapsed 0:00:33.628
+--- SDG Egypt Model scen 8 nga.gms(338) 17 Mb
+--- Starting Equ eq7: elapsed 0:00:33.628
+--- SDG Egypt Model scen 8 nga.gms(339) 17 Mb
+--- Starting Equ eq8: elapsed 0:00:33.645
+--- SDG Egypt Model scen 8 nga.gms(340) 17 Mb
+--- Starting Equ eq9: elapsed 0:00:33.647
+--- SDG Egypt Model scen 8 nga.gms(341) 17 Mb
+--- Starting Equ eq10: elapsed 0:00:33.648
+--- SDG Egypt Model scen 8 nga.gms(344) 17 Mb
+--- Starting Equ eq11: elapsed 0:00:33.649
+--- SDG Egypt Model scen 8 nga.gms(345) 17 Mb
+--- Starting Equ eq12: elapsed 0:00:33.651
+--- SDG Egypt Model scen 8 nga.gms(346) 17 Mb
+--- Starting Equ eq13: elapsed 0:00:33.653
+--- SDG Egypt Model scen 8 nga.gms(347) 17 Mb
+--- Starting Equ eq14: elapsed 0:00:33.654
+--- SDG Egypt Model scen 8 nga.gms(348) 17 Mb
+--- Starting Equ eq15: elapsed 0:00:33.655
+--- SDG Egypt Model scen 8 nga.gms(349) 29 Mb
+--- Starting Equ eq16: elapsed 0:00:33.829
+--- SDG Egypt Model scen 8 nga.gms(350) 45 Mb
+--- Starting Equ eq17: elapsed 0:00:34.052
+--- SDG Egypt Model scen 8 nga.gms(351) 45 Mb
+--- Starting Equ eq19: elapsed 0:00:34.056
+--- SDG Egypt Model scen 8 nga.gms(352) 45 Mb
+--- Starting Equ eq19a: elapsed 0:00:34.205
+--- SDG Egypt Model scen 8 nga.gms(353) 45 Mb
+--- Starting Equ eq19b: elapsed 0:00:34.205
+--- SDG Egypt Model scen 8 nga.gms(354) 45 Mb
+--- Starting Equ eq19c: elapsed 0:00:34.205
+--- SDG Egypt Model scen 8 nga.gms(355) 45 Mb
+--- Starting Equ eq19d: elapsed 0:00:34.205
+--- SDG Egypt Model scen 8 nga.gms(356) 45 Mb
+--- Starting Equ eq19e: elapsed 0:00:34.206
+--- SDG Egypt Model scen 8 nga.gms(357) 45 Mb
+--- Starting Equ eq20: elapsed 0:00:34.206
+--- SDG Egypt Model scen 8 nga.gms(359) 45 Mb
+--- Starting Equ eq21: elapsed 0:00:34.208
+--- SDG Egypt Model scen 8 nga.gms(358) 45 Mb
+--- Starting Equ eq21a: elapsed 0:00:34.208
+--- SDG Egypt Model scen 8 nga.gms(360) 45 Mb
+--- Starting Equ eq22: elapsed 0:00:34.208
+--- SDG Egypt Model scen 8 nga.gms(361) 45 Mb
+--- Starting Equ eq23: elapsed 0:00:34.209
+--- SDG Egypt Model scen 8 nga.gms(362) 45 Mb
+--- Starting Equ eq24: elapsed 0:00:34.209
+--- SDG Egypt Model scen 8 nga.gms(363) 45 Mb
+--- Starting Equ eq25: elapsed 0:00:34.209
+--- SDG Egypt Model scen 8 nga.gms(364) 45 Mb
+--- Starting Equ eq26: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(365) 45 Mb
+--- Starting Equ eq27: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(366) 45 Mb
+--- Starting Equ eq28: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(367) 45 Mb
+--- Starting Equ eq29: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(368) 45 Mb
+--- Starting Equ eq30a: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(369) 45 Mb
+--- Starting Equ eq30: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(370) 45 Mb
+--- Starting Equ eq31: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(371) 45 Mb
+--- Starting Equ eq32: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(372) 45 Mb
+--- Starting Equ eq33: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(373) 45 Mb
+--- Starting Equ eq34: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(374) 45 Mb
+--- Starting Equ eq36: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(375) 45 Mb
+--- Starting Equ eq37: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(376) 45 Mb
+--- Starting Equ eq38: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(377) 45 Mb
+--- Starting Equ eq51: elapsed 0:00:34.222
+--- SDG Egypt Model scen 8 nga.gms(378) 45 Mb
+--- Starting Equ eq52: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(379) 45 Mb
+--- Starting Equ eq53: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(380) 45 Mb
+--- Starting Equ eq54: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(342) 45 Mb
+--- Starting Equ eq61: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(343) 45 Mb
+--- Starting Equ eq62: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(334) 45 Mb
+--- Starting Equ eq63: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(335) 45 Mb
+--- Starting Equ eq64: elapsed 0:00:34.237
+--- SDG Egypt Model scen 8 nga.gms(336) 46 Mb
+--- Starting Equ eq65: elapsed 0:00:34.300
+--- SDG Egypt Model scen 8 nga.gms(381) 47 Mb
+--- Starting Equ eq66: elapsed 0:00:34.553
+--- SDG Egypt Model scen 8 nga.gms(382) 47 Mb
+--- Starting Equ eq70: elapsed 0:00:34.592
+--- SDG Egypt Model scen 8 nga.gms(383) 47 Mb
+--- Starting Equ eq71: elapsed 0:00:34.592
+--- SDG Egypt Model scen 8 nga.gms(384) 47 Mb
+--- Starting Equ eq72: elapsed 0:00:34.592
+--- SDG Egypt Model scen 8 nga.gms(385) 47 Mb
+--- Starting Equ eq73: elapsed 0:00:34.592
+--- SDG Egypt Model scen 8 nga.gms(490) 47 Mb
+--- Starting Equ utilt: elapsed 0:00:34.592
+--- SDG Egypt Model scen 8 nga.gms(491) 47 Mb
+--- Starting Equ utility: elapsed 0:00:34.594
+--- SDG Egypt Model scen 8 nga.gms(438) 47 Mb
+--- Starting Equ output: elapsed 0:00:34.594
+--- SDG Egypt Model scen 8 nga.gms(439) 47 Mb
+--- Starting Equ outputpc: elapsed 0:00:34.595
+--- SDG Egypt Model scen 8 nga.gms(440) 47 Mb
+--- Starting Equ ewage: elapsed 0:00:34.595
+--- SDG Egypt Model scen 8 nga.gms(442) 47 Mb
+--- Starting Equ kstart: elapsed 0:00:34.596
+--- SDG Egypt Model scen 8 nga.gms(446) 47 Mb
+--- Starting Equ kfstart: elapsed 0:00:34.596
+--- SDG Egypt Model scen 8 nga.gms(444) 47 Mb
+--- Starting Equ kffstart: elapsed 0:00:34.597
+--- SDG Egypt Model scen 8 nga.gms(445) 47 Mb
+--- Starting Equ krestart: elapsed 0:00:34.597
+--- SDG Egypt Model scen 8 nga.gms(447) 47 Mb
+--- Starting Equ knext: elapsed 0:00:34.597
+--- SDG Egypt Model scen 8 nga.gms(450) 47 Mb
+--- Starting Equ kfnext: elapsed 0:00:34.598
+--- SDG Egypt Model scen 8 nga.gms(448) 47 Mb
+--- Starting Equ kffnext: elapsed 0:00:34.598
+--- SDG Egypt Model scen 8 nga.gms(449) 47 Mb
+--- Starting Equ krenext: elapsed 0:00:34.598
+--- SDG Egypt Model scen 8 nga.gms(467) 47 Mb
+--- Starting Equ kend: elapsed 0:00:34.598
+--- SDG Egypt Model scen 8 nga.gms(468) 47 Mb
+--- Starting Equ kffend: elapsed 0:00:34.598
+--- SDG Egypt Model scen 8 nga.gms(469) 47 Mb
+--- Starting Equ kreend: elapsed 0:00:34.598
+--- SDG Egypt Model scen 8 nga.gms(470) 47 Mb
+--- Starting Equ kfend: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(471) 47 Mb
+--- Starting Equ ktotal: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(472) 47 Mb
+--- Starting Equ invtotal: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(451) 47 Mb
+--- Starting Equ energy: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(452) 47 Mb
+--- Starting Equ ffuel: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(465) 47 Mb
+--- Starting Equ conlim: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(481) 47 Mb
+--- Starting Equ education: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(484) 47 Mb
+--- Starting Equ edugdp: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(443) 47 Mb
+--- Starting Equ dstart: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(457) 47 Mb
+--- Starting Equ tbalance: elapsed 0:00:34.599
+--- SDG Egypt Model scen 8 nga.gms(459) 47 Mb
+--- Starting Equ totdebt: elapsed 0:00:34.620
+--- SDG Egypt Model scen 8 nga.gms(460) 47 Mb
+--- Starting Equ debttogdp: elapsed 0:00:34.620
+--- SDG Egypt Model scen 8 nga.gms(461) 47 Mb
+--- Starting Equ debtlimit: elapsed 0:00:34.636
+--- SDG Egypt Model scen 8 nga.gms(466) 47 Mb
+--- Starting Equ conend: elapsed 0:00:34.636
+--- SDG Egypt Model scen 8 nga.gms(473) 47 Mb
+--- Starting Equ consumetrpc: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(456) 47 Mb
+--- Starting Equ costk: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(455) 47 Mb
+--- Starting Equ costkf: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(453) 47 Mb
+--- Starting Equ costkff: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(454) 47 Mb
+--- Starting Equ costkre: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(482) 47 Mb
+--- Starting Equ health: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(483) 47 Mb
+--- Starting Equ govcost: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(485) 47 Mb
+--- Starting Equ hlgdp: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(487) 47 Mb
+--- Starting Equ pubadgdp: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(488) 47 Mb
+--- Starting Equ infgdp: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(486) 47 Mb
+--- Starting Equ poutlay: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(478) 47 Mb
+--- Starting Equ educationuc: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(479) 47 Mb
+--- Starting Equ healthuc: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(441) 47 Mb
+--- Starting Equ marginalpk: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(489) 47 Mb
+--- Starting Equ enktotratio: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(474) 47 Mb
+--- Starting Equ endconpclim: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(462) 47 Mb
+--- Starting Equ nodebtbyend: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(458) 47 Mb
+--- Starting Equ posnxbyend: elapsed 0:00:34.652
+--- SDG Egypt Model scen 8 nga.gms(541) 48 Mb
+--- LOOPS scen = lim
+---   142,776 rows  144,972 columns  349,130 non-zeroes
+---   97,975 nl-code  27,863 nl-non-zeroes
+--- SDG Egypt Model scen 8 nga.gms(541) 46 Mb
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:35.061
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        4.7174869834E+03 (Input point)
+ 
+                   Pre-triangular equations:   141579
+                   Post-triangular equations:  227
+                   Definitional equations:     541
+ 
+      1   0        1.8151811123E+04 (After pre-processing)
+      2   0        2.7229131734E+02 (After scaling)
+      3   1   338  2.4623852529E+02 2.5E+05    70 1.0E+00    3 T  T
+      4   1   327  2.4017348786E+02 2.4E+05    66 1.0E+00   11 T  T
+      5   1   314  2.3525642884E+02 1.7E+05    61 1.0E+00   13 T  T
+      6   1   314  2.3525620828E+02 4.0E+01    76 3.1E-04   22 F  F
+      7   1   314  2.3525078234E+02 4.0E+01    55 1.4E-02    9 F  F
+      8   1   314  2.3523065742E+02 4.0E+01    54 8.4E-07      F  F
+      9   1   314  2.3492523728E+02 4.0E+01    56 1.3E-05      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     10   1   314  2.3492347983E+02 4.0E+01    55 7.5E-08      T  T
+     11   1   314  2.3492102980E+02 4.0E+01    54 1.0E-07      T  T
+     12   1   314  2.3491793712E+02 4.0E+01    53 1.3E-07      T  T
+     13   1   314  2.3491393329E+02 4.0E+01    52 1.7E-07      T  T
+     14   1   314  2.3490877687E+02 4.0E+01    51 2.2E-07      T  T
+     15   1   314  2.3490329719E+02 4.0E+01    50 2.3E-07      T  T
+     16   1   314  2.3490218599E+02 4.0E+01    49 4.7E-08      T  T
+     17   1   314  2.3490010008E+02 4.0E+01    48 8.8E-08      T  T
+     18   1   314  2.3489992255E+02 4.0E+01    47 7.5E-09      T  T
+     19   1   314  2.3489838971E+02 4.0E+01    46 6.5E-08      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     20   1   314  2.3489728463E+02 4.0E+01    45 4.7E-08      T  T
+     21   1   314  2.3461966560E+02 4.0E+01    42 1.0E+00    3 T  T
+     22   1   313  2.2257203501E+02 4.0E+01    40 1.0E+00    8 T  T
+     23   1   300  2.0952024143E+02 4.0E+01    33 1.0E+00   13 T  T
+     24   1   255  1.7538598933E+02 2.0E+01    71 1.0E+00   18 T  T
+     25   1   232  1.4803990028E+02 1.0E+00    47 1.0E+00   23 T  T
+     26   1   232  1.4470545619E+02 1.7E+00    75 1.0E-01   28 F  F
+     27   1   231  1.4118241883E+02 1.7E+00    75 1.2E-01   14 F  F
+     28   1   231  1.4118241883E+02 1.0E+00    75 0.0E+00      T  T
+     29   1   231  1.4077588287E+02 1.5E+01    75 1.5E-03      F  F
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     30   1   231  1.4055799870E+02 1.7E+01    75 6.6E-04      F  F
+     31   1   231  1.4037889844E+02 3.6E+01    75 1.3E-04      F  F
+     32   1   230  1.4023664229E+02 3.8E+01    75 1.1E-04      F  T
+     33   1   230  1.4022876274E+02 2.7E+00    75 1.8E-04      T  T
+     34   1   227  1.2662460243E+02 1.0E+00    74 3.9E-01      T  T
+     35   1   226  1.2548612588E+02 1.0E+00    73 3.5E-02      T  T
+     36   1   225  1.2435379453E+02 1.0E+00    72 3.5E-02      T  T
+     37   1   224  1.2322825429E+02 1.0E+00    71 3.6E-02      T  T
+     38   1   223  1.2211924226E+02 1.0E+00    70 3.7E-02      T  T
+     39   1   222  1.2103830021E+02 1.0E+00    69 3.7E-02      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     40   1   221  1.1999337391E+02 1.0E+00    68 3.7E-02      T  T
+     41   1   220  1.1877286533E+02 1.0E+00    67 4.5E-02      T  T
+     42   1   219  1.1752731455E+02 1.0E+00    66 4.8E-02      T  T
+     43   1   218  1.1656653690E+02 1.0E+00    65 3.9E-02      T  T
+     44   1   217  1.1625564813E+02 1.0E+00    64 1.3E-02      T  T
+     45   1   215  1.1514241727E+02 1.0E+00    63 1.0E+00    3 T  T
+     46   1   207  1.0833835460E+02 1.0E+00    60 1.0E+00    8 T  T
+     47   1   194  7.7951105810E+01 1.0E+00    52 1.0E+00   13 T  T
+     48   1   174  6.7219140074E+01 5.0E-01    39 1.0E+00   20 T  T
+     49   1   152  5.3667476211E+01 5.0E-01    44 1.0E+00   23 T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     50   1   152  4.8988203203E+01 2.6E-01    61 2.5E-01   28 F  F
+     51   1   123  3.7704533787E+01 1.1E+00    61 1.0E+00   26 T  T
+     52   1   123  3.5634764441E+01 4.5E+00    43 3.4E-01   27 F  F
+     53   1   119  3.4109311463E+01 4.6E+00    43 1.0E+00    9 T  T
+     54   1   119  3.2583065831E+01 9.2E+00    34 3.4E-01   14 F  F
+     55   1   119  3.1094921748E+01 1.7E+01    36 3.4E-01    5 F  F
+     56   1   119  3.1094600099E+01 1.0E+01    36 1.7E-06      T  T
+     57   1   119  3.0639251507E+01 3.0E+01    35 4.8E-04      T  T
+     58   1   119  2.9721830257E+01 3.4E+01    34 6.7E-04      F  F
+     59   1   119  2.9670848120E+01 3.7E+00    34 1.7E-03      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     60   1   118  2.9598427733E+01 3.7E+00    33 2.5E-03      T  T
+     61   1   117  2.9519356233E+01 3.7E+00    32 2.8E-03      T  T
+     62   1   117  2.9387762847E+01 3.7E+00    31 4.9E-03      T  T
+     63   1   116  2.9216651985E+01 3.7E+00    30 6.3E-03      T  T
+     64   1   113  2.8571755546E+01 4.1E+00    29 1.0E+00    3 T  T
+     65   1   113  2.7748098925E+01 2.5E+01    31 1.2E-01    8 F  F
+     66   1   113  2.7067357978E+01 2.4E+02    31 1.2E-01    4 F  F
+     67   1   113  2.6637515467E+01 3.6E+01    31 2.9E-04      T  T
+     68   1   113  2.6549520153E+01 6.0E+01    30 2.4E-05      T  T
+     69   1   113  2.6164716373E+01 1.3E+01    34 6.6E-04      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     70   1   113  2.5816138412E+01 1.8E+01    33 3.1E-04      F  F
+     71   1   113  2.5763366144E+01 1.2E+01    33 1.4E-04      T  T
+     72   1   113  2.5635803020E+01 7.4E+00    32 1.2E-03      T  T
+     73   1   112  2.5396659535E+01 5.4E+00    31 1.0E+00    3 T  T
+     74   1   112  2.3737375308E+01 1.8E+01    30 2.3E-01    8 F  F
+     75   1   112  2.2052982077E+01 2.4E+01    32 3.4E-01    4 F  F
+     76   1   112  2.1050266764E+01 5.2E+01    32 3.4E-04      T  T
+     77   1   111  2.0663935348E+01 8.6E+00    31 2.6E-03      T  T
+     78   1   110  2.0094695623E+01 9.0E+00    30 3.6E-03      T  T
+     79   1   110  1.9852801412E+01 1.3E+01    31 7.7E-04      F  F
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     80   1   109  1.9581567601E+01 2.8E+01    31 2.0E-04      T  T
+     81   1   107  1.9233145363E+01 1.2E+01    30 1.0E+00    3 T  T
+     82   1   107  1.6611308032E+01 1.8E+01    50 1.0E+00    5 T  T
+     83   1   102  1.4875591380E+01 1.2E+00    46 1.0E+00    6 T  T
+     84   1   100  1.4462586541E+01 4.8E+01    42 3.2E+00   14 T  T
+     85   1    97  1.2910097248E+01 5.6E+01    49 1.0E+00    8 T  T
+     86   1    94  1.1742346632E+01 4.5E+01    46 1.0E+00    9 T  T
+     87   1    92  1.1336728027E+01 8.1E+01    44 1.0E+00   11 T  T
+     88   1    91  1.0419988179E+01 6.1E+01    51 9.4E-01   13 T  T
+     89   1    86  9.5629285826E+00 3.6E+01    54 1.0E+00   10 T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     90   1    77  8.4530925601E+00 1.0E+01    59 1.0E+00   15 T  T
+     91   1    77  7.6091324392E+00 1.7E+00    53 3.8E-01   13 F  F
+     92   1    76  7.1815093662E+00 3.0E+00    46 9.6E-01    4 T  T
+     93   1    76  6.4995889131E+00 2.0E+00    45 5.7E-01    9 F  F
+     94   1    69  5.5005236846E+00 3.7E+00    46 1.0E+00    8 T  T
+     95   1    69  5.0269553792E+00 2.4E+01    41 5.0E-01    9 F  F
+     96   1    65  4.7072084571E+00 6.0E+00    41 1.0E+00    9 T  T
+     97   1    64  4.4317292033E+00 4.4E+01    67 3.5E-01   12 F  F
+     98   1    61  4.0743293302E+00 1.2E+00    42 8.9E-01    9 F  F
+     99   1    60  4.0478289706E+00 9.9E-01    40 7.6E-03      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    100   1    59  4.0453760094E+00 9.9E-01    39 9.8E-04      T  T
+    101   1    58  4.0414496211E+00 9.9E-01    38 2.0E-03      T  T
+    102   1    57  4.0350309167E+00 9.7E-01    37 6.7E-03      T  T
+    103   1    57  4.0334428083E+00 3.1E-02    36 5.2E-01      T  T
+    104   1    57  4.0307503075E+00 3.1E-02    35 8.7E-01      T  T
+    105   1    56  3.8834252428E+00 3.1E-02    34 8.0E+01      T  T
+    106   1    56  3.6605209876E+00 1.6E-02    22 8.8E-01    3 T  T
+    107   1    56  3.5129103528E+00 1.6E-02    30 1.0E+00    6 T  T
+    108   1    54  3.5128580785E+00 6.6E+00    65 1.6E-02   10 F  F
+    109   1    53  3.3372919607E+00 6.2E-02    25 1.0E+00    5 T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    110   1    51  3.3369658600E+00 2.2E+02    58 2.9E-02    8 F  F
+    111   1    51  3.3210667206E+00 7.8E-03    24 3.1E-02    5 F  F
+    112   1    51  3.2436904907E+00 1.0E+00    24 1.9E-02      T  T
+    113   1    50  3.2283156418E+00 4.7E+01    57 1.2E-05      F  T
+    114   1    50  3.2118188535E+00 2.2E+01    57 3.8E-05      T  T
+    115   1    49  3.2047113855E+00 2.8E+00    60 2.7E-03      T  T
+    116   1    47  3.1902729941E+00 1.0E+00    22 5.6E-02      F  T
+    117   1    47  3.1627756985E+00 1.6E-02    20 2.2E+01      T  T
+    118   1    47  3.1089235577E+00 1.6E-02    19 4.3E+01      T  T
+    119   1    43  2.8622182593E+00 1.6E-02    19 2.3E+02      F  F
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    120   1    42  2.8299723600E+00 6.2E-02    15 7.0E+00      T  T
+    121   1    42  2.8163451104E+00 5.1E-02    14 3.9E+00      T  T
+    122   1    41  2.8138294836E+00 5.1E-02    14 2.4E+00      F  T
+    123   1    41  2.8057091889E+00 1.6E-02    14 8.0E+00      T  T
+    124   1    41  2.7240891879E+00 1.6E-02    13 9.3E+01      T  T
+    125   1    41  2.6048851395E+00 1.6E-02    13 1.4E+02      T  T
+    126   1    37  2.5478535683E+00 1.6E-02    13 1.1E+02      T  T
+    127   1    37  2.5175485514E+00 3.9E-03    11 2.2E-01    3 F  F
+    128   1    37  2.4838750992E+00 9.1E-01    57 1.0E+00    2 T  T
+    129   1    37  2.4479252754E+00 7.8E-03    55 1.0E+00    8 T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    130   1    37  2.2634884209E+00 9.9E+00    64 1.0E+00    9 T  T
+    131   1    37  2.2189351223E+00 1.1E+00    61 2.5E-01   14 F  F
+    132   1    35  2.1881163097E+00 3.2E+00    36 1.0E+00    5 T  T
+    133   1    31  1.9170609112E+00 3.6E+00    31 1.0E+00   10 T  T
+    134   1    31  1.7805134317E+00 4.1E+00    54 5.0E-01   15 F  F
+    135   1    30  1.7529946021E+00 2.1E+01    56 6.2E-02   11 F  F
+    136   1    30  1.7497869396E+00 1.0E+00    11 1.1E-03      T  T
+    137   1    30  1.7244853256E+00 1.0E+00    11 8.4E-03      T  T
+    138   1    30  1.7069234611E+00 1.0E+00    11 5.9E-03      F  F
+    139   1    30  1.7005511579E+00 1.0E+00    11 2.1E-03      T  T
+   Elapsed time       31.2 seconds.
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    140   1    30  1.6980572303E+00 1.0E+00    53 1.2E-03      T  T
+    141   1    29  1.6848271686E+00 1.0E+00    52 7.5E-03      T  T
+    142   1    28  1.6813231041E+00 1.4E+00    54 1.0E+00    3 T  T
+    143   1    27  1.6030449150E+00 2.8E+00    49 1.0E+00    8 T  T
+    144   1    27  1.4720108588E+00 1.4E+00    58 3.5E-01   13 F  F
+    145   1    19  1.2609138263E+00 1.0E+00    22 9.1E-01    9 T  T
+    146   1    19  1.0936382848E+00 9.8E-04    19 2.5E-01    9 F  F
+    147   1    19  1.0380472155E+00 4.5E+00    51 8.7E-01    5 T  T
+    148   1    19  1.0252791535E+00 2.7E+00    57 1.0E+00    5 T  T
+    149   1    17  9.8362059842E-01 1.9E+00    59 1.0E+00    7 T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    150   1    16  8.9993365730E-01 6.0E-01    46 1.0E+00    6 T  T
+    151   1    15  8.5054398426E-01 4.4E-01    49 1.0E+00    7 T  T
+    152   1    15  7.2867167412E-01 3.6E-01    48 8.8E-01   12 T  T
+    153   1    10  5.0672134669E-01 2.0E+00    51 1.0E+00   15 T  T
+    154   1    10  2.6349897065E-01 1.0E+00    36 5.0E-01   13 F  F
+    155   1     5  1.0331419423E-01 1.5E+00    10 5.0E-01    8 F  T
+    156   1     4  1.0311166371E-01 4.0E-01    25 1.7E-02      F  T
+    157   1     3  7.1407127269E-02 4.9E-04     4 5.1E+04      T  T
+    158   1     2  6.6003699479E-03 3.1E-02     3 2.5E+01      T  T
+    159   1     2  6.0725719797E-03 3.1E-02     2 2.8E-01      T  T
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+    160   1     1  2.3988999192E-03 3.1E-02     2 2.5E+00      T  T
+ 
+ ** Feasible solution. Value of objective =    10.8272976351
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    161   3        1.0882966473E+01 6.3E+01    70 1.0E+00    1 T  T
+    162   3        1.1166160412E+01 3.0E+01    69 1.0E+00    7 T  T
+    163   3        1.1274848875E+01 5.4E+00    64 1.3E-01   10 F  F
+    164   3        1.1389132426E+01 7.2E+00    64 1.0E+00    4 T  T
+    165   3        1.1796514783E+01 4.8E+00    60 1.0E+00    7 T  T
+    166   3        1.1937110331E+01 1.3E+01    53 6.2E-02    9 F  F
+    167   3        1.2097112153E+01 1.4E+01    53 1.0E+00    5 T  T
+    168   3        1.2374081742E+01 6.0E+00    48 1.2E-01    5 F  F
+    169   3        1.2721063040E+01 5.6E+00    48 1.0E+00    3 T  T
+    170   3        1.2923829918E+01 1.8E+01    45 1.0E+00    3 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    171   3        1.3076745057E+01 1.3E+00    42 5.0E-01    2 F  F
+    172   3        1.3114822788E+01 9.5E-01    42 2.6E-02      T  T
+    173   3        1.3421534785E+01 1.6E+00    43 6.2E-02      T  T
+    174   3        1.3448431815E+01 1.4E+00    42 8.9E-03      T  T
+    175   3        1.3541526716E+01 6.5E-01    41 1.2E-01      F  F
+    176   3        1.3565980507E+01 1.0E+00    42 2.0E-02      T  T
+    177   3        1.3614861780E+01 3.8E-01    41 2.5E-01    3 F  T
+    178   3        1.3761588403E+01 3.9E+00    45 1.0E+00    1 T  T
+    179   3        1.3781601543E+01 7.6E-01    48 2.5E-01    2 F  F
+    180   3        1.3802114535E+01 6.8E-01    48 1.0E+00    1 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    181   3        1.3821839621E+01 8.3E-01    50 1.2E-01    3 F  F
+    182   3        1.3843149749E+01 5.6E-01    50 2.5E-01    1 F  F
+    183   3        1.3872001706E+01 5.7E-01    51 1.9E-02      F  F
+    184   3        1.3920028032E+01 5.7E-01    51 5.6E-02      T  T
+    185   3        1.3932951992E+01 7.2E-01    50 6.6E-03      F  F
+    186   3        1.3952246852E+01 5.8E-01    50 1.4E-02      F  F
+    187   3        1.3952246852E+01 5.8E-01    74 0.0E+00      T  T
+    188   3        1.3957450129E+01 5.8E-01    50 5.2E-03      F  F
+    189   3        1.3976622027E+01 5.8E-01    73 8.7E-03      T  T
+    190   3        1.4013375923E+01 4.0E-01    72 2.1E-02      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    191   3        1.4077139753E+01 3.6E-01    71 4.9E-02      T  T
+    192   3        1.4204339239E+01 3.1E-01    70 8.4E-01    2 F  T
+    193   3        1.4214954681E+01 4.0E-01    70 1.2E-01    1 F  T
+    194   3        1.4229228549E+01 3.3E-01    70 5.3E-02      T  T
+    195   3        1.4241534138E+01 2.1E-01    69 1.2E-01      F  T
+    196   3        1.4249597710E+01 2.8E-01    69 7.9E-02      F  T
+    197   4        1.4249597708E+01 2.7E-01    69 0.0E+00      T  T
+    198   4        1.4255906069E+01 4.1E-01    68 3.7E-01      F  T
+    199   3        1.4258893879E+01 8.8E-02    68 6.7E-02      F  T
+    200   4        1.4271678793E+01 2.3E-01    68 2.3E+00      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    201   4        1.4275005932E+01 2.0E-01    67 6.7E-01      T  T
+    202   4        1.4278816091E+01 1.5E-01    67 8.3E-01      T  T
+    203   4        1.4280934595E+01 1.4E-01    66 5.6E-01      F  T
+    204   4        1.4287769170E+01 1.7E-01    66 2.5E+00      F  T
+    205   4        1.4293119629E+01 6.7E-02    66 1.0E+00    4 F  T
+    206   4        1.4302126854E+01 1.5E-01    67 1.0E+00    8 F  T
+    207   4        1.4316547081E+01 3.2E-02    65 1.0E+00   11 T  T
+    208   4        1.4404940308E+01 1.5E-01    60 1.0E+00   16 T  T
+    209   4        1.4444575060E+01 3.6E-01    58 1.0E+00   19 F  T
+    210   4        1.4458758990E+01 2.9E+00    52 6.3E-01    7 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    211   4        1.4464219776E+01 7.6E+00    53 6.0E-01    5 F  T
+    212   4        1.4482176051E+01 3.2E-01    59 1.0E+00    9 F  T
+    213   4        1.4490097470E+01 3.9E+00    58 1.0E+00    9 F  T
+    214   4        1.4520855088E+01 8.5E-01    58 1.0E+00   14 T  T
+    215   4        1.4539689952E+01 1.4E-01    64 1.0E+00   17 F  T
+    216   4        1.4626587528E+01 8.4E-02    62 1.0E+00   25 F  T
+    217   4        1.4701310595E+01 1.0E-01    62 1.0E+00   21 F  T
+    218   3        1.4701773001E+01 9.7E-02    60 4.5E-02      F  T
+    219   3        1.4702192698E+01 8.2E-02    61 3.6E-02      F  T
+    220   4        1.4702827724E+01 7.9E-02    62 1.8E+00      F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    221   4        1.4704809908E+01 1.1E-01    62 1.0E+00    4 F  T
+    222   4        1.4706414667E+01 1.5E-01    63 1.0E+00    8 F  T
+    223   4        1.4713705114E+01 5.0E-02    69 1.0E+00   13 T  T
+    224   4        1.4722352973E+01 4.4E+04    67 1.0E+00   17 F  T
+    225   3        1.4722463277E+01 8.5E-02    65 1.7E-02      F  T
+    226   4        1.4722552349E+01 2.0E-02    65 6.0E+00      F  T
+    227   4        1.4723142216E+01 5.8E-02    65 1.0E+00    4 F  T
+    228   4        1.4724663744E+01 2.1E-02    65 1.0E+00   11 F  T
+    229   4        1.4726429483E+01 2.5E-02    67 1.0E+00   13 F  T
+    230   4        1.4733820337E+01 8.2E-03    67 1.0E+00   39 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    231   4        1.4733851195E+01 1.3E-02    66 2.7E-03   23 T  T
+    232   3        1.4733851195E+01 1.3E-02    67 0.0E+00      T  T
+    233   3        1.4733851635E+01 1.3E-02    66 4.7E-04      F  F
+    234   3        1.4733910361E+01 1.3E-02    66 1.5E-01      F  T
+    235   3        1.4733930641E+01 9.0E-03    66 7.7E-02      F  T
+    236   4        1.4733937099E+01 1.3E-02    66 3.2E-01      F  T
+    237   4        1.4734012002E+01 5.5E-03    66 1.0E+00    2 F  T
+    238   4        1.4734915244E+01 1.0E-02    66 1.0E+00    6 F  T
+    239   4        1.4737248763E+01 1.7E-02    66 1.0E+00   20 F  T
+    240   4        1.4739870620E+01 9.8E-03    66 1.0E+00   19 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    241   4        1.4740546928E+01 2.8E-01    65 1.0E+00   20 T  T
+    242   4        1.4740688813E+01 5.9E-01    65 1.0E+00    4 F  T
+    243   4        1.4740903808E+01 1.8E-02    66 9.5E-01   13 F  T
+    244   4        1.4741114998E+01 2.2E-03    65 1.0E+00   24 F  T
+    245   4        1.4741182157E+01 9.1E-04    65 1.0E+00   17 F  T
+    246   4        1.4741183402E+01 2.0E-03    65 1.0E+00    4 F  T
+    247   4        1.4748749135E+01 5.7E-04    72 1.0E+00    7 F  T
+    248   4        1.4751119338E+01 2.5E+00    65 1.0E+00    5 T  T
+    249   3        1.4751119338E+01 5.5E-01    72 1.3E-10      T  T
+    250   3        1.4751119338E+01 3.3E-01    71 0.0E+00      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    251   3        1.4751119338E+01 3.3E-01    70 0.0E+00      T  T
+    252   3        1.4751120463E+01 3.3E-01    69 2.0E-05      F  T
+    253   3        1.4751120743E+01 9.0E-03    69 5.0E-04      T  T
+    254   3        1.4751121032E+01 9.0E-03    68 1.3E-03      F  T
+    255   3        1.4751121649E+01 2.4E-01    68 2.1E-05      F  T
+    256   4        1.4751121649E+01 9.0E-03    68 0.0E+00      T  T
+    257   4        1.4751140315E+01 9.0E-03    67 2.9E+03      F  T
+    258   4        1.4751141362E+01 3.1E-01    67 1.0E+00      F  T
+    259   4        1.4751169526E+01 1.6E-02    68 1.0E+00    2 F  T
+    260   4        1.4751346874E+01 9.4E-03    68 1.0E+00    8 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    261   4        1.4751835109E+01 4.5E-01    67 7.4E-01   11 F  T
+    262   4        1.4752044805E+01 2.4E+00    67 1.0E+00    6 F  T
+    263   4        1.4752147763E+01 1.0E+00    67 1.0E+00    7 F  T
+    264   4        1.4752885874E+01 5.6E-01    67 5.0E-01   18 F  T
+    265   4        1.4753738442E+01 1.0E+01    67 1.0E+00    6 F  T
+    266   4        1.4755301049E+01 1.0E-01    67 1.9E-01   38 F  T
+    267   4        1.4757391334E+01 6.0E-01    67 1.0E+00    3 F  T
+    268   4        1.4758944506E+01 1.3E-01    66 1.0E+00    8 F  F
+    269   3        1.4758956602E+01 1.2E-02    66 7.0E-02      F  T
+    270   3        1.4758968843E+01 3.7E-02    66 8.0E-03      F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    271   4        1.4759091996E+01 9.4E-03    66 1.0E+02      F  T
+    272   4        1.4759481867E+01 6.4E-02    66 1.0E+00    4 F  T
+    273   4        1.4760560833E+01 1.5E-02    66 1.0E+00    9 F  T
+    274   4        1.4763786135E+01 1.7E-02    66 1.0E+00   38 F  T
+    275   4        1.4764841827E+01 1.6E-02    66 1.0E+00   16 F  T
+    276   4        1.4767025443E+01 5.4E-03    66 1.0E+00   21 T  T
+    277   4        1.4767434647E+01 3.7E-03    65 1.0E+00   21 F  T
+    278   4        1.4767668781E+01 2.5E-03    65 1.0E+00   21 F  T
+    279   4        1.4767669028E+01 4.5E-03    65 1.0E+00    2 F  T
+    280   4        1.4772949763E+01 2.5E-04    70 1.0E+00    4 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    281   4        1.4779500760E+01 1.6E-02    70 1.0E+00   12 F  T
+    282   4        1.4783008249E+01 7.8E-03    70 1.0E+00   16 F  T
+    283   4        1.4784509315E+01 1.0E-02    70 1.0E+00   16 F  T
+    284   3        1.4784784504E+01 4.9E-02    72 1.3E-01      F  T
+    285   3        1.4784874698E+01 9.7E-02    72 7.8E-03      F  T
+    286   4        1.4784961064E+01 1.9E-02    72 1.9E+01      F  T
+    287   4        1.4785112076E+01 2.4E-02    72 1.0E+00    4 F  T
+    288   4        1.4785296286E+01 1.3E-02    72 1.0E+00    8 T  T
+    289   4        1.4785642649E+01 4.4E-03    71 1.0E+00   38 F  T
+    290   4        1.4785825957E+01 4.7E-04    71 1.0E+00   52 F  T
+   Elapsed time       61.4 seconds.
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    291   4        1.4785827178E+01 1.1E-02    71 1.0E+00    2 F  T
+    292   4        1.4789674102E+01 1.1E-04    75 1.0E+00    7 F  T
+    293   4        1.4794838286E+01 9.9E-03    75 1.0E+00   14 F  T
+    294   4        1.4795927352E+01 1.2E-01    74 1.0E+00    7 F  T
+    295   4        1.4796234010E+01 8.6E-03    75 1.0E+00   14 F  T
+    296   4        1.4796295999E+01 1.5E-03    75 1.0E+00   19 F  T
+    297   4        1.4796299803E+01 2.2E-04    75 1.0E+00   24 F  T
+    298   4        1.4799815976E+01 8.5E-05    78 1.0E+00   19 F  T
+    299   4        1.4799834022E+01 1.4E-02    77 1.0E+00    3 F  T
+    300   4        1.4802766797E+01 7.2E-05    79 1.0E+00    6 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    301   4        1.4802778386E+01 4.3E-03    79 1.0E+00    3 F  T
+    302   4        1.4805058189E+01 2.6E-04    81 1.0E+00    6 F  T
+    303   4        1.4805066508E+01 1.1E-02    81 1.0E+00    3 F  T
+    304   4        1.4806649094E+01 4.4E-05    82 1.0E+00    6 F  T
+    305   4        1.4806655184E+01 5.8E-03    82 1.0E+00    2 F  T
+    306   4        1.4807691352E+01 3.2E-05    83 1.0E+00    7 F  T
+    307   4        1.4807693277E+01 5.8E-03    83 1.0E+00    3 F  T
+    308   4        1.4808056154E+01 1.7E-05    84 1.0E+00    6 F  T
+    309   4        1.4808056349E+01 5.5E-04    84 1.0E+00    2 F  T
+    310   4        1.4808098834E+01 5.6E-06    85 1.0E+00    5 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    311   4        1.4808098837E+01 5.2E-05    85 1.0E+00    3 F  T
+    312   4        1.4808098837E+01 3.3E-08    85
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+--- Reading solution for model sdgfinance
+--- SDG Egypt Model scen 8 nga.gms(541) 46 Mb  68 secs
+--- Executing after solve: elapsed 0:01:46.776
+--- SDG Egypt Model scen 8 nga.gms(536) 46 Mb
+--- Generating DNLP model sdgfinance
+--- SDG Egypt Model scen 8 nga.gms(329) 48 Mb
+--- Starting Equ eq1: elapsed 0:01:46.803
+--- SDG Egypt Model scen 8 nga.gms(330) 48 Mb
+--- Starting Equ eq2: elapsed 0:01:46.809
+--- SDG Egypt Model scen 8 nga.gms(331) 48 Mb
+--- Starting Equ eq3: elapsed 0:01:46.809
+--- SDG Egypt Model scen 8 nga.gms(332) 48 Mb
+--- Starting Equ eq4: elapsed 0:01:46.833
+--- SDG Egypt Model scen 8 nga.gms(333) 48 Mb
+--- Starting Equ eq5: elapsed 0:01:46.958
+--- SDG Egypt Model scen 8 nga.gms(337) 48 Mb
+--- Starting Equ eq6: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(338) 48 Mb
+--- Starting Equ eq7: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(339) 48 Mb
+--- Starting Equ eq8: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(340) 48 Mb
+--- Starting Equ eq9: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(341) 48 Mb
+--- Starting Equ eq10: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(344) 48 Mb
+--- Starting Equ eq11: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(345) 48 Mb
+--- Starting Equ eq12: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(346) 48 Mb
+--- Starting Equ eq13: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(347) 48 Mb
+--- Starting Equ eq14: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(348) 48 Mb
+--- Starting Equ eq15: elapsed 0:01:47.057
+--- SDG Egypt Model scen 8 nga.gms(349) 51 Mb
+--- Starting Equ eq16: elapsed 0:01:47.198
+--- SDG Egypt Model scen 8 nga.gms(350) 64 Mb
+--- Starting Equ eq17: elapsed 0:01:47.819
+--- SDG Egypt Model scen 8 nga.gms(351) 64 Mb
+--- Starting Equ eq19: elapsed 0:01:47.871
+--- SDG Egypt Model scen 8 nga.gms(352) 64 Mb
+--- Starting Equ eq19a: elapsed 0:01:48.086
+--- SDG Egypt Model scen 8 nga.gms(353) 64 Mb
+--- Starting Equ eq19b: elapsed 0:01:48.086
+--- SDG Egypt Model scen 8 nga.gms(354) 64 Mb
+--- Starting Equ eq19c: elapsed 0:01:48.086
+--- SDG Egypt Model scen 8 nga.gms(355) 64 Mb
+--- Starting Equ eq19d: elapsed 0:01:48.086
+--- SDG Egypt Model scen 8 nga.gms(356) 64 Mb
+--- Starting Equ eq19e: elapsed 0:01:48.086
+--- SDG Egypt Model scen 8 nga.gms(357) 64 Mb
+--- Starting Equ eq20: elapsed 0:01:48.086
+--- SDG Egypt Model scen 8 nga.gms(359) 64 Mb
+--- Starting Equ eq21: elapsed 0:01:48.087
+--- SDG Egypt Model scen 8 nga.gms(358) 64 Mb
+--- Starting Equ eq21a: elapsed 0:01:48.088
+--- SDG Egypt Model scen 8 nga.gms(360) 64 Mb
+--- Starting Equ eq22: elapsed 0:01:48.088
+--- SDG Egypt Model scen 8 nga.gms(361) 64 Mb
+--- Starting Equ eq23: elapsed 0:01:48.088
+--- SDG Egypt Model scen 8 nga.gms(362) 64 Mb
+--- Starting Equ eq24: elapsed 0:01:48.088
+--- SDG Egypt Model scen 8 nga.gms(363) 64 Mb
+--- Starting Equ eq25: elapsed 0:01:48.088
+--- SDG Egypt Model scen 8 nga.gms(364) 64 Mb
+--- Starting Equ eq26: elapsed 0:01:48.115
+--- SDG Egypt Model scen 8 nga.gms(365) 64 Mb
+--- Starting Equ eq27: elapsed 0:01:48.115
+--- SDG Egypt Model scen 8 nga.gms(366) 64 Mb
+--- Starting Equ eq28: elapsed 0:01:48.115
+--- SDG Egypt Model scen 8 nga.gms(367) 64 Mb
+--- Starting Equ eq29: elapsed 0:01:48.115
+--- SDG Egypt Model scen 8 nga.gms(368) 64 Mb
+--- Starting Equ eq30a: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(369) 64 Mb
+--- Starting Equ eq30: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(370) 64 Mb
+--- Starting Equ eq31: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(371) 64 Mb
+--- Starting Equ eq32: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(372) 64 Mb
+--- Starting Equ eq33: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(373) 64 Mb
+--- Starting Equ eq34: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(374) 64 Mb
+--- Starting Equ eq36: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(375) 64 Mb
+--- Starting Equ eq37: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(376) 64 Mb
+--- Starting Equ eq38: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(377) 64 Mb
+--- Starting Equ eq51: elapsed 0:01:48.131
+--- SDG Egypt Model scen 8 nga.gms(378) 64 Mb
+--- Starting Equ eq52: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(379) 64 Mb
+--- Starting Equ eq53: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(380) 64 Mb
+--- Starting Equ eq54: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(342) 64 Mb
+--- Starting Equ eq61: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(343) 64 Mb
+--- Starting Equ eq62: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(334) 64 Mb
+--- Starting Equ eq63: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(335) 64 Mb
+--- Starting Equ eq64: elapsed 0:01:48.162
+--- SDG Egypt Model scen 8 nga.gms(336) 65 Mb
+--- Starting Equ eq65: elapsed 0:01:48.275
+--- SDG Egypt Model scen 8 nga.gms(381) 67 Mb
+--- Starting Equ eq66: elapsed 0:01:48.468
+--- SDG Egypt Model scen 8 nga.gms(382) 67 Mb
+--- Starting Equ eq70: elapsed 0:01:48.482
+--- SDG Egypt Model scen 8 nga.gms(383) 67 Mb
+--- Starting Equ eq71: elapsed 0:01:48.482
+--- SDG Egypt Model scen 8 nga.gms(384) 67 Mb
+--- Starting Equ eq72: elapsed 0:01:48.482
+--- SDG Egypt Model scen 8 nga.gms(385) 67 Mb
+--- Starting Equ eq73: elapsed 0:01:48.482
+--- SDG Egypt Model scen 8 nga.gms(490) 67 Mb
+--- Starting Equ utilt: elapsed 0:01:48.482
+--- SDG Egypt Model scen 8 nga.gms(491) 67 Mb
+--- Starting Equ utility: elapsed 0:01:48.482
+--- SDG Egypt Model scen 8 nga.gms(438) 67 Mb
+--- Starting Equ output: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(439) 67 Mb
+--- Starting Equ outputpc: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(440) 67 Mb
+--- Starting Equ ewage: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(442) 67 Mb
+--- Starting Equ kstart: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(446) 67 Mb
+--- Starting Equ kfstart: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(444) 67 Mb
+--- Starting Equ kffstart: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(445) 67 Mb
+--- Starting Equ krestart: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(447) 67 Mb
+--- Starting Equ knext: elapsed 0:01:48.483
+--- SDG Egypt Model scen 8 nga.gms(450) 67 Mb
+--- Starting Equ kfnext: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(448) 67 Mb
+--- Starting Equ kffnext: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(449) 67 Mb
+--- Starting Equ krenext: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(467) 67 Mb
+--- Starting Equ kend: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(468) 67 Mb
+--- Starting Equ kffend: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(469) 67 Mb
+--- Starting Equ kreend: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(470) 67 Mb
+--- Starting Equ kfend: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(471) 67 Mb
+--- Starting Equ ktotal: elapsed 0:01:48.484
+--- SDG Egypt Model scen 8 nga.gms(472) 67 Mb
+--- Starting Equ invtotal: elapsed 0:01:48.491
+--- SDG Egypt Model scen 8 nga.gms(451) 67 Mb
+--- Starting Equ energy: elapsed 0:01:48.491
+--- SDG Egypt Model scen 8 nga.gms(452) 67 Mb
+--- Starting Equ ffuel: elapsed 0:01:48.491
+--- SDG Egypt Model scen 8 nga.gms(465) 67 Mb
+--- Starting Equ conlim: elapsed 0:01:48.491
+--- SDG Egypt Model scen 8 nga.gms(481) 67 Mb
+--- Starting Equ education: elapsed 0:01:48.491
+--- SDG Egypt Model scen 8 nga.gms(484) 67 Mb
+--- Starting Equ edugdp: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(443) 67 Mb
+--- Starting Equ dstart: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(457) 67 Mb
+--- Starting Equ tbalance: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(459) 67 Mb
+--- Starting Equ totdebt: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(460) 67 Mb
+--- Starting Equ debttogdp: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(461) 67 Mb
+--- Starting Equ debtlimit: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(466) 67 Mb
+--- Starting Equ conend: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(473) 67 Mb
+--- Starting Equ consumetrpc: elapsed 0:01:48.492
+--- SDG Egypt Model scen 8 nga.gms(456) 67 Mb
+--- Starting Equ costk: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(455) 67 Mb
+--- Starting Equ costkf: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(453) 67 Mb
+--- Starting Equ costkff: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(454) 67 Mb
+--- Starting Equ costkre: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(482) 67 Mb
+--- Starting Equ health: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(483) 67 Mb
+--- Starting Equ govcost: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(485) 67 Mb
+--- Starting Equ hlgdp: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(487) 67 Mb
+--- Starting Equ pubadgdp: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(488) 67 Mb
+--- Starting Equ infgdp: elapsed 0:01:48.493
+--- SDG Egypt Model scen 8 nga.gms(486) 67 Mb
+--- Starting Equ poutlay: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(478) 67 Mb
+--- Starting Equ educationuc: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(479) 67 Mb
+--- Starting Equ healthuc: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(441) 67 Mb
+--- Starting Equ marginalpk: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(489) 67 Mb
+--- Starting Equ enktotratio: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(474) 67 Mb
+--- Starting Equ endconpclim: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(462) 67 Mb
+--- Starting Equ nodebtbyend: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(458) 67 Mb
+--- Starting Equ posnxbyend: elapsed 0:01:48.494
+--- SDG Egypt Model scen 8 nga.gms(541) 67 Mb
+--- LOOPS scen = lowr
+---   142,776 rows  144,972 columns  349,130 non-zeroes
+---   97,975 nl-code  27,863 nl-non-zeroes
+--- SDG Egypt Model scen 8 nga.gms(541) 64 Mb
+--- Executing CONOPT (Solvelink=2): elapsed 0:01:48.892
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        3.2901142713E+02 (Input point)
+ 
+                   Pre-triangular equations:   141579
+                   Post-triangular equations:  227
+                   Definitional equations:     541
+ 
+      1   0        3.2901142713E+02 (After pre-processing)
+      2   0        5.7427984881E-01 (After scaling)
+      3   0     0  5.7427984881E-01               0.0E+00      F  F
+      4   0     1  5.7427984881E-01               0.0E+00      F  F
+      5   0     2  5.7427984881E-01               0.0E+00      F  F
+      6   0     3  5.7427984881E-01               0.0E+00      F  F
+      7   0     4  5.7427984881E-01               0.0E+00      F  F
+      8   0     5  5.7427984881E-01               0.0E+00      F  F
+      9   0     6  5.7427984881E-01               0.0E+00      F  F
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     10   0     7  5.7427984881E-01               0.0E+00      F  F
+     11   0     8  5.7427984881E-01               0.0E+00      F  F
+     12   0     9  5.7427984881E-01               0.0E+00      F  F
+     13   0    10  5.7427984881E-01               0.0E+00      F  F
+     14   0    11  5.7427984881E-01               0.0E+00      F  F
+     15   0    12  5.7427984881E-01               0.0E+00      F  F
+     16   0    13  5.7427984881E-01               0.0E+00      F  F
+     17   0    14  5.7427984881E-01               0.0E+00      F  F
+     18   0    15  5.7427984881E-01               0.0E+00      F  F
+     19   0    16  5.7427984881E-01               0.0E+00      F  F
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+     20   0    17  5.7176715015E-01               1.0E+00      F  T
+     21   0    17  5.6849327268E-01               1.0E+00      F  T
+     22   0    17  5.6845295986E-01               1.0E+00      F  T
+     23   0    17  5.6845226988E-01               1.0E+00      F  T
+     24   1    15  4.4534369625E-01 2.1E+01   123 1.0E+00    3 T  T
+     25   1     8  1.1730444325E-01 8.0E+00   121 1.0E+00    8 T  T
+     26   1     1  2.2562541880E-03 5.0E+00    84 1.0E+00    7 T  T
+ 
+ ** Feasible solution. Value of objective =    14.8468360528
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     27   3        1.5086882158E+01 9.2E+00   106 1.0E+00   10 T  T
+     28   3        1.5414912000E+01 1.2E+01    96 1.0E+00   14 T  T
+     29   3        1.5431337105E+01 2.8E-01    82 1.1E-01   11 F  T
+     30   3        1.5441892259E+01 1.4E-01    83 4.1E-01    5 F  T
+     31   3        1.5444756579E+01 1.2E-01    85 7.8E-02      F  T
+     32   3        1.5448241968E+01 2.7E-01    85 3.6E-02      T  T
+     33   3        1.5461942046E+01 2.0E-01    84 3.6E-01      T  T
+     34   3        1.5469784456E+01 2.2E-01    83 7.6E-02      T  T
+     35   3        1.5486406923E+01 1.5E-01    82 4.5E-01      T  T
+     36   3        1.5515400725E+01 1.5E-01    81 1.1E+00      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     37   3        1.5524692308E+01 1.4E-01    80 2.5E-01    2 F  T
+     38   3        1.5540550621E+01 1.1E-01    80 1.0E+00    1 T  T
+     39   3        1.5549170365E+01 1.9E-01    79 2.5E-01    1 F  T
+     40   3        1.5558474715E+01 9.6E-02    79 9.5E-01    1 F  T
+     41   3        1.5565206377E+01 2.2E-01    79 5.0E-02      T  T
+     42   3        1.5569263700E+01 9.2E-02    78 1.7E-01      F  T
+     43   3        1.5576102191E+01 1.6E-01    78 2.0E-01      F  T
+     44   4        1.5630084841E+01 1.4E-01    78 4.6E+00      T  T
+     45   4        1.5666260668E+01 2.1E-01    77 1.6E+00      F  T
+     46   4        1.5684443601E+01 2.1E-01    77 4.6E-01      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     47   4        1.5687751831E+01 2.1E-01    76 9.2E-02      T  T
+     48   4        1.5747175305E+01 2.1E-01    75 2.3E+00      T  T
+     49   4        1.5770934407E+01 1.9E-01    74 9.6E-01      T  T
+     50   4        1.5804039714E+01 3.2E-01    73 3.3E-01      F  T
+     51   4        1.5811795353E+01 1.3E-01    73 1.2E-01      T  T
+     52   4        1.5910564171E+01 1.3E-01    72 4.2E+00      T  T
+     53   4        1.5967241579E+01 1.4E-01    71 3.6E+00      T  T
+     54   4        1.6001339867E+01 1.2E-01    70 2.7E+00      T  T
+     55   4        1.6021020698E+01 2.0E-01    77 3.3E-01      T  T
+     56   4        1.6032025422E+01 1.7E-01    76 2.8E-01      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     57   4        1.6068326118E+01 1.4E-01    75 8.1E-01      T  T
+     58   3        1.6077572457E+01 1.6E-01    74 8.9E-02      T  T
+     59   3        1.6093184599E+01 1.1E-01    73 8.4E-01      F  T
+     60   3        1.6108800699E+01 1.4E-01    73 2.0E-01      F  T
+     61   4        1.6115991240E+01 1.7E-01    76 4.3E-01      T  T
+     62   4        1.6127070179E+01 1.7E-01    75 1.0E+00      F  T
+     63   4        1.6137713150E+01 9.5E-02    75 1.5E+00      T  T
+     64   4        1.6160871018E+01 1.0E-01    74 1.6E+00      T  T
+     65   4        1.6222426661E+01 1.4E-01    73 4.6E+00      T  T
+     66   4        1.6230501341E+01 2.8E-01    72 2.6E-01      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     67   4        1.6248415611E+01 3.2E-01    71 9.3E-01      T  T
+     68   3        1.6248755351E+01 1.3E-01    70 7.2E-03      T  T
+     69   3        1.6255929116E+01 1.3E-01    69 4.4E-01      F  T
+     70   3        1.6264717582E+01 1.1E-01    69 3.6E-01      F  T
+     71   4        1.6277604039E+01 1.1E-01    69 8.1E-01      T  T
+     72   4        1.6305836168E+01 1.3E-01    68 1.1E+00      T  T
+     73   4        1.6318235665E+01 1.9E-01    69 1.0E+00      F  T
+     74   4        1.6332543406E+01 2.6E-01    69 6.4E-01      T  T
+     75   4        1.6353900233E+01 1.7E-01    68 1.1E+00      T  T
+     76   4        1.6383242322E+01 1.6E-01    67 2.3E+00      F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     77   4        1.6388003443E+01 2.1E-01    67 2.6E-01      T  T
+     78   4        1.6396594989E+01 2.1E-01    66 9.2E-01      T  T
+     79   4        1.6397149075E+01 1.4E-01    68 6.1E-02      F  T
+     80   4        1.6401333455E+01 2.1E-01    68 2.2E-01      T  T
+     81   4        1.6404830711E+01 8.9E-02    67 5.3E-01      T  T
+     82   4        1.6405542098E+01 3.8E-01    71 2.2E-02      F  T
+     83   4        1.6408139707E+01 1.0E-01    71 2.5E-01      T  T
+     84   4        1.6411698354E+01 9.6E-02    70 1.2E+00      F  T
+     85   4        1.6415823387E+01 1.6E-01    70 5.1E-01      F  T
+     86   4        1.6427956956E+01 6.7E-02    70 1.0E+00    2 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     87   4        1.6481863925E+01 1.2E-01    68 1.0E+00    8 T  T
+     88   4        1.6514793172E+01 4.6E+00    65 1.0E+00   11 T  T
+     89   4        1.6565166403E+01 7.8E-01    69 1.0E+00   17 T  T
+     90   4        1.6620157988E+01 3.1E-01    61 1.0E+00   25 T  T
+     91   4        1.6620195100E+01 1.9E+00    55 1.0E+00    1 F  T
+     92   4        1.6623101566E+01 3.9E-02    63 1.0E+00   11 T  T
+     93   4        1.6635429784E+01 2.6E-01    59 1.0E+00   15 T  T
+     94   4        1.6656233381E+01 6.1E-01    65 1.0E+00   21 T  T
+     95   3        1.6656234178E+01 2.3E+00    58 1.5E-07      T  T
+     96   3        1.6656234178E+01 2.3E+00    57 0.0E+00      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     97   3        1.6656280762E+01 2.3E+00    56 1.6E-05      F  T
+     98   3        1.6656281126E+01 2.1E-01    56 2.2E-05      F  T
+     99   4        1.6656281174E+01 6.1E-02    56 1.0E+00      F  T
+    100   4        1.6656577926E+01 1.6E-02    56 1.0E+00    3 T  T
+    101   4        1.6663452051E+01 3.0E-02    55 1.0E+00    7 F  T
+    102   4        1.6674956308E+01 1.6E-01    54 1.0E+00   11 T  T
+    103   4        1.6681793122E+01 3.7E-02    53 1.0E+00   16 T  T
+    104   4        1.6684559229E+01 3.8E-02    52 1.0E+00   18 F  T
+    105   4        1.6686928137E+01 3.8E-02    54 9.9E-01   25 F  T
+    106   4        1.6686944968E+01 6.2E-02    54 6.4E-01      F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    107   4        1.6687604696E+01 1.1E-02    57 1.0E+00   35 T  T
+    108   3        1.6687604696E+01 1.2E-01    58 0.0E+00      T  T
+    109   3        1.6687604792E+01 1.2E-01    57 1.2E-05      F  T
+    110   3        1.6687604897E+01 4.7E-03    57 3.2E-03      T  T
+    111   3        1.6687605221E+01 4.7E-03    56 1.2E-02      F  T
+    112   3        1.6687605350E+01 1.9E-03    56 2.0E-02      F  T
+    113   4        1.6687606828E+01 3.5E-03    56 4.0E+00      F  T
+    114   4        1.6687626937E+01 2.7E-03    56 1.0E+00    2 F  T
+    115   4        1.6687736224E+01 4.6E-03    56 1.0E+00    9 F  T
+    116   4        1.6688587962E+01 5.1E-03    56 1.0E+00   12 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    117   4        1.6696117042E+01 3.2E-02    56 1.0E+00   18 T  T
+    118   4        1.6697398390E+01 3.1E-02    54 1.0E+00   22 F  T
+    119   4        1.6699604796E+01 1.8E-02    54 1.0E+00   22 T  T
+    120   3        1.6699606233E+01 6.9E-01    55 3.4E-06      T  T
+    121   3        1.6699606233E+01 6.9E-01    54 0.0E+00      T  T
+    122   3        1.6699607670E+01 6.9E-01    53 7.2E-06      F  T
+    123   3        1.6699607706E+01 7.4E-02    53 1.2E-05      F  T
+    124   4        1.6699613658E+01 8.5E-03    53 2.7E+03      T  T
+    125   4        1.6699614126E+01 5.8E-03    52 1.3E+00      F  T
+    126   4        1.6699614377E+01 1.9E-01    53 1.0E+00      F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    127   4        1.6699615370E+01 2.4E-02    53 1.0E+00    2 F  T
+    128   4        1.6699621440E+01 3.0E-03    53 1.0E+00    7 T  T
+    129   4        1.6699681219E+01 1.1E-03    51 1.0E+00   12 F  T
+    130   4        1.6699892059E+01 1.2E-03    51 1.0E+00   20 F  T
+    131   4        1.6700052926E+01 9.2E-03    52 1.0E+00   25 F  T
+    132   4        1.6700116377E+01 3.4E-03    52 1.0E+00   33 F  T
+    133   4        1.6791046787E+01 2.8E-04    53 1.0E+00   42 T  T
+    134   3        1.6791046838E+01 2.5E+00    54 8.3E-09      T  T
+    135   3        1.6791048308E+01 2.5E+00    53 2.4E-07      T  T
+    136   3        1.6791048308E+01 2.5E+00    52 0.0E+00      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    137   3        1.6791082822E+01 2.5E+00    51 1.0E-05      F  T
+    138   3        1.6791083263E+01 2.7E-01    51 1.2E-05      F  T
+    139   4        1.6791151594E+01 3.0E-02    51 9.1E+03      F  T
+    140   4        1.6791166988E+01 1.9E-02    51 1.0E+00    3 F  T
+    141   4        1.6791268606E+01 9.1E-03    50 1.0E+00    8 T  T
+    142   4        1.6791342040E+01 3.1E-03    49 1.0E+00   19 F  T
+    143   4        1.6794155135E+01 8.8E-02    50 1.0E+00   12 F  T
+    144   4        1.6794171288E+01 2.6E-01    51 1.0E+00    5 F  T
+    145   4        1.6796358663E+01 3.3E-02    54 1.0E+00   12 F  T
+    146   4        1.6796368438E+01 4.9E-03    54 1.0E+00   17 F  T
+   Elapsed time       36.8 seconds.
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    147   4        1.6830490582E+01 1.9E-04    57 1.0E+00   27 T  T
+    148   4        1.6830529031E+01 2.0E-02    54 1.0E+00   22 F  T
+    149   4        1.6830656228E+01 1.1E-02    55 1.0E+00    8 F  T
+    150   4        1.6857376670E+01 1.7E-03    57 1.0E+00   17 T  T
+    151   4        1.6857396187E+01 1.6E-02    56 1.0E+00   16 F  T
+    152   4        1.6857699889E+01 1.8E-02    57 1.0E+00    8 F  T
+    153   4        1.6879823721E+01 3.6E-04    59 1.0E+00   17 T  T
+    154   4        1.6879831036E+01 1.3E-02    57 1.0E+00    2 F  T
+    155   4        1.6879961645E+01 1.2E-02    58 1.0E+00    3 F  T
+    156   4        1.6897364545E+01 7.2E-02    59 1.0E+00    5 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    157   4        1.6897370410E+01 7.8E-03    57 1.0E+00    3 F  T
+    158   4        1.6898007377E+01 2.3E-02    60 1.0E+00    8 F  T
+    159   4        1.6898009425E+01 9.4E-01    59 1.0E+00    2 F  T
+    160   4        1.6898149410E+01 1.2E-02    60 1.0E+00    4 F  T
+    161   4        1.6898149426E+01 1.1E-01    60 1.0E+00    1 F  T
+    162   4        1.6899506143E+01 1.9E-04    61 1.0E+00    4 T  T
+    163   3        1.6899506810E+01 5.7E+00    65 2.6E-08      F  T
+    164   4        1.6899506958E+01 2.8E-01    65 8.3E-01      T  T
+    165   4        1.6899507028E+01 2.8E-01    64 8.5E-01      T  T
+    166   4        1.6899507029E+01 2.8E-01    63 3.0E-02      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    167   3        1.6899507036E+01 2.8E-01    61 1.2E-07      F  T
+    168   3        1.6899507036E+01 2.9E-02    61 2.5E-07      F  T
+    169   4        1.6899507045E+01 5.3E-03    61 1.2E+02      T  T
+    170   4        1.6899507045E+01 2.9E-03    60 8.4E+00      F  T
+    171   4        1.6899507066E+01 2.1E-02    60 1.7E+02      F  T
+    172   4        1.6899513244E+01 2.3E-01    60 1.0E+00    1 F  T
+    173   4        1.6899529974E+01 1.2E-02    60 1.0E+00   10 F  T
+    174   4        1.6899540367E+01 2.5E-02    60 1.0E+00    9 F  T
+    175   4        1.6899942130E+01 2.0E-02    60 1.0E+00   20 F  T
+    176   4        1.6900019244E+01 1.1E+00    60 1.0E+00    2 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    177   4        1.6909063711E+01 1.9E-03    60 1.0E+00   30 T  T
+    178   3        1.6909063711E+01 3.5E-02    63 0.0E+00      T  T
+    179   3        1.6909064099E+01 2.3E-02    59 6.1E-04      F  T
+    180   3        1.6909064999E+01 5.2E-03    59 1.8E-02      F  T
+    181   4        1.6909070789E+01 3.3E-02    59 2.5E-01      F  T
+    182   4        1.6909177284E+01 7.0E-03    59 1.0E+00    4 F  T
+    183   4        1.6909974985E+01 1.7E-02    59 1.0E+00    7 F  T
+    184   4        1.6912220217E+01 4.2E-02    58 1.0E+00   14 F  T
+    185   4        1.6913352530E+01 7.8E-02    58 1.0E+00   14 T  T
+    186   4        1.6913557230E+01 4.6E-03    57 1.0E+00   27 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    187   4        1.6913604188E+01 1.4E-03    57 1.0E+00   28 F  T
+    188   4        1.6913762258E+01 7.9E-05    60 1.0E+00   36 F  T
+    189   4        1.6913762427E+01 4.6E-04    60 1.0E+00    2 F  T
+    190   4        1.6913762461E+01 2.0E-05    60 1.0E+00   10 F  T
+    191   4        1.6913762461E+01 2.5E-05    60 1.0E+00    1 F  T
+    192   4        1.6913762462E+01 1.5E-07    60 1.0E+00    4 F  T
+    193   4        1.6913762462E+01 9.3E-08    60
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+--- Reading solution for model sdgfinance
+--- SDG Egypt Model scen 8 nga.gms(541) 64 Mb  52 secs
+--- Executing after solve: elapsed 0:02:43.620
+--- SDG Egypt Model scen 8 nga.gms(536) 64 Mb
+--- Generating DNLP model sdgfinance
+--- SDG Egypt Model scen 8 nga.gms(329) 67 Mb
+--- Starting Equ eq1: elapsed 0:02:43.620
+--- SDG Egypt Model scen 8 nga.gms(330) 67 Mb
+--- Starting Equ eq2: elapsed 0:02:43.651
+--- SDG Egypt Model scen 8 nga.gms(331) 67 Mb
+--- Starting Equ eq3: elapsed 0:02:43.667
+--- SDG Egypt Model scen 8 nga.gms(332) 67 Mb
+--- Starting Equ eq4: elapsed 0:02:43.924
+--- SDG Egypt Model scen 8 nga.gms(333) 67 Mb
+--- Starting Equ eq5: elapsed 0:02:44.241
+--- SDG Egypt Model scen 8 nga.gms(337) 67 Mb
+--- Starting Equ eq6: elapsed 0:02:44.457
+--- SDG Egypt Model scen 8 nga.gms(338) 67 Mb
+--- Starting Equ eq7: elapsed 0:02:44.458
+--- SDG Egypt Model scen 8 nga.gms(339) 67 Mb
+--- Starting Equ eq8: elapsed 0:02:44.458
+--- SDG Egypt Model scen 8 nga.gms(340) 67 Mb
+--- Starting Equ eq9: elapsed 0:02:44.459
+--- SDG Egypt Model scen 8 nga.gms(341) 67 Mb
+--- Starting Equ eq10: elapsed 0:02:44.459
+--- SDG Egypt Model scen 8 nga.gms(344) 67 Mb
+--- Starting Equ eq11: elapsed 0:02:44.460
+--- SDG Egypt Model scen 8 nga.gms(345) 67 Mb
+--- Starting Equ eq12: elapsed 0:02:44.460
+--- SDG Egypt Model scen 8 nga.gms(346) 67 Mb
+--- Starting Equ eq13: elapsed 0:02:44.460
+--- SDG Egypt Model scen 8 nga.gms(347) 67 Mb
+--- Starting Equ eq14: elapsed 0:02:44.460
+--- SDG Egypt Model scen 8 nga.gms(348) 67 Mb
+--- Starting Equ eq15: elapsed 0:02:44.460
+--- SDG Egypt Model scen 8 nga.gms(349) 67 Mb
+--- Starting Equ eq16: elapsed 0:02:44.623
+--- SDG Egypt Model scen 8 nga.gms(350) 67 Mb
+--- Starting Equ eq17: elapsed 0:02:44.983
+--- SDG Egypt Model scen 8 nga.gms(351) 67 Mb
+--- Starting Equ eq19: elapsed 0:02:44.985
+--- SDG Egypt Model scen 8 nga.gms(352) 67 Mb
+--- Starting Equ eq19a: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(353) 67 Mb
+--- Starting Equ eq19b: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(354) 67 Mb
+--- Starting Equ eq19c: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(355) 67 Mb
+--- Starting Equ eq19d: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(356) 67 Mb
+--- Starting Equ eq19e: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(357) 67 Mb
+--- Starting Equ eq20: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(359) 67 Mb
+--- Starting Equ eq21: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(358) 67 Mb
+--- Starting Equ eq21a: elapsed 0:02:45.346
+--- SDG Egypt Model scen 8 nga.gms(360) 67 Mb
+--- Starting Equ eq22: elapsed 0:02:45.362
+--- SDG Egypt Model scen 8 nga.gms(361) 67 Mb
+--- Starting Equ eq23: elapsed 0:02:45.362
+--- SDG Egypt Model scen 8 nga.gms(362) 67 Mb
+--- Starting Equ eq24: elapsed 0:02:45.362
+--- SDG Egypt Model scen 8 nga.gms(363) 67 Mb
+--- Starting Equ eq25: elapsed 0:02:45.362
+--- SDG Egypt Model scen 8 nga.gms(364) 67 Mb
+--- Starting Equ eq26: elapsed 0:02:45.424
+--- SDG Egypt Model scen 8 nga.gms(365) 67 Mb
+--- Starting Equ eq27: elapsed 0:02:45.424
+--- SDG Egypt Model scen 8 nga.gms(366) 67 Mb
+--- Starting Equ eq28: elapsed 0:02:45.424
+--- SDG Egypt Model scen 8 nga.gms(367) 67 Mb
+--- Starting Equ eq29: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(368) 67 Mb
+--- Starting Equ eq30a: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(369) 67 Mb
+--- Starting Equ eq30: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(370) 67 Mb
+--- Starting Equ eq31: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(371) 67 Mb
+--- Starting Equ eq32: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(372) 67 Mb
+--- Starting Equ eq33: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(373) 67 Mb
+--- Starting Equ eq34: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(374) 67 Mb
+--- Starting Equ eq36: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(375) 67 Mb
+--- Starting Equ eq37: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(376) 67 Mb
+--- Starting Equ eq38: elapsed 0:02:45.440
+--- SDG Egypt Model scen 8 nga.gms(377) 67 Mb
+--- Starting Equ eq51: elapsed 0:02:45.456
+--- SDG Egypt Model scen 8 nga.gms(378) 67 Mb
+--- Starting Equ eq52: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(379) 67 Mb
+--- Starting Equ eq53: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(380) 67 Mb
+--- Starting Equ eq54: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(342) 67 Mb
+--- Starting Equ eq61: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(343) 67 Mb
+--- Starting Equ eq62: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(334) 67 Mb
+--- Starting Equ eq63: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(335) 67 Mb
+--- Starting Equ eq64: elapsed 0:02:45.579
+--- SDG Egypt Model scen 8 nga.gms(336) 67 Mb
+--- Starting Equ eq65: elapsed 0:02:45.660
+--- SDG Egypt Model scen 8 nga.gms(381) 67 Mb
+--- Starting Equ eq66: elapsed 0:02:45.866
+--- SDG Egypt Model scen 8 nga.gms(382) 67 Mb
+--- Starting Equ eq70: elapsed 0:02:45.868
+--- SDG Egypt Model scen 8 nga.gms(383) 67 Mb
+--- Starting Equ eq71: elapsed 0:02:45.868
+--- SDG Egypt Model scen 8 nga.gms(384) 67 Mb
+--- Starting Equ eq72: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(385) 67 Mb
+--- Starting Equ eq73: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(490) 67 Mb
+--- Starting Equ utilt: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(491) 67 Mb
+--- Starting Equ utility: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(438) 67 Mb
+--- Starting Equ output: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(439) 67 Mb
+--- Starting Equ outputpc: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(440) 67 Mb
+--- Starting Equ ewage: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(442) 67 Mb
+--- Starting Equ kstart: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(446) 67 Mb
+--- Starting Equ kfstart: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(444) 67 Mb
+--- Starting Equ kffstart: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(445) 67 Mb
+--- Starting Equ krestart: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(447) 67 Mb
+--- Starting Equ knext: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(450) 67 Mb
+--- Starting Equ kfnext: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(448) 67 Mb
+--- Starting Equ kffnext: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(449) 67 Mb
+--- Starting Equ krenext: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(467) 67 Mb
+--- Starting Equ kend: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(468) 67 Mb
+--- Starting Equ kffend: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(469) 67 Mb
+--- Starting Equ kreend: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(470) 67 Mb
+--- Starting Equ kfend: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(471) 67 Mb
+--- Starting Equ ktotal: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(472) 67 Mb
+--- Starting Equ invtotal: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(451) 67 Mb
+--- Starting Equ energy: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(452) 67 Mb
+--- Starting Equ ffuel: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(465) 67 Mb
+--- Starting Equ conlim: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(481) 67 Mb
+--- Starting Equ education: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(484) 67 Mb
+--- Starting Equ edugdp: elapsed 0:02:45.869
+--- SDG Egypt Model scen 8 nga.gms(443) 67 Mb
+--- Starting Equ dstart: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(457) 67 Mb
+--- Starting Equ tbalance: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(459) 67 Mb
+--- Starting Equ totdebt: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(460) 67 Mb
+--- Starting Equ debttogdp: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(461) 67 Mb
+--- Starting Equ debtlimit: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(466) 67 Mb
+--- Starting Equ conend: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(473) 67 Mb
+--- Starting Equ consumetrpc: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(456) 67 Mb
+--- Starting Equ costk: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(455) 67 Mb
+--- Starting Equ costkf: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(453) 67 Mb
+--- Starting Equ costkff: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(454) 67 Mb
+--- Starting Equ costkre: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(482) 67 Mb
+--- Starting Equ health: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(483) 67 Mb
+--- Starting Equ govcost: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(485) 67 Mb
+--- Starting Equ hlgdp: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(487) 67 Mb
+--- Starting Equ pubadgdp: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(488) 67 Mb
+--- Starting Equ infgdp: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(486) 67 Mb
+--- Starting Equ poutlay: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(478) 67 Mb
+--- Starting Equ educationuc: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(479) 67 Mb
+--- Starting Equ healthuc: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(441) 67 Mb
+--- Starting Equ marginalpk: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(489) 67 Mb
+--- Starting Equ enktotratio: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(474) 67 Mb
+--- Starting Equ endconpclim: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(462) 67 Mb
+--- Starting Equ nodebtbyend: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(458) 67 Mb
+--- Starting Equ posnxbyend: elapsed 0:02:45.885
+--- SDG Egypt Model scen 8 nga.gms(541) 67 Mb
+--- LOOPS scen = highdebt
+---   142,776 rows  144,972 columns  349,130 non-zeroes
+---   97,975 nl-code  27,863 nl-non-zeroes
+--- SDG Egypt Model scen 8 nga.gms(541) 64 Mb
+--- Executing CONOPT (Solvelink=2): elapsed 0:02:46.326
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.9650375599E-10 (Input point)
+ 
+                   Pre-triangular equations:   141579
+                   Post-triangular equations:  227
+                   Definitional equations:     541
+ 
+      1   0        1.8018055797E-10 (After pre-processing)
+      2   0        4.7070680687E-13 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    16.9137624621
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.6969920519E+01 5.3E-01    75 7.0E-01    2 T  T
+      4   3        1.7002139652E+01 1.6E+00    74 1.0E+00    2 T  T
+      5   3        1.7202136665E+01 5.0E-01    72 1.0E+00    3 T  T
+      6   3        1.7321724194E+01 3.3E+00    70 9.1E-01    3 F  T
+      7   3        1.7374391072E+01 8.1E-01    69 1.0E+00    3 T  T
+      8   3        1.7551351666E+01 4.5E-01    67 1.0E+00    3 F  T
+      9   3        1.7627431860E+01 6.3E-01    64 1.0E+00    1 T  T
+     10   3        1.7745827996E+01 3.9E-01    63 1.0E+00    2 T  T
+     11   3        1.7808299711E+01 2.7E-01    62 1.0E+00    3 T  T
+     12   3        1.7837835184E+01 2.6E-01    60 1.0E+00    2 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     13   3        1.7911310874E+01 4.6E-01    58 1.0E+00    2 T  T
+     14   3        1.7950874604E+01 3.0E-01    56 3.9E-01    1 F  T
+     15   3        1.7984691162E+01 2.1E-01    56 5.1E-01    1 F  T
+     16   3        1.8010727574E+01 2.5E-01    56 2.3E-01      F  T
+     17   3        1.8033343731E+01 1.6E-01    56 3.6E-01      F  T
+     18   4        1.8197302655E+01 2.1E-01    56 4.1E+00      T  T
+     19   4        1.8197302655E+01 1.8E-01    56 0.0E+00      T  T
+     20   4        1.8265377926E+01 9.4E-02    55 2.4E+00      T  T
+     21   4        1.8302785291E+01 3.0E-01    54 3.7E-01      T  T
+     22   4        1.8359599119E+01 1.3E-01    53 2.3E+00      T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     23   4        1.8402481865E+01 1.2E-01    52 4.7E-01      T  T
+     24   4        1.8458127334E+01 1.4E-01    51 1.9E+00      T  T
+     25   4        1.8507983633E+01 1.1E-01    50 5.8E-01      T  T
+     26   4        1.8526804044E+01 1.2E-01    49 2.1E+00      F  T
+     27   4        1.8691314744E+01 4.8E-01    55 1.2E+00      F  T
+     28   4        1.8806267418E+01 2.4E-01    55 1.0E+00    2 F  T
+     29   4        1.8977628089E+01 1.2E+00    54 1.0E+00    6 T  T
+     30   4        1.9057961400E+01 1.4E+00    52 1.0E+00   11 T  T
+     31   4        1.9263312465E+01 1.4E+00    61 1.0E+00   16 F  T
+     32   4        1.9263512233E+01 4.7E+00    53 8.6E-04   14 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     33   3        1.9275718962E+01 4.7E+00    53 1.0E-03      F  T
+     34   4        1.9276212617E+01 6.9E-01    53 1.8E+00      F  T
+     35   3        1.9276460395E+01 2.1E-01    53 4.0E-03      F  T
+     36   3        1.9276653768E+01 4.0E-01    54 1.3E-03      F  T
+     37   4        1.9277756349E+01 2.2E-01    54 1.6E+01      F  T
+     38   4        1.9282045752E+01 8.6E-01    54 1.0E+00    1 F  T
+     39   4        1.9307334593E+01 1.1E-01    54 1.0E+00    7 F  T
+     40   4        1.9354505139E+01 1.2E+00    54 1.0E+00   12 F  T
+     41   4        1.9360063434E+01 1.1E+00    54 6.1E-01   11 F  T
+     42   4        1.9394986517E+01 5.4E-01    53 1.0E+00   12 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     43   4        1.9409864571E+01 2.9E-01    51 1.0E+00   10 F  T
+     44   4        1.9424685151E+01 4.6E-01    53 1.0E+00   12 F  T
+     45   4        1.9429337500E+01 1.7E-01    51 1.0E+00   14 F  T
+     46   4        1.9442358735E+01 1.7E-01    55 1.0E+00   17 T  T
+     47   4        1.9460206195E+01 1.4E-01    55 1.0E+00   29 F  T
+     48   4        1.9476514796E+01 3.5E-01    51 1.0E+00   25 T  T
+     49   3        1.9476514796E+01 3.0E-01    54 0.0E+00      T  T
+     50   3        1.9476514796E+01 3.1E-02    50 0.0E+00      T  T
+     51   3        1.9476527566E+01 3.0E-01    50 1.7E-04      T  T
+     52   3        1.9476531529E+01 3.0E-01    49 7.5E-05      F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     53   3        1.9476531529E+01 1.5E-01    49 0.0E+00      T  T
+     54   3        1.9476537888E+01 1.5E-01    48 5.3E-04      F  T
+     55   3        1.9476538953E+01 1.7E-02    48 1.1E-03      T  T
+     56   3        1.9476555124E+01 7.4E-02    48 2.7E-03      T  T
+     57   3        1.9476606511E+01 7.4E-02    47 1.8E-02      F  T
+     58   3        1.9476667721E+01 4.9E-01    47 5.9E-04      F  T
+     59   4        1.9476674401E+01 8.8E-02    47 1.9E+00      F  T
+     60   4        1.9477328051E+01 6.8E-02    47 1.0E+00    1 F  T
+     61   4        1.9483161439E+01 6.1E-01    47 1.0E+00    7 T  T
+     62   4        1.9501123945E+01 1.9E-01    47 1.0E+00   13 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     63   4        1.9519681770E+01 9.7E-02    45 1.0E+00   19 F  T
+     64   4        1.9528324657E+01 3.6E-01    43 1.0E+00   12 F  T
+     65   4        1.9529543392E+01 1.4E-01    43 1.0E+00   10 F  T
+     66   4        1.9530566033E+01 6.4E-02    47 1.0E+00   15 F  T
+     67   4        1.9531018687E+01 7.5E-03    46 1.0E+00   20 T  T
+     68   3        1.9531018687E+01 1.2E-03    48 0.0E+00      T  T
+     69   3        1.9531018710E+01 8.5E-04    45 2.5E-02      F  T
+     70   3        1.9531018729E+01 9.8E-04    45 8.5E-03      F  T
+     71   4        1.9531018856E+01 6.3E-04    45 2.4E+01      F  T
+     72   4        1.9531020029E+01 5.2E-04    45 1.0E+00    4 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     73   4        1.9531030898E+01 1.3E-03    45 1.0E+00    7 F  T
+     74   4        1.9531058848E+01 3.4E-03    45 1.0E+00   15 T  T
+     75   3        1.9531058848E+01 1.6E-03    47 0.0E+00      T  T
+     76   3        1.9531059259E+01 1.6E-03    44 8.3E-02      F  T
+     77   3        1.9531059641E+01 7.4E-03    44 4.9E-03      F  T
+     78   4        1.9531059723E+01 2.1E-03    44 1.0E+00      F  T
+     79   4        1.9531062894E+01 1.4E-03    44 1.0E+00    2 F  T
+     80   4        1.9531073694E+01 1.4E-03    44 1.0E+00    9 F  T
+     81   4        1.9531133098E+01 4.8E-04    44 1.0E+00   22 F  T
+     82   4        1.9531348634E+01 5.5E-03    44 1.0E+00   17 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     83   3        1.9531348634E+01 1.0E-03    46 0.0E+00      T  T
+     84   3        1.9531348639E+01 8.7E-04    43 4.2E-03      T  T
+     85   3        1.9531348640E+01 3.1E-04    42 9.4E-03      F  T
+     86   3        1.9531348650E+01 4.5E-04    43 5.7E-02      F  T
+     87   4        1.9531350153E+01 1.0E-03    43 1.6E+01      F  T
+     88   4        1.9531356203E+01 8.9E-04    43 1.0E+00    2 F  T
+     89   4        1.9531401499E+01 3.8E-03    43 1.0E+00    7 F  T
+     90   4        1.9531810009E+01 1.8E-03    43 1.0E+00   12 F  T
+     91   4        1.9533354303E+01 2.2E-02    43 1.0E+00   21 F  T
+     92   4        1.9534751827E+01 1.6E-02    43 1.0E+00   11 T  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     93   3        1.9534751827E+01 1.7E-02    43 0.0E+00      T  T
+     94   3        1.9534753829E+01 1.7E-02    42 6.5E-03      F  T
+     95   3        1.9534753916E+01 7.5E-04    42 8.2E-02      F  T
+     96   4        1.9534753932E+01 8.3E-04    42 1.8E-01      F  T
+     97   4        1.9534754214E+01 7.0E-04    42 2.8E+00      F  T
+     98   4        1.9534754557E+01 3.5E-04    42 1.0E+00    3 F  T
+     99   4        1.9534762488E+01 1.9E-03    42 1.0E+00   15 F  T
+    100   4        1.9534786101E+01 3.0E-04    42 1.0E+00   25 F  T
+    101   4        1.9534793490E+01 2.3E-04    42 1.0E+00   13 F  T
+    102   4        1.9534794713E+01 6.0E-05    42 1.0E+00   11 F  T
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+    103   4        1.9534794713E+01 1.6E-05    42 1.0E+00    1 F  T
+    104   4        1.9534794713E+01 1.0E-07    42 1.7E+00      F  T
+    105   4        1.9534794713E+01 1.0E-07    42 1.0E+00    3 F  T
+    106   4        1.9534794713E+01 4.4E-08    42
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+--- Reading solution for model sdgfinance
+--- SDG Egypt Model scen 8 nga.gms(541) 64 Mb  14 secs
+--- Executing after solve: elapsed 0:03:00.865
+--- SDG Egypt Model scen 8 nga.gms(604) 64 Mb
+--- GDX File (execute_unload) C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\modeloutput_nga.gdx
+--- SDG Egypt Model scen 8 nga.gms(609) 64 Mb
+
+GDXXRW           37.1.0 r07954d5 Released Nov 11, 2021 WEI x86 64bit/MS Window
+Input file : C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\input\auxiliary\modeloutput_nga.gdx
+Output file: C:\Users\eleven\scenario\SDG Financing Simplified model (Egypt)\scen 8\output\modeloutput_nga.xlsx
+Total time = 20734 Ms
+--- SDG Egypt Model scen 8 nga.gms(609) 64 Mb  24 secs
+--- Profile Summary (466 records processed)
+   147.359   0.064GB       536 Loop       
+    68.343   0.046GB       541 Solve Alg  sdgfinance
+    51.750   0.064GB       541 Solve Alg  sdgfinance
+    24.000   0.064GB       609 Execute    
+    12.750   0.064GB       541 Solve Alg  sdgfinance
+     3.375   0.046GB       541 Solve Read sdgfinance
+     2.984   0.064GB       541 Solve Read sdgfinance
+     1.781   0.064GB       541 Solve Read sdgfinance
+     0.625   0.064GB       349 Equation   eq16 (53424)
+     0.437   0.064GB       541 Solve Fini sdgfinance (349130)
+*** Status: Normal completion
+--- Job SDG Egypt Model scen 8 nga.gms Stop 08/28/22 23:32:02 elapsed 0:03:25.090
